@@ -28,6 +28,7 @@ A modern, responsive single-page resume built with React and TypeScript, featuri
 ## 🏃‍♂️ Quick Start
 
 ### Prerequisites
+
 - Docker and Docker Compose
 - Node.js 18+ (for local development)
 - Git
@@ -35,16 +36,18 @@ A modern, responsive single-page resume built with React and TypeScript, featuri
 ### Development Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd 001_Resume
    ```
 
 2. **Start with Docker Compose** (Recommended)
+
    ```bash
    docker-compose up --build
    ```
-   
+
    The application will be available at `http://localhost:5173`
 
 3. **Or run locally**
@@ -103,7 +106,7 @@ Deployment is automated via GitHub Actions:
 2. GitHub Actions builds the application
 3. Deploys to GitHub Pages automatically
 
-**Live Site**: [Your GitHub Pages URL]
+**Live Site**: https://tortoisewolfe.github.io/Resume/
 
 ## 📱 Browser Support
 
@@ -127,6 +130,7 @@ npm run bundle-analyze # Analyze bundle size
 ## 📊 Success Metrics
 
 ### Performance Targets
+
 - ⚡ **First Contentful Paint**: < 1.0s
 - 📦 **Bundle Size**: < 500KB gzipped
 - 🎯 **Lighthouse Score**: > 90
@@ -134,12 +138,14 @@ npm run bundle-analyze # Analyze bundle size
 - 🔄 **Time to Interactive**: < 3.0s
 
 ### Quality Metrics
+
 - ✅ **Test Coverage**: > 80%
 - ♿ **Accessibility**: WCAG 2.1 AA compliant
 - 📱 **Mobile Score**: 100% responsive
 - 🌐 **Browser Support**: 95%+ global usage
 
 ### Monitoring
+
 ```bash
 # Check bundle size
 npm run build
@@ -155,6 +161,7 @@ npm run test:a11y
 ## 🚀 Implementation Roadmap
 
 ### Quick Wins (1-2 hours each)
+
 1. ✅ Project initialization with Vite
 2. ✅ Basic component structure
 3. ✅ Dark theme implementation
@@ -162,6 +169,7 @@ npm run test:a11y
 5. ✅ Mobile responsive layout
 
 ### Core Features (2-4 hours each)
+
 1. 🔄 Typewriter animation
 2. 🔄 Theme toggle with persistence
 3. 🔄 PDF download functionality
@@ -169,6 +177,7 @@ npm run test:a11y
 5. 🔄 Performance optimization
 
 ### Polish (1-2 hours each)
+
 1. ⏳ Loading states
 2. ⏳ Error boundaries
 3. ⏳ SEO optimization
@@ -177,16 +186,16 @@ npm run test:a11y
 
 ## 🎯 Key Decisions
 
-| Decision | Choice | Rationale |
-|----------|--------|----------|
-| **CSS Solution** | CSS Modules | Better performance, smaller bundle |
-| **PDF Library** | react-pdf (lazy) | Feature-rich, loaded on-demand |
-| **State Management** | React Context | Simple app, no Redux needed |
-| **Build Tool** | Vite | Faster builds, better DX |
-| **Theme Default** | Dark Mode | Modern, reduces eye strain |
-| **Animation Library** | Custom CSS | Smaller bundle, full control |
-| **Testing Framework** | Vitest | Fast, Vite-native |
-| **Deployment** | GitHub Pages | Free, reliable, custom domain |
+| Decision              | Choice           | Rationale                          |
+| --------------------- | ---------------- | ---------------------------------- |
+| **CSS Solution**      | CSS Modules      | Better performance, smaller bundle |
+| **PDF Library**       | react-pdf (lazy) | Feature-rich, loaded on-demand     |
+| **State Management**  | React Context    | Simple app, no Redux needed        |
+| **Build Tool**        | Vite             | Faster builds, better DX           |
+| **Theme Default**     | Dark Mode        | Modern, reduces eye strain         |
+| **Animation Library** | Custom CSS       | Smaller bundle, full control       |
+| **Testing Framework** | Vitest           | Fast, Vite-native                  |
+| **Deployment**        | GitHub Pages     | Free, reliable, custom domain      |
 
 ## 📄 License
 
@@ -206,23 +215,27 @@ This is a personal resume project. If you'd like to use this as a template:
 ### Common Issues
 
 **Docker build fails**
+
 ```bash
 docker-compose down -v  # Clear volumes
 docker-compose build --no-cache
 ```
 
 **Port already in use**
+
 ```bash
 lsof -i :5173  # Find process
 kill -9 <PID>  # Kill process
 ```
 
 **PDF download not working**
+
 - Check browser console for errors
 - Ensure PDF library is loaded
 - Test in different browsers
 
 **Theme not persisting**
+
 - Check localStorage permissions
 - Clear browser cache
 - Verify theme context setup

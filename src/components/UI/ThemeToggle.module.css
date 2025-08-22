@@ -1,0 +1,51 @@
+.themeToggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-background-alt);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.themeToggle:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-steampunk);
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+/* Gear rotation animation for steampunk effect */
+.gear {
+  animation: gear-rotate var(--duration-gear-spin) linear infinite;
+}
+
+.themeToggle:hover .gear {
+  animation-duration: calc(var(--duration-gear-spin) / 2);
+}
+
+@keyframes gear-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

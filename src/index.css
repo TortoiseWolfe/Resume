@@ -1,0 +1,9 @@
+/* Main Entry Point for Styles */
+@import './styles/global.css';
+
+/* Apply theme to root */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

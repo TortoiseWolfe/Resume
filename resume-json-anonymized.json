@@ -1,0 +1,200 @@
+{
+  "personalInfo": {
+    "name": "John Doe",
+    "title": "FULL STACK DEVELOPER & GRAPHIC DESIGNER",
+    "location": "Cleveland, TN 37312",
+    "phone": "(555) 123-4567",
+    "email": "johndoe@example.com",
+    "willingToRelocate": ["Knoxville, TN", "Nashville, TN", "Atlanta, GA"]
+  },
+  "links": {
+    "portfolio": "https://TurtleWolfe.com",
+    "github": [
+      "https://github.com/TortoiseWolfe",
+      "https://github.com/TurtleWolfe"
+    ],
+    "linkedin": "https://linkedin.com/in/johndoe",
+    "youtube": "https://youtube.com/@johndoe",
+    "twitch": "https://twitch.tv/turtlewolfe"
+  },
+  "summary": "The rare mix of left-brain for the technical and right-brain for the visually appealing, with attention to accessibility. Semantic markup for screen readers and visual contrast for the color-blind. Media queries to adjust screen size from mobile, tablet, or desktop. Confident with React and loving TypeScript. Willing to relocate to: Knoxville, TN - Nashville, TN - Atlanta, GA",
+  "experience": [
+    {
+      "title": "SOFTWARE DEVELOPER",
+      "company": "Trinam Drafting and Design",
+      "location": "GA",
+      "startDate": "2022-03",
+      "endDate": "2024-09",
+      "responsibilities": [
+        "Developed C# plugins for Revit, improving workflow efficiency by 30%",
+        "Implemented automated testing reducing bug reports by 40%"
+      ]
+    },
+    {
+      "title": "JUNIOR DEVELOPER INTERN",
+      "company": "TechJoy Software",
+      "location": null,
+      "startDate": "2022-01",
+      "endDate": "Present",
+      "responsibilities": [
+        "Developing features in React/TypeScript for production applications",
+        "Creating responsive UI components and implementing API integrations"
+      ]
+    },
+    {
+      "title": "LEAD DEVELOPER",
+      "company": "Collective Minds Incorporated",
+      "location": null,
+      "startDate": "2021-01",
+      "endDate": "2021-03",
+      "responsibilities": [
+        "Lead React/React Native development serving 5,000+ users",
+        "Architected RESTful APIs using Node.js and Express",
+        "Reduced application load time by 50% through optimization"
+      ]
+    },
+    {
+      "title": "FULL STACK WEB DEVELOPER",
+      "company": "ScriptHammer.com",
+      "location": "Cleveland, TN",
+      "startDate": "2011-08",
+      "endDate": "Present",
+      "responsibilities": [
+        "Designed and developed 20+ custom web applications for small businesses",
+        "Increased client conversions by 35% through UX improvements",
+        "Full stack implementation from mockup to deployment"
+      ]
+    },
+    {
+      "title": "LEAD GRAPHIC DESIGNER",
+      "company": "Creative Touch",
+      "location": "Cleveland, TN",
+      "startDate": "1995-10",
+      "endDate": "2018-12",
+      "responsibilities": [
+        "Visual layout for church directories and promotional materials",
+        "Color correction and photo editing for professional publications",
+        "Managed team of two employees for photo scanning and data input"
+      ]
+    },
+    {
+      "title": "CHILDREN'S PORTRAIT PHOTOGRAPHER",
+      "company": "Antiquities",
+      "location": "Cleveland, TN",
+      "startDate": "1998-10",
+      "endDate": "2017-12",
+      "responsibilities": [
+        "Traveled to 23 states on short notice for portrait fundraising programs",
+        "Set up mobile studio and photographed new groups every 12 minutes",
+        "Achieved consistent sales averaging $80 per sitting with vintage costume portraits"
+      ]
+    }
+  ],
+  "skills": {
+    "frontend": {
+      "technologies": ["React", "React Native", "TypeScript", "JavaScript ES6+", "HTML5", "CSS3", "Bootstrap", "Tailwind", "jQuery"],
+      "yearsExperience": {
+        "React": 4,
+        "TypeScript": 1,
+        "React Native": 1
+      }
+    },
+    "backend": {
+      "technologies": ["Node.js", "Express", "C#", "PHP", "RESTful APIs", "GraphQL"],
+      "yearsExperience": {
+        "Node.js": 5,
+        "PHP": 6
+      }
+    },
+    "database": {
+      "technologies": ["MongoDB", "MySQL", "PostgreSQL", "Firebase", "Microsoft Access"],
+      "yearsExperience": {
+        "MySQL": 5
+      }
+    },
+    "tools": {
+      "technologies": ["Git", "GitHub", "Docker", "AWS", "Linux", "Webpack", "Jest", "Agile/Scrum"],
+      "yearsExperience": {
+        "Linux": 4
+      }
+    },
+    "design": {
+      "technologies": ["Adobe Photoshop", "GIMP", "Typography", "Wireframing"],
+      "yearsExperience": {
+        "Adobe Photoshop": 10,
+        "GIMP": 3
+      }
+    },
+    "cms": {
+      "technologies": ["WordPress", "Drupal", "Joomla", "CodeIgniter"],
+      "yearsExperience": {
+        "WordPress": 2
+      }
+    }
+  },
+  "education": [
+    {
+      "institution": "JOY OF CODING ACADEMY",
+      "degree": "Software Development Bootcamp",
+      "year": "ENROLLED 2024"
+    },
+    {
+      "institution": "CLEVELAND STATE COMMUNITY COLLEGE",
+      "degree": "Certificate in Computer Aided Drafting (CAD)",
+      "year": "1996"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "FreeCodeCamp Front End Libraries",
+      "year": "2021",
+      "url": "https://www.freecodecamp.org/certification/turtlewolf/front-end-libraries"
+    },
+    {
+      "name": "Node.js API Masterclass With Express & MongoDB",
+      "provider": "Udemy",
+      "year": "2020",
+      "url": "https://www.udemy.com/certificate/UC-8033cc47-612f-4a7b-afc3-c7a8c9273686/"
+    }
+  ],
+  "assessments": {
+    "indeed": [
+      {
+        "name": "Problem Solving",
+        "level": "Expert"
+      },
+      {
+        "name": "Basic Computer Skills: PC",
+        "level": "Expert"
+      },
+      {
+        "name": "Software Developer Fit",
+        "level": "Proficient"
+      },
+      {
+        "name": "Attention to Detail",
+        "level": "Proficient"
+      },
+      {
+        "name": "Analyzing Data",
+        "level": "Proficient"
+      },
+      {
+        "name": "Graphic Design",
+        "level": "Proficient"
+      },
+      {
+        "name": "Social Media",
+        "level": "Proficient"
+      },
+      {
+        "name": "Technical Support",
+        "level": "Familiar"
+      },
+      {
+        "name": "Software Developer Skills",
+        "level": "Familiar"
+      }
+    ]
+  }
+}

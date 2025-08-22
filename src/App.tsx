@@ -1,38 +1,63 @@
-import React from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { Layout } from './components/Layout/Layout';
+import { PersonalInfo } from './components/Resume/PersonalInfo';
+import { Summary } from './components/Resume/Summary';
+import { Experience } from './components/Resume/Experience';
+import { Skills } from './components/Resume/Skills';
+import { EducationAndCertifications } from './components/Resume/EducationAndCertifications';
+import { useResumeData } from './hooks/useResumeData';
+import styles from './App.module.css';
 
 function App() {
+  const { data: resumeData, loading, error } = useResumeData();
+
+  if (loading) {
+    return (
+      <ThemeProvider>
+        <Layout>
+          <div className={styles.loading}>
+            <div className={styles.loadingSpinner}></div>
+            <p>Loading resume data...</p>
+          </div>
+        </Layout>
+      </ThemeProvider>
+    );
+  }
+
+  if (error || !resumeData) {
+    return (
+      <ThemeProvider>
+        <Layout>
+          <div className={styles.error}>
+            <h2>Error Loading Resume</h2>
+            <p>{error?.message || 'Failed to load resume data'}</p>
+          </div>
+        </Layout>
+      </ThemeProvider>
+    );
+  }
+
   return (
     <ThemeProvider>
       <Layout>
-        <div className="card">
-          <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              color: 'var(--color-primary)',
-            }}
-          >
-            TurtleWolfe
-          </h1>
-          <h2 className="text-secondary">
-            Full Stack Developer & Graphic Designer
-          </h2>
-          <p>
-            Welcome to my steampunk-themed resume! This is Phase 1 - basic setup
-            with theme switching.
-          </p>
-          <div style={{ marginTop: 'var(--space-lg)' }}>
-            <p className="text-small text-secondary">
-              🎯 Phase 1 Complete: React + TypeScript + Vite setup with
-              steampunk theming
-            </p>
-            <p className="text-small text-secondary">
-              🚀 Next: Docker environment, component structure, and resume
-              content
-            </p>
-          </div>
-        </div>
+        <main className={styles.resumeContent}>
+          <PersonalInfo
+            personalInfo={resumeData.personalInfo}
+            links={resumeData.links}
+          />
+
+          <Summary summary={resumeData.summary} />
+
+          <Experience experiences={resumeData.experience} />
+
+          <Skills skills={resumeData.skills} />
+
+          <EducationAndCertifications
+            education={resumeData.education}
+            certifications={resumeData.certifications}
+            assessments={resumeData.assessments}
+          />
+        </main>
       </Layout>
     </ThemeProvider>
   );

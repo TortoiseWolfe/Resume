@@ -1,5 +1,7 @@
 import React from 'react';
 import { ThemeToggle } from '../UI/ThemeToggle';
+import { PDFDownloadButton } from '../UI/PDFDownloadButton';
+import { SectionNavigation } from '../UI/SectionNavigation';
 import styles from './Layout.module.css';
 
 interface LayoutProps {
@@ -13,13 +15,15 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container">
           <div className={styles.controls}>
             <ThemeToggle />
-            <button className="button no-print">Download PDF</button>
+            <PDFDownloadButton />
           </div>
         </div>
       </header>
 
       <main className={styles.main}>
-        <div className="container">{children}</div>
+        <div className="container" data-resume-content>
+          {children}
+        </div>
       </main>
 
       <footer className={styles.footer}>
@@ -29,6 +33,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           </p>
         </div>
       </footer>
+
+      <SectionNavigation />
     </div>
   );
 };

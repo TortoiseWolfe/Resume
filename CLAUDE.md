@@ -98,8 +98,10 @@ npm run format
 - Lighthouse Performance score > 90
 
 ## Development Notes
+
+### Coding Standards
 - Use CSS Modules for styling with CSS custom properties for theming
-- Store resume data in JSON for easy updates
+- Store resume data in JSON with consistent date formats (ISO 8601)
 - Default to dark mode with steampunk copper/bronze color palette
 - Implement typewriter animation for name and title text
 - Dark mode toggle positioned in top-right corner next to download button
@@ -107,3 +109,54 @@ npm run format
 - Test download functionality across browsers
 - Optimize images and assets for web
 - Respect prefers-reduced-motion for accessibility
+
+### TypeScript Guidelines
+- Enable strict mode in tsconfig.json
+- Define interfaces for all data structures
+- Use type inference where possible
+- Avoid 'any' type - use 'unknown' if type is truly unknown
+- Export types separately from implementations
+
+### Testing Requirements
+- Unit tests for utility functions (>80% coverage)
+- Integration tests for critical user flows
+- Visual regression tests for theme switching
+- Accessibility tests with axe-core
+- Performance tests with Lighthouse CI
+
+### Bundle Size Monitoring
+- Target: < 500KB gzipped total
+- Core app: < 200KB
+- PDF library: < 250KB (lazy loaded)
+- Monitor with webpack-bundle-analyzer
+- Set up CI alerts for size regression
+
+## Implementation Phases
+
+### Phase 1: Core Setup (Priority: High)
+1. Initialize project with Vite + React + TypeScript
+2. Set up Docker development environment
+3. Configure ESLint, Prettier, and pre-commit hooks
+4. Create base component structure
+5. Implement CSS custom properties and theme system
+
+### Phase 2: Resume Display (Priority: High)
+1. Create resume section components
+2. Integrate resume JSON data
+3. Implement responsive layout
+4. Add steampunk styling
+5. Test on multiple devices
+
+### Phase 3: Interactive Features (Priority: Medium)
+1. Implement typewriter animation
+2. Add theme toggle functionality
+3. Create PDF download feature (lazy loaded)
+4. Add loading and error states
+5. Implement smooth scrolling
+
+### Phase 4: Polish & Deploy (Priority: Medium)
+1. Optimize performance (Lighthouse > 90)
+2. Add comprehensive tests
+3. Set up GitHub Actions CI/CD
+4. Deploy to GitHub Pages
+5. Monitor and iterate

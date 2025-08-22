@@ -25,6 +25,10 @@
 - **F16**: Steampunk-inspired color scheme and typography with dark/light theme support
 - **F17**: Typewriter animation with configurable speed for name and title text
 - **F18**: Accessible design with proper ARIA labels and theme announcements
+- **F19**: Focus states for all interactive elements with visible outline
+- **F20**: Loading states for download actions with spinner or progress indicator
+- **F21**: Error states for failed downloads with user-friendly messages
+- **F22**: Hover states for buttons and links with smooth transitions
 
 ## Non-Functional Requirements
 
@@ -43,3 +47,17 @@
 - **NF8**: Automated deployment via GitHub Actions
 - **NF9**: HTTPS enabled via GitHub Pages
 - **NF10**: Zero downtime deployments
+
+### Quality Assurance
+- **NF11**: Unit test coverage > 80% for business logic
+- **NF12**: Integration tests for critical user flows
+- **NF13**: Visual regression testing for UI components
+- **NF14**: Automated accessibility testing (WCAG 2.1 AA compliance)
+- **NF15**: Cross-browser testing matrix (Chrome, Firefox, Safari, Edge)
+
+### Development Standards
+- **NF16**: TypeScript strict mode enabled
+- **NF17**: ESLint and Prettier for code consistency
+- **NF18**: Pre-commit hooks for code quality checks
+- **NF19**: Bundle size monitoring with CI/CD alerts
+- **NF20**: Performance budgets enforced in build pipeline

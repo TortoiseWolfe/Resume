@@ -75,16 +75,24 @@ npm run preview
 
 ```
 ├── src/
-│   ├── components/          # React components
+│   ├── components/
+│   │   ├── Layout/         # Header, Footer, Navigation
+│   │   ├── Resume/         # PersonalInfo, Experience, Skills
+│   │   ├── UI/             # ThemeToggle, DownloadButton
+│   │   └── Common/         # Card, Section, Button
+│   ├── contexts/           # Theme, Resume data contexts
+│   ├── hooks/              # Custom React hooks
 │   ├── data/               # Resume content (JSON)
-│   ├── styles/             # CSS modules
+│   ├── styles/             # CSS modules, theme variables
 │   ├── utils/              # Helper functions
+│   ├── types/              # TypeScript definitions
 │   └── App.tsx             # Main application
-├── public/                 # Static assets
+├── public/                 # Static assets, fonts, icons
 ├── docker/                 # Docker configurations
+├── tests/                  # Test suites
 ├── .github/workflows/      # CI/CD pipelines
-├── ai_docs/               # AI documentation
-└── specs/                 # Technical specifications
+├── ai_docs/               # Architecture documentation
+└── specs/                 # Requirements, design system
 ```
 
 ## 🚀 Deployment
@@ -107,11 +115,78 @@ Deployment is automated via GitHub Actions:
 ## 🧪 Testing
 
 ```bash
-npm test              # Run tests
+npm test              # Run unit tests
+npm run test:e2e      # Run end-to-end tests
+npm run test:coverage # Generate coverage report
 npm run type-check    # TypeScript checking
 npm run lint          # ESLint
 npm run format        # Prettier formatting
+npm run bundle-analyze # Analyze bundle size
 ```
+
+## 📊 Success Metrics
+
+### Performance Targets
+- ⚡ **First Contentful Paint**: < 1.0s
+- 📦 **Bundle Size**: < 500KB gzipped
+- 🎯 **Lighthouse Score**: > 90
+- 🖼️ **Largest Contentful Paint**: < 2.5s
+- 🔄 **Time to Interactive**: < 3.0s
+
+### Quality Metrics
+- ✅ **Test Coverage**: > 80%
+- ♿ **Accessibility**: WCAG 2.1 AA compliant
+- 📱 **Mobile Score**: 100% responsive
+- 🌐 **Browser Support**: 95%+ global usage
+
+### Monitoring
+```bash
+# Check bundle size
+npm run build
+ls -lh dist/assets/*.js
+
+# Run Lighthouse
+npm run lighthouse
+
+# Check accessibility
+npm run test:a11y
+```
+
+## 🚀 Implementation Roadmap
+
+### Quick Wins (1-2 hours each)
+1. ✅ Project initialization with Vite
+2. ✅ Basic component structure
+3. ✅ Dark theme implementation
+4. ✅ Resume data integration
+5. ✅ Mobile responsive layout
+
+### Core Features (2-4 hours each)
+1. 🔄 Typewriter animation
+2. 🔄 Theme toggle with persistence
+3. 🔄 PDF download functionality
+4. 🔄 Steampunk styling
+5. 🔄 Performance optimization
+
+### Polish (1-2 hours each)
+1. ⏳ Loading states
+2. ⏳ Error boundaries
+3. ⏳ SEO optimization
+4. ⏳ Analytics integration
+5. ⏳ PWA capabilities
+
+## 🎯 Key Decisions
+
+| Decision | Choice | Rationale |
+|----------|--------|----------|
+| **CSS Solution** | CSS Modules | Better performance, smaller bundle |
+| **PDF Library** | react-pdf (lazy) | Feature-rich, loaded on-demand |
+| **State Management** | React Context | Simple app, no Redux needed |
+| **Build Tool** | Vite | Faster builds, better DX |
+| **Theme Default** | Dark Mode | Modern, reduces eye strain |
+| **Animation Library** | Custom CSS | Smaller bundle, full control |
+| **Testing Framework** | Vitest | Fast, Vite-native |
+| **Deployment** | GitHub Pages | Free, reliable, custom domain |
 
 ## 📄 License
 
@@ -126,6 +201,32 @@ This is a personal resume project. If you'd like to use this as a template:
 3. Customize styling and components as needed
 4. Deploy to your own GitHub Pages
 
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**Docker build fails**
+```bash
+docker-compose down -v  # Clear volumes
+docker-compose build --no-cache
+```
+
+**Port already in use**
+```bash
+lsof -i :5173  # Find process
+kill -9 <PID>  # Kill process
+```
+
+**PDF download not working**
+- Check browser console for errors
+- Ensure PDF library is loaded
+- Test in different browsers
+
+**Theme not persisting**
+- Check localStorage permissions
+- Clear browser cache
+- Verify theme context setup
+
 ---
 
-**Performance**: ⚡ Sub-1s load times | 📱 Mobile-first | ♿ Accessible | 🌙 Dark mode default | ⌨️ Typewriter animations# Resume
+**Performance**: ⚡ Sub-1s load times | 📱 Mobile-first | ♿ Accessible | 🌙 Dark mode default | ⌨️ Typewriter animations

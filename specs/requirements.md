@@ -3,6 +3,7 @@
 ## Functional Requirements
 
 ### Core Features
+
 - **F1**: Single-page resume display with all sections visible
 - **F2**: Download resume as PDF format
 - **F3**: Download resume as DOCX format
@@ -12,6 +13,7 @@
 - **F7**: Typewriter animation for name/title with steampunk styling
 
 ### Content Sections
+
 - **F8**: Header with name, title, and contact information
 - **F9**: Professional summary/objective section
 - **F10**: Work experience with company, role, dates, and achievements
@@ -20,6 +22,7 @@
 - **F13**: Projects section with descriptions and technologies used
 
 ### User Experience
+
 - **F14**: Dark mode toggle and download button positioned in top-right corner
 - **F15**: Smooth scrolling navigation between sections
 - **F16**: Steampunk-inspired color scheme and typography with dark/light theme support
@@ -33,22 +36,26 @@
 ## Non-Functional Requirements
 
 ### Performance
+
 - **NF1**: First Contentful Paint < 1 second
 - **NF2**: Largest Contentful Paint < 2.5 seconds
 - **NF3**: Bundle size < 500KB gzipped
 - **NF4**: Lighthouse Performance score > 90
 
 ### Compatibility
+
 - **NF5**: Support modern browsers (Chrome, Firefox, Safari, Edge)
 - **NF6**: Mobile responsive down to 320px width
 - **NF7**: Print compatibility with standard paper sizes
 
 ### Deployment
+
 - **NF8**: Automated deployment via GitHub Actions
 - **NF9**: HTTPS enabled via GitHub Pages
 - **NF10**: Zero downtime deployments
 
 ### Quality Assurance
+
 - **NF11**: Unit test coverage > 80% for business logic
 - **NF12**: Integration tests for critical user flows
 - **NF13**: Visual regression testing for UI components
@@ -56,8 +63,39 @@
 - **NF15**: Cross-browser testing matrix (Chrome, Firefox, Safari, Edge)
 
 ### Development Standards
+
 - **NF16**: TypeScript strict mode enabled
 - **NF17**: ESLint and Prettier for code consistency
 - **NF18**: Pre-commit hooks for code quality checks
 - **NF19**: Bundle size monitoring with CI/CD alerts
 - **NF20**: Performance budgets enforced in build pipeline
+
+## SEO & Professional Requirements (Phase 5)
+
+### Search Engine Optimization
+
+- **SEO1**: Professional HTML title tag with name and title
+- **SEO2**: Meta description optimized for job search keywords (155 chars max)
+- **SEO3**: Meta keywords including relevant skills and technologies
+- **SEO4**: Custom favicon replacing default Vite logo
+- **SEO5**: Apple touch icon for mobile bookmark optimization
+- **SEO6**: JSON-LD structured data for Person schema
+- **SEO7**: Open Graph meta tags for LinkedIn/social media previews
+- **SEO8**: Twitter Card meta tags for Twitter sharing optimization
+
+### Content & Branding
+
+- **SEO9**: Complete resume data update with accurate information (when all real data is available)
+
+### Analytics & Tracking
+
+- **SEO10**: Google Analytics 4 integration for visitor tracking
+- **SEO11**: Goal conversion tracking for download actions
+- **SEO12**: Real User Metrics (RUM) for performance monitoring
+- **SEO13**: Search Console integration for search performance
+
+### Professional Enhancement
+
+- **SEO14**: Contact form or professional inquiry mechanism
+- **SEO15**: Resume version control and last updated timestamp
+- **SEO16**: Professional social media meta previews

@@ -223,6 +223,8 @@ This is a personal resume project. If you'd like to use this as a template:
 
 ## 🔧 Troubleshooting
 
+For known bugs and test failures, see [KNOWN_ISSUES.md](./KNOWN_ISSUES.md)
+
 ### Common Issues
 
 **Docker build fails**

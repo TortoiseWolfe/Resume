@@ -66,13 +66,13 @@ describe('ThemeToggle', () => {
     const button = screen.getByRole('button');
 
     // In dark mode, should show gear icon (has gear class)
-    expect(button.querySelector('.gear')).toBeInTheDocument();
+    expect(button.querySelector('[class*="gear"]')).toBeInTheDocument();
 
     // Toggle to light mode
     fireEvent.click(button);
 
     // In light mode, should not show gear icon
-    expect(button.querySelector('.gear')).not.toBeInTheDocument();
+    expect(button.querySelector('[class*="gear"]')).not.toBeInTheDocument();
   });
 
   it('should update document theme attribute', () => {

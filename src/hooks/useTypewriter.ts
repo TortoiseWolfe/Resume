@@ -6,6 +6,7 @@ interface UseTypewriterOptions {
   delay?: number; // initial delay before starting
   repeat?: boolean;
   repeatDelay?: number;
+  onComplete?: () => void; // callback when typing completes
 }
 
 interface UseTypewriterReturn {
@@ -20,6 +21,7 @@ export const useTypewriter = ({
   delay = 0,
   repeat = false,
   repeatDelay = 2000,
+  onComplete,
 }: UseTypewriterOptions): UseTypewriterReturn => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,6 +53,10 @@ export const useTypewriter = ({
         setIsComplete(true);
         setIsTyping(false);
 
+        if (onComplete) {
+          onComplete();
+        }
+
         if (repeat) {
           timeout = setTimeout(() => {
             setDisplayText('');
@@ -74,15 +80,26 @@ export const useTypewriter = ({
         clearTimeout(timeout);
       }
     };
-  }, [text, speed, delay, repeat, repeatDelay, currentIndex]);
+  }, [text, speed, delay, repeat, repeatDelay, currentIndex, onComplete]);
 
   // Reset when text changes
   useEffect(() => {
-    setDisplayText('');
-    setCurrentIndex(0);
-    setIsComplete(false);
-    setIsTyping(false);
-  }, [text]);
+    // Handle empty text case
+    if (text === '') {
+      setDisplayText('');
+      setCurrentIndex(0);
+      setIsComplete(true);
+      setIsTyping(false);
+      if (onComplete) {
+        onComplete();
+      }
+    } else {
+      setDisplayText('');
+      setCurrentIndex(0);
+      setIsComplete(false);
+      setIsTyping(false);
+    }
+  }, [text, onComplete]);
 
   return { displayText, isComplete, isTyping };
 };

@@ -1,11 +1,13 @@
 import React from 'react';
 import { usePDFDownload } from '../../hooks/usePDFDownload';
+import { trackDownload } from '../../utils/analytics';
 import styles from './PDFDownloadButton.module.css';
 
 export const PDFDownloadButton: React.FC = () => {
   const { downloadPDF, isGenerating, error } = usePDFDownload();
 
   const handleDownload = async () => {
+    trackDownload('pdf');
     await downloadPDF();
   };
 

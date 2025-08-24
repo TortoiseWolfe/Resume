@@ -105,6 +105,33 @@ npm run format
 - Bundle size < 500KB gzipped
 - Lighthouse Performance score > 90
 
+## Environment Variables
+
+### Local Development (.env)
+
+```bash
+# Google Analytics
+VITE_GA4_MEASUREMENT_ID=G-XXXXXXXXXX
+
+# Optional: Hide sensitive data
+VITE_CONTACT_EMAIL=your-email@example.com
+VITE_CONTACT_PHONE=+1-555-123-4567
+```
+
+### Production (GitHub Secrets)
+
+- Set `GA4_MEASUREMENT_ID` in repository secrets
+- Configure in GitHub Actions workflow
+- Vite injects at build time
+
+## Privacy Considerations
+
+- Respect browser Do Not Track settings
+- Consider GDPR/CCPA compliance for analytics
+- Email obfuscation to prevent scraping
+- Optional phone number hiding
+- Cookie consent for EU visitors
+
 ## Development Notes
 
 ### Coding Standards
@@ -177,13 +204,22 @@ npm run format
 4. ✅ Deploy to GitHub Pages (Live at https://tortoisewolfe.github.io/Resume/)
 5. ✅ Monitor and iterate
 
-### Phase 5: SEO & Professional Enhancement (Priority: High)
+### Phase 5: SEO & Privacy-Conscious Enhancement 🚀 IN PROGRESS
 
-1. Professional meta tags and title optimization
-2. Custom favicon and professional branding assets
-3. Open Graph and Twitter Card meta tags for social sharing
-4. JSON-LD structured data for better search engine understanding
-5. Complete resume data update (when all accurate information is available)
-6. Google Analytics integration for visitor tracking
-7. Contact form or professional contact optimization
-8. Performance monitoring and Real User Metrics
+1. ✅ Professional meta tags and title optimization
+2. ✅ Open Graph and Twitter Card meta tags for social sharing
+3. ✅ JSON-LD structured data for better search engine understanding
+4. ⏳ Environment variable configuration (.env for sensitive data)
+5. ⏳ Google Analytics 4 with privacy controls (respecting Do Not Track)
+6. ⏳ Custom favicon and professional branding assets (user will design)
+7. ⏳ Complete resume data update (when all accurate information available)
+
+### Phase 6: Privacy, Security & Advanced Features (Priority: Medium)
+
+1. Data privacy strategy (email obfuscation, phone privacy)
+2. Environment configuration (secrets management, build-time injection)
+3. Progressive Web App features (offline support, installable)
+4. Performance monitoring (Web Vitals, Lighthouse CI, RUM)
+5. Contact optimization (spam protection, professional routing)
+6. Version control and update timestamps
+7. Advanced analytics with user consent

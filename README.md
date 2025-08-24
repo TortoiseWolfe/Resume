@@ -42,7 +42,34 @@ A modern, responsive single-page resume built with React and TypeScript, featuri
    cd 001_Resume
    ```
 
-2. **Start with Docker Compose** (Recommended)
+2. **Configure your personal information** (Privacy-first approach)
+
+   ```bash
+   # Copy environment template
+   cp .env.example .env
+
+   # Copy resume template
+   cp src/data/resume.example.json src/data/resume.json
+   ```
+
+   **Edit `.env`** with your personal details:
+
+   ```env
+   VITE_RESUME_NAME="Your Name"
+   VITE_RESUME_EMAIL=your.email@example.com
+   VITE_RESUME_PHONE=+1-555-123-4567
+   # ... see .env.example for all options
+   ```
+
+   **Edit `src/data/resume.json`** with your professional history:
+   - Work experience
+   - Education
+   - Skills
+   - Projects
+
+   > 🔒 **Privacy Note:** Your `.env` and `resume.json` files are gitignored and never committed to the repository.
+
+3. **Start with Docker Compose** (Recommended)
 
    ```bash
    docker-compose up --build
@@ -50,18 +77,11 @@ A modern, responsive single-page resume built with React and TypeScript, featuri
 
    The application will be available at `http://localhost:5173`
 
-3. **Or run locally**
+4. **Or run locally**
    ```bash
    npm install
    npm run dev
    ```
-
-### Making Changes
-
-1. Edit resume content in `src/data/resume.json`
-2. Modify components in `src/components/`
-3. Update styles in `src/styles/`
-4. Changes auto-reload in development
 
 ### Building for Production
 
@@ -212,14 +232,32 @@ npm run test:a11y
 
 Personal project - All rights reserved
 
+## 🔒 Privacy & Security
+
+This template uses a **privacy-first approach**:
+
+- **Sensitive data** (name, email, phone) stored in `.env` (never committed)
+- **Professional data** (work history, skills) in `resume.json` (also gitignored)
+- **Templates provided** for both files with example data
+- **Runtime merging** combines both data sources in the app
+
+### Data Flow
+
+```
+.env (personal info) + resume.json (career data) = Your Complete Resume
+```
+
 ## 🤝 Contributing
 
 This is a personal resume project. If you'd like to use this as a template:
 
 1. Fork the repository
-2. Update `src/data/resume.json` with your information
-3. Customize styling and components as needed
-4. Deploy to your own GitHub Pages
+2. Copy `.env.example` to `.env` and add your personal info
+3. Copy `resume.example.json` to `resume.json` and add your career data
+4. Customize styling and components as needed
+5. Deploy to your own GitHub Pages
+
+**Important:** Never commit real personal data. Only example files should be in the repository.
 
 ## 🔧 Troubleshooting
 

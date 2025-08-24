@@ -1,14 +1,21 @@
 import React from 'react';
 import { useTheme } from '../../hooks/useTheme';
+import { trackThemeToggle } from '../../utils/analytics';
 import styles from './ThemeToggle.module.css';
 
 export const ThemeToggle: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
+  const handleToggle = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    trackThemeToggle(newTheme);
+    toggleTheme();
+  };
+
   return (
     <button
       className={styles.themeToggle}
-      onClick={toggleTheme}
+      onClick={handleToggle}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
       title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >

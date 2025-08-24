@@ -42,6 +42,17 @@ export const useTypewriter = ({
       return;
     }
 
+    // Handle empty text case
+    if (text === '') {
+      setDisplayText('');
+      setIsComplete(true);
+      setIsTyping(false);
+      if (onComplete) {
+        onComplete();
+      }
+      return;
+    }
+
     let timeout: ReturnType<typeof setTimeout>;
 
     const typeNextCharacter = () => {
@@ -49,20 +60,23 @@ export const useTypewriter = ({
         setIsTyping(true);
         setDisplayText(text.slice(0, currentIndex + 1));
         setCurrentIndex((prev) => prev + 1);
-      } else {
-        setIsComplete(true);
-        setIsTyping(false);
 
-        if (onComplete) {
-          onComplete();
-        }
+        // Check if we just typed the last character
+        if (currentIndex + 1 === text.length) {
+          setIsComplete(true);
+          setIsTyping(false);
+          if (onComplete) {
+            // Call onComplete in next tick to ensure state is updated
+            setTimeout(() => onComplete(), 0);
+          }
 
-        if (repeat) {
-          timeout = setTimeout(() => {
-            setDisplayText('');
-            setCurrentIndex(0);
-            setIsComplete(false);
-          }, repeatDelay);
+          if (repeat) {
+            timeout = setTimeout(() => {
+              setDisplayText('');
+              setCurrentIndex(0);
+              setIsComplete(false);
+            }, repeatDelay);
+          }
         }
       }
     };
@@ -84,22 +98,11 @@ export const useTypewriter = ({
 
   // Reset when text changes
   useEffect(() => {
-    // Handle empty text case
-    if (text === '') {
-      setDisplayText('');
-      setCurrentIndex(0);
-      setIsComplete(true);
-      setIsTyping(false);
-      if (onComplete) {
-        onComplete();
-      }
-    } else {
-      setDisplayText('');
-      setCurrentIndex(0);
-      setIsComplete(false);
-      setIsTyping(false);
-    }
-  }, [text, onComplete]);
+    setDisplayText('');
+    setCurrentIndex(0);
+    setIsComplete(text === '');
+    setIsTyping(false);
+  }, [text]);
 
   return { displayText, isComplete, isTyping };
 };

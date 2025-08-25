@@ -6,6 +6,7 @@ import type {
 import { TypewriterText } from '../UI/TypewriterText';
 import { ObfuscatedEmail } from '../UI/ObfuscatedEmail';
 import { ObfuscatedPhone } from '../UI/ObfuscatedPhone';
+import { trackExternalLink } from '../../utils/analytics';
 import styles from './PersonalInfo.module.css';
 
 interface PersonalInfoProps {
@@ -79,6 +80,7 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
             rel="noopener noreferrer"
             className={styles.socialLink}
             title="Portfolio"
+            onClick={() => trackExternalLink('portfolio', links.portfolio)}
           >
             🌐 Portfolio
           </a>
@@ -91,6 +93,7 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
               rel="noopener noreferrer"
               className={styles.socialLink}
               title={`GitHub ${index + 1}`}
+              onClick={() => trackExternalLink('github', github)}
             >
               ⚙️ GitHub
             </a>
@@ -102,6 +105,7 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
             rel="noopener noreferrer"
             className={styles.socialLink}
             title="LinkedIn"
+            onClick={() => trackExternalLink('linkedin', links.linkedin)}
           >
             💼 LinkedIn
           </a>
@@ -113,6 +117,7 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
               rel="noopener noreferrer"
               className={styles.socialLink}
               title="YouTube"
+              onClick={() => trackExternalLink('youtube', links.youtube)}
             >
               📺 YouTube
             </a>
@@ -125,6 +130,7 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
               rel="noopener noreferrer"
               className={styles.socialLink}
               title="Twitch"
+              onClick={() => trackExternalLink('twitch', links.twitch!)}
             >
               🎮 Twitch
             </a>

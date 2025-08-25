@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { Layout } from './components/Layout/Layout';
 import { PersonalInfo } from './components/Resume/PersonalInfo';
@@ -8,10 +9,16 @@ import { EducationAndCertifications } from './components/Resume/EducationAndCert
 import { useResumeData } from './hooks/useResumeData';
 import ScheduleButton from './components/ScheduleButton';
 import ContactForm from './components/ContactForm';
+import { trackPageViewWithUTM } from './utils/analytics';
 import styles from './App.module.css';
 
 function App() {
   const { data: resumeData, loading, error } = useResumeData();
+
+  // Track UTM parameters on initial load
+  useEffect(() => {
+    trackPageViewWithUTM();
+  }, []);
 
   if (loading) {
     return (

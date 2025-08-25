@@ -117,7 +117,7 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
               rel="noopener noreferrer"
               className={styles.socialLink}
               title="YouTube"
-              onClick={() => trackExternalLink('youtube', links.youtube)}
+              onClick={() => trackExternalLink('youtube', links.youtube!)}
             >
               📺 YouTube
             </a>

@@ -1,11 +1,21 @@
 // Google Analytics 4 utilities
+interface GtagConfigCommand {
+  (
+    command: 'config' | 'event' | 'set',
+    targetId: string,
+    config?: Record<string, unknown>
+  ): void;
+}
+
+interface GtagJsCommand {
+  (command: 'js', date: Date): void;
+}
+
+type GtagFunction = GtagConfigCommand & GtagJsCommand;
+
 declare global {
   interface Window {
-    gtag?: (
-      command: 'config' | 'event' | 'js' | 'set',
-      targetId: string,
-      config?: Record<string, unknown>
-    ) => void;
+    gtag?: GtagFunction;
     dataLayer?: unknown[];
   }
 }
@@ -35,10 +45,12 @@ export const trackEvent = (
     return;
   }
 
+  const GA_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
+
   try {
     window.gtag!('event', eventName, {
       ...parameters,
-      send_to: 'GA_MEASUREMENT_ID', // Will be replaced with actual ID
+      send_to: GA_MEASUREMENT_ID,
     });
 
     console.log(`GA4 Event: ${eventName}`, parameters);

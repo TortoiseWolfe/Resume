@@ -206,12 +206,12 @@ npm run test:a11y
 
 ### SEO & Professional Enhancement 🚀 IN PROGRESS (Phase 5)
 
-1. ⏳ Professional meta tags and title optimization
+1. ✅ Professional meta tags and title optimization
 2. ⏳ Custom favicon and branding assets
-3. ⏳ Open Graph and Twitter Card meta tags
-4. ⏳ JSON-LD structured data for search engines
+3. ✅ Open Graph and Twitter Card meta tags
+4. ✅ JSON-LD structured data for search engines
 5. ⏳ Complete resume data update (when all accurate information available)
-6. ⏳ Google Analytics integration
+6. ✅ Google Analytics 4 integration with privacy controls
 7. ⏳ Contact optimization for recruiters
 8. ⏳ Performance monitoring with Real User Metrics
 
@@ -240,12 +240,42 @@ This template uses a **privacy-first approach**:
 - **Professional data** (work history, skills) in `resume.json` (also gitignored)
 - **Templates provided** for both files with example data
 - **Runtime merging** combines both data sources in the app
+- **Google Analytics 4** with privacy controls:
+  - Respects browser Do Not Track settings
+  - IP anonymization enabled
+  - No advertising features or personalization
+  - Secure, same-site cookies only
+  - Can be disabled via environment variables
 
 ### Data Flow
 
 ```
 .env (personal info) + resume.json (career data) = Your Complete Resume
 ```
+
+### Google Analytics Setup
+
+1. **Local Development**: Add your GA4 measurement ID to `.env`:
+
+   ```bash
+   VITE_GA4_MEASUREMENT_ID=G-XXXXXXXXXX
+   ```
+
+2. **Production (GitHub Pages)**: Add as repository secret:
+   - Go to your repository on GitHub
+   - Click **Settings** tab
+   - In left sidebar under "Security", click **Secrets and variables**
+   - Click **Actions**
+   - Click green **"New repository secret"** button (NOT "Manage environment secrets")
+   - Add secret with:
+     - Name: `GA4_MEASUREMENT_ID`
+     - Value: `G-XXXXXXXXXX` (your actual measurement ID)
+   - The GitHub Actions workflow will automatically use this during build
+
+3. **Privacy Controls**: Analytics respects:
+   - Browser Do Not Track preferences
+   - `VITE_SHOW_ANALYTICS=false` to disable completely
+   - IP anonymization and no ad personalization
 
 ## 🤝 Contributing
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface UseTypewriterOptions {
   text: string;
@@ -25,10 +25,21 @@ export const useTypewriter = ({
 }: UseTypewriterOptions): UseTypewriterReturn => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isComplete, setIsComplete] = useState(false);
+  const [isComplete, setIsComplete] = useState(text === '');
   const [isTyping, setIsTyping] = useState(false);
+  const prevTextRef = useRef(text);
 
   useEffect(() => {
+    // Check if text has changed
+    if (prevTextRef.current !== text) {
+      prevTextRef.current = text;
+      setDisplayText('');
+      setCurrentIndex(0);
+      setIsComplete(text === '');
+      setIsTyping(false);
+      return; // Exit early to restart the effect on next render
+    }
+
     // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
@@ -95,14 +106,6 @@ export const useTypewriter = ({
       }
     };
   }, [text, speed, delay, repeat, repeatDelay, currentIndex, onComplete]);
-
-  // Reset when text changes
-  useEffect(() => {
-    setDisplayText('');
-    setCurrentIndex(0);
-    setIsComplete(text === '');
-    setIsTyping(false);
-  }, [text]);
 
   return { displayText, isComplete, isTyping };
 };

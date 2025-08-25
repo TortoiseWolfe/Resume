@@ -1,0 +1,168 @@
+.scheduleButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  border-radius: var(--border-radius-base);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.scheduleButton:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.scheduleButton:active {
+  transform: scale(0.98);
+}
+
+.scheduleButton:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Floating Action Button variant */
+.floating {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: var(--z-fab, 100);
+  animation: pulse 5s ease-in-out infinite;
+}
+
+.floating:hover {
+  width: auto;
+  padding: 0 1.5rem;
+  border-radius: 28px;
+}
+
+.floating .icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+}
+
+.floating .text {
+  white-space: nowrap;
+  margin-left: 0.5rem;
+}
+
+/* Header variant */
+.header {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+/* Inline variant */
+.inline {
+  margin: 1rem 0;
+}
+
+/* Icon styling */
+.icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+/* Text styling */
+.text {
+  line-height: 1;
+}
+
+/* Pulse animation for attention */
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.6);
+  }
+}
+
+/* Steampunk gear animation on hover */
+.scheduleButton::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10 L55 25 L70 20 L65 35 L80 35 L70 45 L80 55 L65 55 L70 70 L55 65 L50 80 L45 65 L30 70 L35 55 L20 55 L30 45 L20 35 L35 35 L30 20 L45 25 Z" fill="none" stroke="rgba(251,191,36,0.1)" stroke-width="1"/></svg>')
+    center/50% no-repeat;
+  opacity: 0;
+  transform: rotate(0deg);
+  transition:
+    opacity var(--duration-base),
+    transform 1s;
+  pointer-events: none;
+}
+
+.scheduleButton:hover::before {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .floating {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  .floating:hover {
+    width: 48px;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  .floating .text {
+    display: none;
+  }
+}
+
+/* Dark theme specific styles */
+:root[data-theme='dark'] .scheduleButton {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent-gold, #fbbf24) 100%
+  );
+  color: var(--color-background);
+}
+
+:root[data-theme='dark'] .scheduleButton:hover {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-dark) 0%,
+    var(--color-accent-bronze, #92400e) 100%
+  );
+}
+
+/* Light theme specific styles */
+:root[data-theme='light'] .scheduleButton {
+  background: var(--color-primary);
+  color: white;
+}
+
+:root[data-theme='light'] .scheduleButton:hover {
+  background: var(--color-primary-dark);
+}

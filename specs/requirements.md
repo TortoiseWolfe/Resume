@@ -33,6 +33,17 @@
 - **F21**: Error states for failed downloads with user-friendly messages
 - **F22**: Hover states for buttons and links with smooth transitions
 
+### Engagement & Conversion Features
+
+- **F23**: Schedule Interview CTA button with Calendly or Google Calendar integration
+- **F24**: Contact form with email notification via third-party service (Formspree)
+- **F25**: Conversion tracking for key actions (downloads, clicks, form submissions)
+- **F26**: UTM parameter support for campaign tracking
+- **F27**: Floating action button (FAB) or prominent header CTA placement
+- **F28**: Form validation with client-side error handling
+- **F29**: Anti-spam measures (honeypot field, reCAPTCHA)
+- **F30**: Success animations and user feedback for form submissions
+
 ## Non-Functional Requirements
 
 ### Performance
@@ -66,9 +77,17 @@
 
 - **NF16**: TypeScript strict mode enabled
 - **NF17**: ESLint and Prettier for code consistency
-- **NF18**: Pre-commit hooks for code quality checks
-- **NF19**: Bundle size monitoring with CI/CD alerts
-- **NF20**: Performance budgets enforced in build pipeline
+
+### Analytics & Tracking
+
+- **NF18**: Google Analytics 4 integration with privacy controls
+- **NF19**: Respect Do Not Track browser settings
+- **NF20**: GDPR/CCPA compliant data collection
+- **NF21**: Conversion funnel tracking and reporting
+- **NF22**: Event tracking for user interactions (downloads, clicks, form submissions)
+- **NF23**: Bundle size monitoring with CI/CD alerts
+- **NF24**: Performance budgets enforced in build pipeline
+- **NF25**: Lighthouse CI integration for performance monitoring
 
 ## SEO & Professional Requirements (Phase 5)
 

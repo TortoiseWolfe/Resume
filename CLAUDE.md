@@ -204,22 +204,68 @@ VITE_CONTACT_PHONE=+1-555-123-4567
 4. ✅ Deploy to GitHub Pages (Live at https://tortoisewolfe.github.io/Resume/)
 5. ✅ Monitor and iterate
 
-### Phase 5: SEO & Privacy-Conscious Enhancement 🚀 IN PROGRESS
+### Phase 5: SEO & Privacy-Conscious Enhancement ✅ COMPLETE
 
 1. ✅ Professional meta tags and title optimization
 2. ✅ Open Graph and Twitter Card meta tags for social sharing
 3. ✅ JSON-LD structured data for better search engine understanding
-4. ⏳ Environment variable configuration (.env for sensitive data)
-5. ⏳ Google Analytics 4 with privacy controls (respecting Do Not Track)
-6. ⏳ Custom favicon and professional branding assets (user will design)
-7. ⏳ Complete resume data update (when all accurate information available)
+4. ✅ Environment variable configuration (.env for sensitive data)
+5. ✅ Google Analytics 4 with privacy controls (respecting Do Not Track)
+6. ✅ Email/phone obfuscation for bot protection
+7. ✅ PWA support with offline functionality
+8. ✅ Print-optimized styles
+9. ✅ Last updated timestamp
+10. ⏳ Custom favicon and professional branding assets (user will design)
+11. ⏳ Complete resume data update (when all accurate information available)
 
-### Phase 6: Privacy, Security & Advanced Features (Priority: Medium)
+### Phase 6: Engagement & Conversion Features ⏳ IN PROGRESS
 
-1. Data privacy strategy (email obfuscation, phone privacy)
-2. Environment configuration (secrets management, build-time injection)
-3. Progressive Web App features (offline support, installable)
-4. Performance monitoring (Web Vitals, Lighthouse CI, RUM)
-5. Contact optimization (spam protection, professional routing)
-6. Version control and update timestamps
-7. Advanced analytics with user consent
+#### High Priority (Current Sprint)
+
+1. ⏳ Schedule Interview CTA button with Calendly integration
+2. ⏳ Conversion tracking setup in GA4 (downloads, clicks, submissions)
+3. ⏳ UTM parameter support for campaign tracking
+
+#### Medium Priority (Next Sprint)
+
+4. ⏳ Contact form with Formspree integration (50 submissions/month free)
+5. ⏳ Success animations and user feedback
+6. ⏳ Conversion funnel dashboard/reporting
+
+#### Low Priority (Future)
+
+7. ⏳ A/B testing for button placement and colors
+8. ⏳ Testimonials/recommendations section
+9. ⏳ Live chat widget integration
+
+## Known Issues & Notes
+
+### Lighthouse CI
+
+- ✅ Already integrated in CI/CD pipeline (deploy.yml lines 47-52)
+- `lighthouserc.json` config exists but needs to be committed
+- Runs performance checks on every push with defined thresholds
+
+### Docker Compose Version
+
+- The `version` attribute warning is only for standard Docker Compose
+- Keeping it for Docker Swarm compatibility (if needed)
+- Can be removed if only using local development
+
+### Node.js Version
+
+- Currently on v20.18.3, Vite recommends 20.19+ or 22.12+
+- Optional upgrade for better Vite compatibility
+- Not blocking deployment or functionality
+
+### Calendly Integration
+
+- Free tier available: unlimited 1-on-1 meetings, 1 event type
+- Alternative: Direct Google Calendar booking links
+- Recommendation: Start with Calendly free tier
+
+### Contact Form Options
+
+- Formspree: 50 submissions/month free, includes reCAPTCHA
+- Un-static Forms: Simple HTML integration
+- Note: GitHub Pages has no backend, requires third-party service

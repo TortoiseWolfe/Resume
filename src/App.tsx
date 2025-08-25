@@ -6,6 +6,7 @@ import { Experience } from './components/Resume/Experience';
 import { Skills } from './components/Resume/Skills';
 import { EducationAndCertifications } from './components/Resume/EducationAndCertifications';
 import { useResumeData } from './hooks/useResumeData';
+import ScheduleButton from './components/ScheduleButton';
 import styles from './App.module.css';
 
 function App() {
@@ -58,6 +59,13 @@ function App() {
             assessments={resumeData.assessments}
           />
         </main>
+
+        {/* Schedule Interview Floating Action Button */}
+        <ScheduleButton
+          calendlyUrl={import.meta.env.VITE_CALENDLY_URL}
+          googleCalendarUrl={import.meta.env.VITE_GOOGLE_CALENDAR_URL}
+          variant="floating"
+        />
       </Layout>
     </ThemeProvider>
   );

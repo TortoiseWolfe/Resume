@@ -69,6 +69,11 @@ A modern, responsive single-page resume built with React and TypeScript, featuri
 
    > 🔒 **Privacy Note:** Your `.env` and `resume.json` files are gitignored and never committed to the repository.
 
+   Key environment variables:
+   - `VITE_CALENDLY_URL`: Your Calendly scheduling link for interview bookings
+   - `VITE_GA4_MEASUREMENT_ID`: Google Analytics tracking (optional)
+   - See `.env.example` for all available options
+
 3. **Start with Docker Compose** (Recommended)
 
    ```bash

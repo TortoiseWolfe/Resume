@@ -3,6 +3,7 @@
 ## Color Palette
 
 ### Light Theme Colors
+
 - **Primary**: #2563eb (Blue 600)
 - **Primary Light**: #3b82f6 (Blue 500)
 - **Primary Dark**: #1d4ed8 (Blue 700)
@@ -16,6 +17,7 @@
 - **Success**: #10b981 (Green 500)
 
 ### Dark Theme Colors (Default) - Steampunk Inspired
+
 - **Primary**: #d97706 (Amber 600) - Copper accent
 - **Primary Light**: #f59e0b (Amber 500) - Bright copper
 - **Primary Dark**: #b45309 (Amber 700) - Dark copper
@@ -34,8 +36,9 @@
 ## CSS Custom Properties
 
 ### Color Variables
+
 ```css
-:root[data-theme="light"] {
+:root[data-theme='light'] {
   --color-primary: #2563eb;
   --color-primary-light: #3b82f6;
   --color-primary-dark: #1d4ed8;
@@ -49,7 +52,7 @@
   --color-success: #10b981;
 }
 
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   --color-primary: #d97706;
   --color-primary-light: #f59e0b;
   --color-primary-dark: #b45309;
@@ -68,47 +71,50 @@
 ```
 
 ### Spacing Variables
+
 ```css
 :root {
   /* Spacing Scale */
-  --space-xs: 0.25rem;   /* 4px */
-  --space-sm: 0.5rem;    /* 8px */
-  --space-md: 1rem;      /* 16px */
-  --space-lg: 1.5rem;    /* 24px */
-  --space-xl: 2rem;      /* 32px */
-  --space-2xl: 3rem;     /* 48px */
-  
+  --space-xs: 0.25rem; /* 4px */
+  --space-sm: 0.5rem; /* 8px */
+  --space-md: 1rem; /* 16px */
+  --space-lg: 1.5rem; /* 24px */
+  --space-xl: 2rem; /* 32px */
+  --space-2xl: 3rem; /* 48px */
+
   /* Steampunk-specific spacing */
-  --space-gear: 0.125rem;  /* 2px - tiny details */
+  --space-gear: 0.125rem; /* 2px - tiny details */
   --space-rivet: 0.375rem; /* 6px - small elements */
-  --space-pipe: 0.75rem;   /* 12px - medium elements */
+  --space-pipe: 0.75rem; /* 12px - medium elements */
 }
 ```
 
 ### Typography Variables
+
 ```css
 :root {
   /* Font Families */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-primary:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Crimson Text', 'Times New Roman', serif;
   --font-mono: 'Courier New', 'Monaco', monospace;
-  
+
   /* Font Sizes - Mobile First */
-  --font-size-xs: 0.75rem;    /* 12px */
-  --font-size-sm: 0.875rem;   /* 14px */
-  --font-size-base: 1rem;     /* 16px */
-  --font-size-lg: 1.125rem;   /* 18px */
-  --font-size-xl: 1.25rem;    /* 20px */
-  --font-size-2xl: 1.5rem;    /* 24px */
-  --font-size-3xl: 1.75rem;   /* 28px */
-  --font-size-4xl: 2rem;      /* 32px */
-  
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.75rem; /* 28px */
+  --font-size-4xl: 2rem; /* 32px */
+
   /* Font Weights */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  
+
   /* Line Heights */
   --line-height-tight: 1.25;
   --line-height-base: 1.5;
@@ -118,13 +124,14 @@
 /* Desktop Font Sizes */
 @media (min-width: 768px) {
   :root {
-    --font-size-3xl: 2.25rem;  /* 36px */
+    --font-size-3xl: 2.25rem; /* 36px */
     --font-size-2xl: 1.875rem; /* 30px */
   }
 }
 ```
 
 ### Animation Variables
+
 ```css
 :root {
   /* Durations */
@@ -134,13 +141,13 @@
   --duration-base: 300ms;
   --duration-slow: 500ms;
   --duration-gear-spin: 1200ms;
-  
+
   /* Easing Functions */
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ease-spring: cubic-bezier(0.5, 1.5, 0.5, 1);
-  
+
   /* Steampunk-specific animations */
   --animation-steam-rise: steam-rise 3s ease-in-out infinite;
   --animation-gear-rotate: gear-rotate var(--duration-gear-spin) linear infinite;
@@ -149,26 +156,27 @@
 ```
 
 ### Layout Variables
+
 ```css
 :root {
   /* Containers */
   --container-max-width: 800px;
   --container-padding: var(--space-md);
-  
+
   /* Borders */
   --border-width: 1px;
   --border-radius-sm: 0.25rem;
   --border-radius-base: 0.5rem;
   --border-radius-lg: 0.75rem;
   --border-radius-full: 9999px;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-steampunk: 0 0 20px rgba(217, 119, 6, 0.3);
-  
+
   /* Z-index Scale */
   --z-base: 0;
   --z-dropdown: 10;
@@ -190,12 +198,14 @@
 ## Typography
 
 ### Font Stack
+
 - **Primary**: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
 - **Steampunk Display**: 'Crimson Text', 'Times New Roman', serif - For typewriter effect
 - **Steampunk Accent**: 'Courier New', 'Monaco', monospace - For mechanical elements
 - **Fallback**: System fonts for maximum compatibility
 
 ### Font Sizes
+
 - **Heading 1**: 2.25rem (36px) - Name
 - **Heading 2**: 1.875rem (30px) - Section headers
 - **Heading 3**: 1.25rem (20px) - Job titles
@@ -206,6 +216,7 @@
 ## Layout
 
 ### Spacing Scale
+
 - **XS**: 0.25rem (4px)
 - **SM**: 0.5rem (8px)
 - **MD**: 1rem (16px)
@@ -214,11 +225,13 @@
 - **2XL**: 3rem (48px)
 
 ### Breakpoints
+
 - **Mobile**: 320px - 767px
 - **Tablet**: 768px - 1023px
 - **Desktop**: 1024px+
 
 ### Grid System
+
 - **Container**: Max-width 800px, centered
 - **Columns**: Single column layout
 - **Gutters**: 1rem mobile, 2rem desktop
@@ -226,12 +239,14 @@
 ## Components
 
 ### Top Controls Bar
+
 - **Position**: Fixed top-right corner
 - **Layout**: Horizontal flex container with gap
 - **Components**: Dark mode toggle + Download button
 - **Z-index**: var(--z-fixed)
 
 #### Dark Mode Toggle
+
 - **Size**: 44px height (touch-friendly)
 - **Style**: Steampunk gear/switch design with copper accents
 - **States**: Dark (default), Light
@@ -241,6 +256,7 @@
 - **Hover**: Scale(1.05) with shadow glow
 
 #### Download Button
+
 - **Size**: 44px height (touch-friendly)
 - **Style**: Primary color with theme-appropriate text
 - **Hover**: Darker primary color with steampunk glow effect
@@ -249,6 +265,7 @@
 - **Disabled**: Opacity 0.5 with cursor not-allowed
 
 ### Section Cards
+
 - **Background**: var(--color-background-alt)
 - **Padding**: 1.5rem
 - **Border Radius**: var(--border-radius-base)
@@ -256,14 +273,42 @@
 - **Hover**: var(--shadow-md) for interactive cards
 
 ### Typography Hierarchy
+
 - **Name**: Large, bold, primary color with typewriter animation (Steampunk Display font)
 - **Title**: Medium, regular weight, secondary color with typewriter animation
 - **Section Headers**: Bold, uppercase, with bottom border
 - **Content**: Regular weight, good line spacing
 
+## Phase 6: Engagement Components
+
+### Schedule Interview Button (CTA)
+
+- **Variants**: Floating (FAB), Header, Inline
+- **FAB Position**: Bottom-right corner, 2rem from edges
+- **Size**: 56px diameter (FAB), 44px height (inline)
+- **Style**: Prominent with steampunk accent colors
+- **Icon**: Calendar or clock gear symbol
+- **Animation**: Pulse effect every 5 seconds to draw attention
+- **Hover**: Expand with "Schedule Interview" text
+- **Mobile**: Fixed bottom position to avoid thumb reach issues
+- **Z-index**: var(--z-fab) above content but below modals
+
+### Contact Form
+
+- **Layout**: Single column, full width on mobile
+- **Fields**: Name, Email, Message (textarea)
+- **Field Style**: Dark theme input with copper border
+- **Validation**: Real-time with error messages below fields
+- **Submit Button**: Primary action button with loading state
+- **Success State**: Green checkmark animation with fade
+- **Error State**: Red border with shake animation
+- **Honeypot**: Hidden field for spam prevention
+- **Typography**: Clear labels with proper spacing
+
 ## Interactive States
 
 ### Focus States
+
 ```css
 .interactive-element:focus-visible {
   outline: 2px solid var(--color-focus);
@@ -273,6 +318,7 @@
 ```
 
 ### Hover States
+
 ```css
 .button:hover {
   transform: translateY(-1px);
@@ -290,6 +336,7 @@
 ```
 
 ### Loading States
+
 ```css
 .loading {
   position: relative;
@@ -313,6 +360,7 @@
 ```
 
 ### Error States
+
 ```css
 .error {
   border-color: var(--color-error);
@@ -329,6 +377,7 @@
 ## Animations
 
 ### Typewriter Effect
+
 - **Target Elements**: Name and title text
 - **Timing**: 50-100ms per character
 - **Cursor**: Blinking pipe character (|) in accent color
@@ -339,10 +388,15 @@
 ### Steampunk Animations
 
 #### Gear Rotation
+
 ```css
 @keyframes gear-rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .gear-icon {
@@ -355,6 +409,7 @@
 ```
 
 #### Steam Rise Effect
+
 ```css
 @keyframes steam-rise {
   0% {
@@ -376,10 +431,17 @@
 ```
 
 #### Typewriter Cursor Blink
+
 ```css
 @keyframes cursor-blink {
-  0%, 49% { opacity: 1; }
-  50%, 100% { opacity: 0; }
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .typewriter-cursor {
@@ -389,16 +451,20 @@
 ```
 
 #### Copper Glow Pulse
+
 ```css
 @keyframes copper-glow {
-  0%, 100% {
-    box-shadow: 0 0 5px var(--color-primary),
-                0 0 10px var(--color-primary-light);
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px var(--color-primary),
+      0 0 10px var(--color-primary-light);
   }
   50% {
-    box-shadow: 0 0 10px var(--color-primary),
-                0 0 20px var(--color-primary-light),
-                0 0 30px var(--color-accent-gold);
+    box-shadow:
+      0 0 10px var(--color-primary),
+      0 0 20px var(--color-primary-light),
+      0 0 30px var(--color-accent-gold);
   }
 }
 
@@ -410,6 +476,7 @@
 ## Accessibility
 
 ### Motion Preferences
+
 ```css
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -419,7 +486,7 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   .typewriter-text {
     animation: none;
   }
@@ -427,12 +494,14 @@
 ```
 
 ### Color Contrast
+
 - All text meets WCAG 2.1 AA standards
 - Primary text: 7:1 contrast ratio minimum
 - Secondary text: 4.5:1 contrast ratio minimum
 - Interactive elements: 3:1 contrast ratio minimum
 
 ### Focus Management
+
 - Visible focus indicators for all interactive elements
 - Logical tab order throughout the document
 - Skip links for keyboard navigation

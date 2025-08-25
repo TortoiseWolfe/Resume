@@ -102,3 +102,98 @@ export const trackScrollDepth = (percentage: number): void => {
     percent_scrolled: percentage,
   });
 };
+
+/**
+ * Track Schedule Interview button clicks
+ */
+export const trackScheduleClick = (
+  variant: 'floating' | 'header' | 'inline'
+): void => {
+  trackEvent('schedule_interview_click', {
+    event_category: 'conversion',
+    event_label: variant,
+    value: 1,
+    conversion_type: 'schedule',
+  });
+};
+
+/**
+ * Track contact form interactions
+ */
+export const trackFormInteraction = (
+  action: 'view' | 'submit' | 'error'
+): void => {
+  trackEvent(`contact_form_${action}`, {
+    event_category: action === 'submit' ? 'conversion' : 'engagement',
+    event_label: action,
+    value: action === 'submit' ? 1 : 0,
+  });
+};
+
+/**
+ * Parse and store UTM parameters
+ */
+interface UTMParams {
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_term?: string;
+  utm_content?: string;
+}
+
+export const parseUTMParams = (): UTMParams => {
+  if (typeof window === 'undefined') return {};
+
+  const params = new URLSearchParams(window.location.search);
+  const utmParams: UTMParams = {};
+
+  const utmKeys: (keyof UTMParams)[] = [
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+    'utm_term',
+    'utm_content',
+  ];
+
+  utmKeys.forEach((key) => {
+    const value = params.get(key);
+    if (value) {
+      utmParams[key] = value;
+    }
+  });
+
+  // Store in session if present
+  if (Object.keys(utmParams).length > 0) {
+    try {
+      sessionStorage.setItem('utm_params', JSON.stringify(utmParams));
+    } catch (error) {
+      console.error('Failed to store UTM params:', error);
+    }
+  }
+
+  return utmParams;
+};
+
+/**
+ * Track page view with UTM parameters
+ */
+export const trackPageViewWithUTM = (): void => {
+  const utmParams = parseUTMParams();
+
+  trackEvent('page_view_with_utm', {
+    event_category: 'navigation',
+    ...utmParams,
+  });
+};
+
+/**
+ * Track conversion funnel step
+ */
+export const trackFunnelStep = (step: string, stepNumber: number): void => {
+  trackEvent('funnel_step', {
+    event_category: 'conversion',
+    event_label: step,
+    funnel_step: stepNumber,
+    value: stepNumber,
+  });
+};

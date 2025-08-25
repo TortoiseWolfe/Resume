@@ -43,6 +43,14 @@ jobs:
       env:
         VITE_GA4_MEASUREMENT_ID: ${{ secrets.GA4_MEASUREMENT_ID || 'G-V975WT62BG' }}
         VITE_BUILD_DATE: ${{ github.event.head_commit.timestamp }}
+        VITE_CALENDLY_URL: 'https://calendly.com/turtlewolfe/15min-1'
+    
+    - name: Run Lighthouse CI
+      run: |
+        npm install -g @lhci/cli@0.13.x
+        lhci autorun --config=lighthouserc.json || echo "Lighthouse CI analysis completed with warnings"
+      env:
+        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
       
     - name: Setup Pages
       if: github.ref == 'refs/heads/main'

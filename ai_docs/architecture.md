@@ -110,6 +110,8 @@ App.tsx
 - **DownloadButton**: PDF/DOCX export with loading state
 - **TypewriterText**: Animated text with cursor
 - **LoadingSpinner**: Steampunk-styled loading indicator
+- **ScheduleButton**: CTA button for Calendly/Calendar integration (Phase 6)
+- **ContactForm**: Email contact form with Formspree integration (Phase 6)
 
 #### Common Components
 
@@ -410,6 +412,62 @@ site.webmanifest      - PWA manifest
 - Device/browser analytics
 - Geographic visitor data
 - Referral source tracking
+- **Schedule Interview button clicks** (Phase 6)
+- **Contact form submissions** (Phase 6)
+- **UTM campaign tracking** (Phase 6)
+- **Conversion funnel analysis** (Phase 6)
+
+## Phase 6: Engagement & Conversion Architecture
+
+### Schedule Interview Integration
+
+```typescript
+interface ScheduleButtonProps {
+  calendlyUrl?: string;
+  googleCalendarUrl?: string;
+  variant: 'floating' | 'header' | 'inline';
+  trackingEvent?: string;
+}
+```
+
+- Floating Action Button (FAB) with steampunk styling
+- GA4 event tracking for conversion monitoring
+- Support for both Calendly (free tier) and Google Calendar
+- Responsive positioning and mobile optimization
+
+### Contact Form Architecture
+
+```typescript
+interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+  honeypot?: string; // Anti-spam field
+}
+```
+
+- Formspree integration (50 submissions/month free)
+- Client-side validation with error states
+- Honeypot field for spam prevention
+- Success/error animations with user feedback
+- GA4 form tracking events
+
+### Conversion Tracking Utilities
+
+```typescript
+// utils/analytics.ts
+interface ConversionEvent {
+  action: 'schedule_click' | 'form_submit' | 'resume_download';
+  category: 'engagement' | 'conversion';
+  label?: string;
+  value?: number;
+}
+```
+
+- Centralized event tracking functions
+- UTM parameter parsing and storage
+- Conversion funnel tracking
+- A/B test support infrastructure
 
 ## Future Considerations
 

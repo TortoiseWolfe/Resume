@@ -4,6 +4,8 @@ import type {
   Links,
 } from '../../types/Resume';
 import { TypewriterText } from '../UI/TypewriterText';
+import { ObfuscatedEmail } from '../UI/ObfuscatedEmail';
+import { ObfuscatedPhone } from '../UI/ObfuscatedPhone';
 import styles from './PersonalInfo.module.css';
 
 interface PersonalInfoProps {
@@ -55,22 +57,18 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
 
           <div className={styles.contactItem}>
             <span className={styles.contactIcon}>📞</span>
-            <a
-              href={`tel:${personalInfo.phone}`}
+            <ObfuscatedPhone
+              phone={personalInfo.phone}
               className={styles.contactLink}
-            >
-              {personalInfo.phone}
-            </a>
+            />
           </div>
 
           <div className={styles.contactItem}>
             <span className={styles.contactIcon}>✉️</span>
-            <a
-              href={`mailto:${personalInfo.email}`}
+            <ObfuscatedEmail
+              email={personalInfo.email}
               className={styles.contactLink}
-            >
-              {personalInfo.email}
-            </a>
+            />
           </div>
         </div>
 

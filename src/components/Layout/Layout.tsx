@@ -9,6 +9,10 @@ interface LayoutProps {
 }
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const buildDate = import.meta.env.VITE_BUILD_DATE
+    ? new Date(import.meta.env.VITE_BUILD_DATE)
+    : new Date();
+
   return (
     <div className={styles.layout}>
       <header className={styles.header}>
@@ -29,7 +33,15 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       <footer className={styles.footer}>
         <div className="container">
           <p className="text-small text-secondary">
-            © 2024 TurtleWolfe. Built with React & TypeScript.
+            © {new Date().getFullYear()} TurtleWolfe. Built with React &
+            TypeScript.
+            {' • '}
+            Last updated:{' '}
+            {buildDate.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
           </p>
         </div>
       </footer>

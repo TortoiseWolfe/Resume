@@ -1,5 +1,6 @@
 /* Main Entry Point for Styles */
 @import './styles/global.css';
+@import './styles/print.css';
 
 /* Apply theme to root */
 #root {

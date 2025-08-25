@@ -43,7 +43,12 @@ jobs:
       env:
         VITE_GA4_MEASUREMENT_ID: ${{ secrets.GA4_MEASUREMENT_ID || 'G-V975WT62BG' }}
         VITE_BUILD_DATE: ${{ github.event.head_commit.timestamp }}
-        VITE_CALENDLY_URL: 'https://calendly.com/turtlewolfe/15min-1'
+        VITE_CALENDLY_URL: ${{ secrets.CALENDLY_URL || 'https://calendly.com/turtlewolfe/15min-1' }}
+        VITE_RESUME_NAME: ${{ secrets.RESUME_NAME || 'TurtleWolfe' }}
+        VITE_RESUME_TITLE: ${{ secrets.RESUME_TITLE || 'FULL STACK DEVELOPER & GRAPHIC DESIGNER' }}
+        VITE_RESUME_EMAIL: ${{ secrets.RESUME_EMAIL || 'contact@example.com' }}
+        VITE_RESUME_PHONE: ${{ secrets.RESUME_PHONE || '+1-555-000-0000' }}
+        VITE_LINKEDIN_URL: ${{ secrets.LINKEDIN_URL || 'https://linkedin.com/in/example' }}
     
     - name: Run Lighthouse CI
       run: |

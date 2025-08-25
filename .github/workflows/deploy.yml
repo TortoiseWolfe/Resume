@@ -49,6 +49,7 @@ jobs:
         VITE_RESUME_EMAIL: ${{ secrets.RESUME_EMAIL || 'contact@example.com' }}
         VITE_RESUME_PHONE: ${{ secrets.RESUME_PHONE || '+1-555-000-0000' }}
         VITE_LINKEDIN_URL: ${{ secrets.LINKEDIN_URL || 'https://linkedin.com/in/example' }}
+        VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.WEB3FORMS_ACCESS_KEY }}
     
     - name: Run Lighthouse CI
       run: |

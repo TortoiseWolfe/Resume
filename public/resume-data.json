@@ -1,14 +1,14 @@
 {
   "personalInfo": {
-    "name": "John Doe",
+    "name": "TurtleWolfe",
     "title": "FULL STACK DEVELOPER & GRAPHIC DESIGNER",
     "location": {
       "city": "Cleveland",
       "state": "TN",
       "zip": "37312"
     },
-    "phone": "(555) 123-4567",
-    "email": "johndoe@example.com",
+    "phone": "+1-555-123-4567",
+    "email": "turtlewolfe@example.com",
     "willingToRelocate": ["Knoxville, TN", "Nashville, TN", "Atlanta, GA"]
   },
   "links": {
@@ -17,8 +17,8 @@
       "https://github.com/TortoiseWolfe",
       "https://github.com/TurtleWolfe"
     ],
-    "linkedin": "https://linkedin.com/in/johndoe",
-    "youtube": "https://youtube.com/@johndoe",
+    "linkedin": "https://linkedin.com/in/turtlewolfe",
+    "youtube": "https://www.youtube.com/@JonathanPohlner",
     "twitch": "https://twitch.tv/turtlewolfe"
   },
   "summary": "The rare mix of left-brain for the technical and right-brain for the visually appealing, with attention to accessibility. Semantic markup for screen readers and visual contrast for the color-blind. Media queries to adjust screen size from mobile, tablet, or desktop. Confident with React and loving TypeScript. Willing to relocate to: Knoxville, TN - Nashville, TN - Atlanta, GA",

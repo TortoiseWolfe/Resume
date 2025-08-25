@@ -12,6 +12,16 @@ export default defineConfig({
       usePolling: true, // Needed for hot reload in Docker
     },
   },
+  build: {
+    // Aggressive cache busting with timestamp
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/[name]-[hash]-${Date.now()}.js`,
+        chunkFileNames: `assets/[name]-[hash]-${Date.now()}.js`,
+        assetFileNames: `assets/[name]-[hash]-${Date.now()}.[ext]`,
+      },
+    },
+  },
   css: {
     modules: {
       localsConvention: 'camelCase',

@@ -7,6 +7,7 @@ import { Skills } from './components/Resume/Skills';
 import { EducationAndCertifications } from './components/Resume/EducationAndCertifications';
 import { useResumeData } from './hooks/useResumeData';
 import ScheduleButton from './components/ScheduleButton';
+import ContactForm from './components/ContactForm';
 import styles from './App.module.css';
 
 function App() {
@@ -58,6 +59,9 @@ function App() {
             certifications={resumeData.certifications}
             assessments={resumeData.assessments}
           />
+
+          {/* Contact Form */}
+          <ContactForm />
         </main>
 
         {/* Schedule Interview Floating Action Button */}

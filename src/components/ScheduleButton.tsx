@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './ScheduleButton.module.css';
 import { trackScheduleClick } from '../utils/analytics';
 
@@ -15,7 +15,39 @@ const ScheduleButton: React.FC<ScheduleButtonProps> = ({
   variant = 'floating',
   className = '',
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isAttentionMode, setIsAttentionMode] = useState(false);
+
+  // Smart triggers for attention mode
+  useEffect(() => {
+    if (variant !== 'floating') return;
+
+    // Trigger after 30 seconds on page
+    const timeoutId = setTimeout(() => {
+      setIsAttentionMode(true);
+      // Turn off attention mode after 10 seconds
+      setTimeout(() => setIsAttentionMode(false), 10000);
+    }, 30000);
+
+    // Trigger on scroll depth (50%)
+    const handleScroll = () => {
+      const scrollPercentage =
+        (window.scrollY /
+          (document.documentElement.scrollHeight - window.innerHeight)) *
+        100;
+
+      if (scrollPercentage > 50 && !isAttentionMode) {
+        setIsAttentionMode(true);
+        setTimeout(() => setIsAttentionMode(false), 10000);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [variant, isAttentionMode]);
 
   // Don't render if no URL is configured
   if (!calendlyUrl && !googleCalendarUrl) {
@@ -37,26 +69,14 @@ const ScheduleButton: React.FC<ScheduleButtonProps> = ({
     }
   };
 
-  const handleMouseEnter = () => {
-    if (variant === 'floating') {
-      setIsExpanded(true);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (variant === 'floating') {
-      setIsExpanded(false);
-    }
-  };
-
-  const buttonClass = `${styles.scheduleButton} ${styles[variant]} ${className}`;
+  const buttonClass = `${styles.scheduleButton} ${styles[variant]} ${
+    isAttentionMode ? styles.attentionMode : ''
+  } ${className}`;
 
   return (
     <button
       className={buttonClass}
       onClick={handleClick}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       aria-label="Schedule an interview"
       title="Schedule an interview"
     >
@@ -74,9 +94,11 @@ const ScheduleButton: React.FC<ScheduleButtonProps> = ({
         <line x1="8" y1="2" x2="8" y2="6"></line>
         <line x1="3" y1="10" x2="21" y2="10"></line>
       </svg>
-      {(variant === 'floating' && isExpanded) || variant !== 'floating' ? (
+      {variant === 'floating' ? (
+        <span className={styles.text}>Book Interview Now!</span>
+      ) : (
         <span className={styles.text}>Schedule Interview</span>
-      ) : null}
+      )}
     </button>
   );
 };

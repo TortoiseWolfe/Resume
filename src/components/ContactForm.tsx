@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { trackFormInteraction } from '../utils/analytics';
 import { Toast } from './UI/Toast';
+import { ScheduleModal } from './UI/ScheduleModal';
 import styles from './ContactForm.module.css';
 
 interface ContactFormProps {
@@ -19,6 +20,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
   >('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [showToast, setShowToast] = useState(false);
+  const [showScheduleModal, setShowScheduleModal] = useState(false);
 
   // Don't render if no access key is configured
   if (!accessKey) {
@@ -56,6 +58,10 @@ const ContactForm: React.FC<ContactFormProps> = ({
         setSubmitStatus('success');
         setShowToast(true);
         form.reset();
+        // Show schedule modal after a brief delay
+        setTimeout(() => {
+          setShowScheduleModal(true);
+        }, 1500);
         // Reset success message after toast disappears
         setTimeout(() => {
           setSubmitStatus('idle');
@@ -243,6 +249,14 @@ const ContactForm: React.FC<ContactFormProps> = ({
       {showToast && submitStatus === 'error' && (
         <Toast message={errorMessage} type="error" onClose={handleCloseToast} />
       )}
+
+      {/* Schedule Modal */}
+      <ScheduleModal
+        isOpen={showScheduleModal}
+        onClose={() => setShowScheduleModal(false)}
+        calendlyUrl={import.meta.env.VITE_CALENDLY_URL}
+        googleCalendarUrl={import.meta.env.VITE_GOOGLE_CALENDAR_URL}
+      />
     </>
   );
 };

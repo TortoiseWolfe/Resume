@@ -9,6 +9,7 @@ import { EducationAndCertifications } from './components/Resume/EducationAndCert
 import { useResumeData } from './hooks/useResumeData';
 import ScheduleButton from './components/ScheduleButton';
 import ContactForm from './components/ContactForm';
+import CTASection from './components/CTASection';
 import { trackPageViewWithUTM } from './utils/analytics';
 import styles from './App.module.css';
 
@@ -69,6 +70,12 @@ function App() {
 
           {/* Contact Form */}
           <ContactForm />
+
+          {/* Call to Action Section */}
+          <CTASection
+            calendlyUrl={import.meta.env.VITE_CALENDLY_URL}
+            googleCalendarUrl={import.meta.env.VITE_GOOGLE_CALENDAR_URL}
+          />
         </main>
 
         {/* Schedule Interview Floating Action Button */}

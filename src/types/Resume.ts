@@ -32,6 +32,10 @@ export interface Experience {
   displayDate: string;
   isCurrent: boolean;
   responsibilities: string[];
+  portfolioLinks?: Array<{
+    name: string;
+    url: string;
+  }>;
 }
 
 export interface YearsExperience {

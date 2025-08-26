@@ -49,11 +49,89 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         </div>
 
         <ul className={styles.responsibilities}>
-          {experience.responsibilities.map((responsibility, index) => (
-            <li key={index} className={styles.responsibility}>
-              {responsibility}
-            </li>
-          ))}
+          {experience.responsibilities
+            .map((responsibility, index, array) => {
+              // Check if this is the portfolio header
+              const isPortfolioHeader = responsibility === 'Portfolio Sites:';
+
+              // Check if previous item was portfolio header
+              const prevIsPortfolioHeader =
+                index > 0 && array[index - 1] === 'Portfolio Sites:';
+
+              // Check if this is a portfolio site line (contains bullet and dash)
+              const isPortfolioItem =
+                responsibility.startsWith('•') &&
+                responsibility.includes(' - ');
+
+              if (isPortfolioHeader) {
+                return (
+                  <li key={index} className={styles.portfolioHeader}>
+                    {responsibility}
+                  </li>
+                );
+              }
+
+              // If we're starting the portfolio section, wrap all portfolio items
+              if (prevIsPortfolioHeader) {
+                // Find all portfolio items
+                const portfolioItems = array
+                  .slice(index)
+                  .filter((r) => r.startsWith('•'));
+
+                return (
+                  <li key={index} className={styles.portfolioCard}>
+                    <ul className={styles.portfolioList}>
+                      {portfolioItems.map((item, idx) => {
+                        const siteName = item
+                          .split(' - ')[0]
+                          .replace('• ', '')
+                          .trim();
+                        const description = item.split(' - ')[1];
+                        const link = experience.portfolioLinks?.find(
+                          (l) => l.name === siteName
+                        );
+
+                        return (
+                          <li key={idx} className={styles.portfolioItem}>
+                            <span className={styles.bullet}>•</span>
+                            {link ? (
+                              <>
+                                <a
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={styles.portfolioLink}
+                                >
+                                  {siteName}
+                                </a>
+                                <span className={styles.portfolioDescription}>
+                                  {' '}
+                                  - {description}
+                                </span>
+                              </>
+                            ) : (
+                              <span>{item.replace('• ', '')}</span>
+                            )}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </li>
+                );
+              }
+
+              // Skip portfolio items as they're handled above
+              if (isPortfolioItem) {
+                return null;
+              }
+
+              return (
+                <li key={index} className={styles.responsibility}>
+                  {responsibility}
+                </li>
+              );
+            })
+            .filter(Boolean)}
         </ul>
       </div>
     </div>

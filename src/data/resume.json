@@ -87,7 +87,40 @@
       "responsibilities": [
         "Designed and developed 20+ custom web applications for small businesses",
         "Increased client conversions by 35% through UX improvements",
-        "Full stack implementation from mockup to deployment"
+        "Full stack implementation from mockup to deployment",
+        "Portfolio Sites:",
+        "• CRUDgames.com - Interactive web-based gaming platform",
+        "• geoLARP.com - Location-based gaming and event management system",
+        "• ScriptHammer.com - Web development services and consulting",
+        "• TantrumArt.com - Digital art gallery and commission portal",
+        "• The House that Code Built - Interactive children's book built with Flask",
+        "• TurtleWolfe.com - Personal portfolio and development blog"
+      ],
+      "portfolioLinks": [
+        {
+          "name": "CRUDgames.com",
+          "url": "https://crudgames.com"
+        },
+        {
+          "name": "geoLARP.com",
+          "url": "https://geolarp.com"
+        },
+        {
+          "name": "ScriptHammer.com",
+          "url": "https://scripthammer.com"
+        },
+        {
+          "name": "TantrumArt.com",
+          "url": "https://tantrumart.com"
+        },
+        {
+          "name": "The House that Code Built",
+          "url": "https://tortoisewolfe.github.io/The_House_that_Code_Built/"
+        },
+        {
+          "name": "TurtleWolfe.com",
+          "url": "https://turtlewolfe.com"
+        }
       ]
     }
   ],
@@ -99,9 +132,9 @@
         "city": "Cleveland",
         "state": "TN"
       },
-      "startDate": "1995-10-01",
+      "startDate": "1998-10-01",
       "endDate": "2018-12-31",
-      "displayDate": "Oct 1995 - Dec 2018",
+      "displayDate": "Oct 1998 - Dec 2018",
       "isCurrent": false,
       "responsibilities": [
         "Visual layout for church directories and promotional materials",
@@ -116,9 +149,9 @@
         "city": "Cleveland",
         "state": "TN"
       },
-      "startDate": "1998-10-01",
+      "startDate": "1995-10-01",
       "endDate": "2017-12-31",
-      "displayDate": "Oct 1998 - Dec 2017",
+      "displayDate": "Oct 1995 - Dec 2017",
       "isCurrent": false,
       "responsibilities": [
         "Traveled to 23 states on short notice for portrait fundraising programs",

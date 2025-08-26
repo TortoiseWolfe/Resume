@@ -24,7 +24,7 @@ describe('ThemeToggle', () => {
     expect(button).toHaveAttribute('aria-label');
   });
 
-  it('should start with dark theme by default', () => {
+  it('should start with light theme by default', () => {
     render(
       <TestWrapper>
         <ThemeToggle />
@@ -32,7 +32,7 @@ describe('ThemeToggle', () => {
     );
 
     const button = screen.getByRole('button');
-    expect(button).toHaveAttribute('aria-label', 'Switch to light mode');
+    expect(button).toHaveAttribute('aria-label', 'Switch to dark mode');
   });
 
   it('should toggle theme when clicked', () => {
@@ -44,16 +44,16 @@ describe('ThemeToggle', () => {
 
     const button = screen.getByRole('button');
 
-    // Initially dark mode
-    expect(button).toHaveAttribute('aria-label', 'Switch to light mode');
-
-    // Click to toggle to light mode
-    fireEvent.click(button);
+    // Initially light mode
     expect(button).toHaveAttribute('aria-label', 'Switch to dark mode');
 
-    // Click to toggle back to dark mode
+    // Click to toggle to dark mode
     fireEvent.click(button);
     expect(button).toHaveAttribute('aria-label', 'Switch to light mode');
+
+    // Click to toggle back to light mode
+    fireEvent.click(button);
+    expect(button).toHaveAttribute('aria-label', 'Switch to dark mode');
   });
 
   it('should show gear icon in dark mode and sun icon in light mode', () => {
@@ -65,14 +65,14 @@ describe('ThemeToggle', () => {
 
     const button = screen.getByRole('button');
 
-    // In dark mode, should show gear icon (has gear class)
-    expect(button.querySelector('[class*="gear"]')).toBeInTheDocument();
-
-    // Toggle to light mode
-    fireEvent.click(button);
-
     // In light mode, should not show gear icon
     expect(button.querySelector('[class*="gear"]')).not.toBeInTheDocument();
+
+    // Toggle to dark mode
+    fireEvent.click(button);
+
+    // In dark mode, should show gear icon (has gear class)
+    expect(button.querySelector('[class*="gear"]')).toBeInTheDocument();
   });
 
   it('should update document theme attribute', () => {
@@ -84,15 +84,15 @@ describe('ThemeToggle', () => {
 
     const button = screen.getByRole('button');
 
-    // Should start with dark theme
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
-
-    // Toggle to light
-    fireEvent.click(button);
+    // Should start with light theme
     expect(document.documentElement.getAttribute('data-theme')).toBe('light');
 
-    // Toggle back to dark
+    // Toggle to dark
     fireEvent.click(button);
     expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
+
+    // Toggle back to light
+    fireEvent.click(button);
+    expect(document.documentElement.getAttribute('data-theme')).toBe('light');
   });
 });

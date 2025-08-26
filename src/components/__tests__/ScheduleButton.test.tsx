@@ -142,20 +142,12 @@ describe('ScheduleButton', () => {
         calendlyUrl="https://calendly.com/test/meeting"
       />
     );
-    const button = screen.getByRole('button', {
+    screen.getByRole('button', {
       name: /schedule an interview/i,
     });
 
-    // Initially no text visible
-    expect(screen.queryByText('Schedule Interview')).not.toBeInTheDocument();
-
-    // Hover shows text
-    fireEvent.mouseEnter(button);
-    expect(screen.getByText('Schedule Interview')).toBeInTheDocument();
-
-    // Leave hides text
-    fireEvent.mouseLeave(button);
-    expect(screen.queryByText('Schedule Interview')).not.toBeInTheDocument();
+    // Text is always visible for floating variant (design change)
+    expect(screen.getByText('Book Interview Now!')).toBeInTheDocument();
   });
 
   it('applies custom className', () => {

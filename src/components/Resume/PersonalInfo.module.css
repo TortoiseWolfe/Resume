@@ -1,21 +1,46 @@
 .personalInfo {
   text-align: center;
   margin-bottom: var(--space-2xl);
-  padding: var(--space-2xl) 0;
-  border-bottom: 2px solid var(--color-primary);
+  padding: var(--space-2xl) var(--space-xl);
+  border: 6px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
   position: relative;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      var(--color-stain-1) 2px,
+      var(--color-stain-1) 4px
+    ),
+    linear-gradient(
+      135deg,
+      var(--color-background-alt) 0%,
+      var(--color-background) 100%
+    );
+  box-shadow: var(--shadow-steampunk), var(--shadow-paper), var(--shadow-inset);
+}
+
+/* Corner gears decoration */
+.personalInfo::before,
+.personalInfo::after {
+  content: '⚙';
+  position: absolute;
+  font-size: 3rem;
+  color: var(--color-primary);
+  opacity: 0.3;
+}
+
+.personalInfo::before {
+  top: 20px;
+  left: 20px;
+  animation: gear-rotate 8s linear infinite;
 }
 
 .personalInfo::after {
-  content: '⚙️';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--color-background);
-  padding: 0 var(--space-md);
-  font-size: var(--font-size-lg);
-  animation: gear-rotate var(--duration-gear-spin) linear infinite;
+  bottom: 20px;
+  right: 20px;
+  animation: gear-rotate-reverse 10s linear infinite;
 }
 
 .nameSection {
@@ -23,21 +48,61 @@
 }
 
 .name {
-  font-size: var(--font-size-4xl);
+  font-size: 3.5rem;
   font-family: var(--font-display);
-  color: var(--color-primary);
+  color: var(--color-text-primary);
   margin-bottom: var(--space-sm);
   font-weight: var(--font-weight-bold);
-  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-shadow:
+    5px 5px 10px rgba(0, 0, 0, 0.3),
+    0 0 50px var(--color-primary-light);
+  position: relative;
 }
 
 .title {
   font-size: var(--font-size-xl);
+  font-family: var(--font-display);
   color: var(--color-text-secondary);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin: 0;
+  letter-spacing: 0.15em;
+  margin: var(--space-lg) 0;
+  padding: var(--space-md) 0;
+  position: relative;
+}
+
+/* Decorative divider with gear */
+.title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-primary) 30%,
+    var(--color-primary-light) 50%,
+    var(--color-primary) 70%,
+    transparent
+  );
+}
+
+.title::after {
+  content: '⚙';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  background: transparent;
+  padding: 0 var(--space-sm);
+  animation: gear-rotate 12s linear infinite;
 }
 
 .contactInfo {
@@ -49,10 +114,10 @@
 
 .contactGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
   width: 100%;
-  max-width: 600px;
+  max-width: 900px;
 }
 
 .contactItem {
@@ -60,11 +125,34 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  padding: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
   background-color: var(--color-background-alt);
   border-radius: var(--border-radius-base);
-  border: 1px solid var(--color-border);
+  border: 3px solid var(--color-border);
   transition: all var(--duration-base) var(--ease-out);
+  position: relative;
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  box-shadow: var(--shadow-paper);
+}
+
+.contactItem::before,
+.contactItem::after {
+  content: '◆';
+  position: absolute;
+  color: var(--color-primary);
+  opacity: 0.6;
+  font-size: 0.75rem;
+}
+
+.contactItem::before {
+  left: 8px;
+}
+
+.contactItem::after {
+  right: 8px;
 }
 
 .contactItem:hover {
@@ -74,25 +162,39 @@
 }
 
 .contactIcon {
-  font-size: var(--font-size-lg);
-  filter: sepia(1) hue-rotate(30deg) saturate(1.5);
+  font-size: 1.5rem;
+  color: var(--color-primary);
 }
 
 .contactText {
-  font-size: var(--font-size-sm);
+  font-size: 1.25rem;
   color: var(--color-text-primary);
+  font-weight: var(--font-weight-bold);
 }
 
 .contactLink {
-  font-size: var(--font-size-sm);
-  color: var(--color-primary);
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
   text-decoration: none;
+  font-weight: var(--font-weight-bold);
   transition: color var(--duration-fast) var(--ease-out);
 }
 
 .contactLink:hover {
   color: var(--color-primary-light);
   text-decoration: underline;
+}
+
+.contactColumn {
+  flex: 1;
+}
+
+.socialColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: center;
 }
 
 .socialLinks {
@@ -173,16 +275,27 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
+    gap: var(--space-xl);
+  }
+
+  .contactColumn {
+    flex: 1.5;
+  }
+
+  .socialColumn {
+    flex: 1;
+    align-items: flex-end;
   }
 
   .contactGrid {
-    flex: 1;
     max-width: none;
   }
 
   .socialLinks {
-    flex: 1;
     justify-content: flex-end;
+  }
+
+  .relocation {
+    max-width: 300px;
   }
 }

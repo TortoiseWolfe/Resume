@@ -1,13 +1,18 @@
 .typewriter {
   font-family: var(--font-display);
   display: inline-block;
+  position: relative;
 }
 
 .cursor {
-  color: var(--color-accent-gold);
+  display: inline-block;
+  width: 4px;
+  height: 1.2em;
+  background: var(--color-primary);
   animation: cursor-blink 1s step-end infinite;
-  font-weight: normal;
-  margin-left: 2px;
+  margin-left: 4px;
+  vertical-align: text-bottom;
+  box-shadow: 0 0 10px var(--color-primary-light);
 }
 
 @keyframes cursor-blink {

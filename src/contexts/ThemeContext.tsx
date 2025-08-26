@@ -8,7 +8,7 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>('dark'); // Default to dark theme
+  const [theme, setTheme] = useState<Theme>('light'); // Default to light theme
   const [systemPreference, setSystemPreference] = useState<Theme | null>(null);
 
   // Check for saved theme preference or default to dark
@@ -23,8 +23,8 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     if (savedTheme) {
       setTheme(savedTheme);
     } else {
-      // Default to dark theme (steampunk)
-      setTheme('dark');
+      // Default to light theme (aged paper aesthetic)
+      setTheme('light');
     }
   }, []);
 

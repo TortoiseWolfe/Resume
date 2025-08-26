@@ -8,20 +8,20 @@
   margin-bottom: var(--space-xl);
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   border-bottom: 2px solid var(--color-primary);
   padding-bottom: var(--space-sm);
   position: relative;
+  padding-right: 3rem;
 }
 
 .sectionTitle::after {
-  content: '🔧';
+  content: ' 🔧';
   position: absolute;
+  right: -80px;
   top: 50%;
-  right: 0;
   transform: translateY(-50%);
-  background-color: var(--color-background);
-  padding: 0 var(--space-sm);
+  font-size: var(--font-size-2xl);
 }
 
 .experienceList {

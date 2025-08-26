@@ -4,16 +4,26 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: var(--color-primary);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  );
   color: var(--color-background);
-  border: none;
+  border: 3px solid var(--color-primary-dark);
   border-radius: var(--border-radius-base);
   font-size: 1rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   cursor: pointer;
   transition: all var(--duration-base) var(--ease-out);
   position: relative;
   overflow: hidden;
+  box-shadow:
+    var(--shadow-steampunk),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .scheduleButton:hover {

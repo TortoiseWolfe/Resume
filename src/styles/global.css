@@ -21,11 +21,73 @@ body {
   line-height: var(--line-height-base);
   color: var(--color-text-primary);
   background-color: var(--color-background);
+  position: relative;
   transition:
     background-color var(--duration-base) var(--ease-in-out),
     color var(--duration-base) var(--ease-in-out);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Aged Paper Background Texture */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      var(--color-stain-1) 2px,
+      var(--color-stain-1) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      var(--color-stain-2) 2px,
+      var(--color-stain-2) 4px
+    );
+  z-index: 1;
+}
+
+/* Paper Stains Overlay */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      var(--color-stain-1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      var(--color-stain-2) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      var(--color-paper-overlay, transparent) 0%,
+      transparent 50%
+    );
+  z-index: 1;
+}
+
+#root {
+  position: relative;
+  z-index: 2;
 }
 
 /* Container */
@@ -36,35 +98,59 @@ body {
   padding: 0 var(--container-padding);
 }
 
-/* Typography */
+/* Typography - Vintage Typewriter Style */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-display);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--color-text-primary);
+  text-shadow: var(--shadow-text, 2px 2px 0px rgba(0, 0, 0, 0.4));
+  letter-spacing: 0.08em;
 }
 
 h1 {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-4xl);
   font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow:
+    3px 3px 6px rgba(0, 0, 0, 0.3),
+    0 0 30px var(--color-primary-light);
 }
 
 h2 {
   font-size: var(--font-size-2xl);
   margin-bottom: var(--space-lg);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-bottom: 2px solid var(--color-primary);
+  letter-spacing: 0.1em;
+  border-bottom: 3px solid var(--color-primary);
   padding-bottom: var(--space-sm);
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Decorative line with gear */
+h2::after {
+  content: '⚙';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  background: transparent;
+  padding: 0 var(--space-sm);
 }
 
 h3 {
   font-size: var(--font-size-xl);
   margin-bottom: var(--space-md);
+  letter-spacing: 0.05em;
 }
 
 p {
@@ -114,12 +200,17 @@ button {
   background-color: var(--color-primary);
   color: white;
   transition: all var(--duration-base) var(--ease-out);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 .button:hover {
   background-color: var(--color-primary-dark);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 15px rgba(0, 0, 0, 0.2),
+    0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .button:active {
@@ -132,19 +223,47 @@ button {
   pointer-events: none;
 }
 
-/* Card Component */
+/* Card Component - Vintage Paper Style */
 .card {
-  background-color: var(--color-background-alt);
-  border: 1px solid var(--color-border);
+  background: linear-gradient(
+    135deg,
+    var(--color-background-alt) 0%,
+    var(--color-background) 100%
+  );
+  border: 3px solid var(--color-border);
   border-radius: var(--border-radius-base);
   padding: var(--space-lg);
   margin-bottom: var(--space-lg);
-  box-shadow: var(--shadow-base);
-  transition: box-shadow var(--duration-base) var(--ease-out);
+  box-shadow: var(--shadow-steampunk), var(--shadow-paper), var(--shadow-inset);
+  position: relative;
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    var(--color-stain-1) 2px,
+    var(--color-stain-1) 4px
+  );
+  opacity: 0.02;
+  border-radius: var(--border-radius-base);
+  pointer-events: none;
 }
 
 .card:hover {
-  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  box-shadow:
+    var(--shadow-steampunk),
+    0 25px 70px rgba(0, 0, 0, 0.6),
+    var(--shadow-inset);
 }
 
 /* Utility Classes */
@@ -212,6 +331,15 @@ button {
   }
 }
 
+@keyframes gear-rotate-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
 @keyframes cursor-blink {
   0%,
   49% {
@@ -220,6 +348,25 @@ button {
   50%,
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes paper-flutter {
+  0%,
+  100% {
+    transform: perspective(1000px) rotateX(0deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(2deg);
   }
 }
 

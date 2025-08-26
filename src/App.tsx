@@ -58,7 +58,10 @@ function App() {
 
           <Summary summary={resumeData.summary} />
 
-          <Experience experiences={resumeData.experience} />
+          <Experience
+            experiences={resumeData.experience}
+            previousExperiences={resumeData.previousExperience}
+          />
 
           <Skills skills={resumeData.skills} />
 

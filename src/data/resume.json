@@ -21,7 +21,7 @@
     "youtube": "https://www.youtube.com/@JonathanPohlner",
     "twitch": "https://twitch.tv/turtlewolfe"
   },
-  "summary": "The rare mix of left-brain for the technical and right-brain for the visually appealing, with attention to accessibility. Semantic markup for screen readers and visual contrast for the color-blind. Media queries to adjust screen size from mobile, tablet, or desktop. Confident with React and loving TypeScript. Willing to relocate to: Knoxville, TN - Nashville, TN - Atlanta, GA",
+  "summary": "The rare mix of left-brain for the technical and right-brain for the visually appealing, with attention to accessibility. Semantic markup for screen readers and visual contrast for the color-blind. Media queries to adjust screen size from mobile, tablet, or desktop. Confident with React and loving TypeScript.",
   "experience": [
     {
       "title": "SOFTWARE DEVELOPER",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "title": "JUNIOR DEVELOPER INTERN",
+      "title": "SOFTWARE ENGINEERING INTERN",
       "company": "TechJoy Software",
       "location": {
         "city": null,
@@ -51,7 +51,8 @@
       "displayDate": "Jan 2022 - Present",
       "isCurrent": true,
       "responsibilities": [
-        "Developing features in React/TypeScript for production applications",
+        "Collaborating on React/TypeScript applications through code reviews and pull requests",
+        "Contributing to team development workflow with git branching and merge requests",
         "Creating responsive UI components and implementing API integrations"
       ]
     },
@@ -74,7 +75,7 @@
     },
     {
       "title": "FULL STACK WEB DEVELOPER",
-      "company": "ScriptHammer.com",
+      "company": "ScriptHammer.com (Side Project)",
       "location": {
         "city": "Cleveland",
         "state": "TN"
@@ -88,7 +89,9 @@
         "Increased client conversions by 35% through UX improvements",
         "Full stack implementation from mockup to deployment"
       ]
-    },
+    }
+  ],
+  "previousExperience": [
     {
       "title": "LEAD GRAPHIC DESIGNER",
       "company": "Creative Touch",

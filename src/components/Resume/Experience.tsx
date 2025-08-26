@@ -4,6 +4,7 @@ import styles from './Experience.module.css';
 
 interface ExperienceProps {
   experiences: ExperienceType[];
+  previousExperiences?: ExperienceType[];
 }
 
 interface ExperienceItemProps {
@@ -59,19 +60,39 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   );
 };
 
-export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
+export const Experience: React.FC<ExperienceProps> = ({
+  experiences,
+  previousExperiences,
+}) => {
   return (
-    <section id="experience" className={styles.experience}>
-      <h2 className={styles.sectionTitle}>Professional Experience</h2>
-      <div className={styles.experienceList}>
-        {experiences.map((experience, index) => (
-          <ExperienceItem
-            key={`${experience.company}-${experience.startDate}`}
-            experience={experience}
-            isLast={index === experiences.length - 1}
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      <section id="experience" className={styles.experience}>
+        <h2 className={styles.sectionTitle}>Professional Experience</h2>
+        <div className={styles.experienceList}>
+          {experiences.map((experience, index) => (
+            <ExperienceItem
+              key={`${experience.company}-${experience.startDate}`}
+              experience={experience}
+              isLast={index === experiences.length - 1}
+            />
+          ))}
+        </div>
+      </section>
+
+      {previousExperiences && previousExperiences.length > 0 && (
+        <section id="previous-experience" className={styles.experience}>
+          <h2 className={styles.sectionTitle}>Previous Experience</h2>
+          <div className={styles.experienceList}>
+            {previousExperiences.map((experience, index) => (
+              <ExperienceItem
+                key={`${experience.company}-${experience.startDate}`}
+                experience={experience}
+                isLast={index === previousExperiences.length - 1}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+    </>
   );
 };

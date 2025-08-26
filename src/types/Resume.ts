@@ -87,6 +87,7 @@ export interface ResumeData {
   links: Links;
   summary: string;
   experience: Experience[];
+  previousExperience?: Experience[];
   skills: Skills;
   education: Education[];
   certifications: Certification[];

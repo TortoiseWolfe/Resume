@@ -11,7 +11,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>('light'); // Default to light theme
   const [systemPreference, setSystemPreference] = useState<Theme | null>(null);
 
-  // Check for saved theme preference or default to dark
+  // Check for saved theme preference or default to light
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as Theme | null;
     const prefersDark = window.matchMedia(

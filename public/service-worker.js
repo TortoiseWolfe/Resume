@@ -1,5 +1,5 @@
 // Service Worker for PWA functionality
-const CACHE_NAME = 'resume-v1.1.0';
+const CACHE_NAME = 'resume-v1.2.0';
 const urlsToCache = [
   '/Resume/',
   '/Resume/manifest.json',

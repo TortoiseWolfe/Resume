@@ -12,11 +12,12 @@ export interface PersonalInfo {
   location: Location;
   phone: string;
   email: string;
-  willingToRelocate: string[];
+  willingToRelocate?: string[];
 }
 
 export interface Links {
   portfolio: string;
+  spokeToWork?: string;
   github: string[];
   linkedin: string;
   youtube?: string;
@@ -48,12 +49,11 @@ export interface SkillCategory {
 }
 
 export interface Skills {
+  languages: SkillCategory;
   frontend: SkillCategory;
   backend: SkillCategory;
-  database: SkillCategory;
+  cadAnd3d: SkillCategory;
   tools: SkillCategory;
-  design: SkillCategory;
-  cms: SkillCategory;
 }
 
 export interface Education {
@@ -86,6 +86,13 @@ export interface Assessments {
   indeed: Assessment[];
 }
 
+export interface KeyProject {
+  name: string;
+  technologies: string[];
+  description: string;
+  url: string;
+}
+
 export interface ResumeData {
   personalInfo: PersonalInfo;
   links: Links;
@@ -96,6 +103,7 @@ export interface ResumeData {
   education: Education[];
   certifications: Certification[];
   assessments?: Assessments;
+  keyProjects?: KeyProject[];
 }
 
 // Helper types for component props

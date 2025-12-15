@@ -1,18 +1,18 @@
 {
   "personalInfo": {
-    "name": "TurtleWolfe",
-    "title": "FULL STACK DEVELOPER & GRAPHIC DESIGNER",
+    "name": "Jonathan Pohlner",
+    "title": "Full Stack Developer | C# • React • TypeScript • 3D Modeling",
     "location": {
       "city": "Cleveland",
       "state": "TN",
       "zip": "37312"
     },
     "phone": "+1-555-123-4567",
-    "email": "turtlewolfe@example.com",
-    "willingToRelocate": ["Knoxville, TN", "Nashville, TN", "Atlanta, GA"]
+    "email": "turtlewolfe@example.com"
   },
   "links": {
     "portfolio": "https://TurtleWolfe.com",
+    "spokeToWork": "https://spoketowork.com",
     "github": [
       "https://github.com/TortoiseWolfe",
       "https://github.com/TurtleWolfe"
@@ -21,7 +21,7 @@
     "youtube": "https://www.youtube.com/@JonathanPohlner",
     "twitch": "https://twitch.tv/turtlewolfe"
   },
-  "summary": "The rare mix of left-brain for the technical and right-brain for the visually appealing, with attention to accessibility. Semantic markup for screen readers and visual contrast for the color-blind. Media queries to adjust screen size from mobile, tablet, or desktop. Confident with React and loving TypeScript.",
+  "summary": "Software developer with 2.5 years of production C# experience building Revit automation plugins and 4+ years developing web applications in React and React Native. Background in 3D modeling (Blender, 3D Studio Max, SketchUp) and CAD (AutoCAD, Revit) informs approach to translating design workflows into technical solutions. Developed plugins used daily by 12+ drafters, reducing dimensioning tasks from minutes to milliseconds. Maintains 166+ GitHub repositories including full stack templates with 93 components and 680+ tests.",
   "experience": [
     {
       "title": "SOFTWARE DEVELOPER",
@@ -35,15 +35,17 @@
       "displayDate": "Mar 2022 - Sep 2024",
       "isCurrent": false,
       "responsibilities": [
-        "Developed C# plugins for Revit, improving workflow efficiency by 30%",
-        "Implemented automated testing reducing bug reports by 40%"
+        "Built 5+ C# Revit plugins automating wall dimensioning, reducing manual tasks to milliseconds",
+        "Deployed automation tools used daily by 12+ drafters, translating design pain points into solutions",
+        "Wrote 20+ automated test cases validating plugin functionality across multiple Revit versions",
+        "Collaborated with drafting team to identify workflow bottlenecks and prioritize feature development"
       ]
     },
     {
       "title": "SOFTWARE ENGINEERING INTERN",
       "company": "TechJoy Software",
       "location": {
-        "city": null,
+        "city": "Remote",
         "state": null
       },
       "startDate": "2022-01-01",
@@ -51,31 +53,29 @@
       "displayDate": "Jan 2022 - Present",
       "isCurrent": true,
       "responsibilities": [
-        "Collaborating on React/TypeScript applications through code reviews and pull requests",
-        "Contributing to team development workflow with git branching and merge requests",
-        "Creating responsive UI components and implementing API integrations"
+        "Built 50+ responsive UI components in React and TypeScript for client web applications",
+        "Integrated RESTful APIs and participated in weekly code reviews following agile methodology"
       ]
     },
     {
       "title": "LEAD DEVELOPER",
-      "company": "Collective Minds Incorporated",
+      "company": "Collective Minds Inc",
       "location": {
-        "city": null,
+        "city": "Remote",
         "state": null
       },
       "startDate": "2021-01-01",
       "endDate": "2021-03-31",
-      "displayDate": "Jan 2021 - Mar 2021",
+      "displayDate": "Jan - Mar 2021",
       "isCurrent": false,
       "responsibilities": [
-        "Lead React/React Native development serving 5,000+ users",
-        "Architected RESTful APIs using Node.js and Express",
-        "Reduced application load time by 50% through optimization"
+        "Developed 10+ cross-platform mobile screens using React Native with Firebase backend",
+        "Led technical planning and coordinated deliverables across a 4-person distributed team"
       ]
     },
     {
-      "title": "FULL STACK WEB DEVELOPER",
-      "company": "ScriptHammer.com (Side Project)",
+      "title": "FREELANCE WEB DEVELOPER",
+      "company": "ScriptHammer.com",
       "location": {
         "city": "Cleveland",
         "state": "TN"
@@ -85,37 +85,18 @@
       "displayDate": "Aug 2011 - Present",
       "isCurrent": true,
       "responsibilities": [
-        "Designed and developed 20+ custom web applications for small businesses",
-        "Increased client conversions by 35% through UX improvements",
-        "Full stack implementation from mockup to deployment",
-        "Portfolio Sites:",
-        "• CRUDgames.com - Interactive web-based gaming platform",
-        "• geoLARP.com - Location-based gaming and event management system",
-        "• ScriptHammer.com - Web development services and consulting",
-        "• TantrumArt.com - Digital art gallery and commission portal",
-        "• The House that Code Built - Interactive children's book built with Flask",
-        "• TurtleWolfe.com - Personal portfolio and development blog"
+        "Built Next.js starter template with 35+ features, 93 Storybook components, and 680+ tests",
+        "Containerized development environments using Docker across 166+ GitHub repositories",
+        "Built WCAG-compliant Next.js template with PWA support, 32 themes, and colorblind accessibility modes"
       ],
       "portfolioLinks": [
         {
-          "name": "CRUDgames.com",
-          "url": "https://crudgames.com"
-        },
-        {
-          "name": "geoLARP.com",
-          "url": "https://geolarp.com"
+          "name": "SpokeToWork",
+          "url": "https://spoketowork.com"
         },
         {
           "name": "ScriptHammer.com",
           "url": "https://scripthammer.com"
-        },
-        {
-          "name": "TantrumArt.com",
-          "url": "https://tantrumart.com"
-        },
-        {
-          "name": "The House that Code Built",
-          "url": "https://tortoisewolfe.github.io/The_House_that_Code_Built/"
         },
         {
           "name": "TurtleWolfe.com",
@@ -161,111 +142,114 @@
     }
   ],
   "skills": {
+    "languages": {
+      "technologies": [
+        "C#",
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "Python",
+        "PHP",
+        "HTML5",
+        "CSS3"
+      ],
+      "yearsExperience": {
+        "C#": 3,
+        "JavaScript (ES6+)": 8,
+        "TypeScript": 4,
+        "Python": 2,
+        "PHP": 6,
+        "HTML5": 10,
+        "CSS3": 10
+      }
+    },
     "frontend": {
       "technologies": [
         "React",
         "React Native",
-        "TypeScript",
-        "JavaScript ES6+",
-        "HTML5",
-        "CSS3",
-        "Bootstrap",
-        "Tailwind",
-        "jQuery"
+        "Next.js",
+        "Tailwind CSS",
+        "Storybook"
       ],
       "yearsExperience": {
         "React": 4,
-        "TypeScript": 1,
-        "React Native": 1,
-        "JavaScript": 8,
-        "HTML5": 10,
-        "CSS3": 10
+        "React Native": 2,
+        "Next.js": 2,
+        "Tailwind CSS": 2,
+        "Storybook": 1
       }
     },
     "backend": {
       "technologies": [
         "Node.js",
         "Express",
-        "C#",
-        "PHP",
         "RESTful APIs",
-        "GraphQL"
+        "Firebase",
+        "MongoDB",
+        "PostgreSQL"
       ],
       "yearsExperience": {
         "Node.js": 5,
         "Express": 5,
-        "C#": 2,
-        "PHP": 6,
-        "RESTful APIs": 5
+        "RESTful APIs": 5,
+        "Firebase": 2,
+        "MongoDB": 3,
+        "PostgreSQL": 2
       }
     },
-    "database": {
+    "cadAnd3d": {
       "technologies": [
-        "MongoDB",
-        "MySQL",
-        "PostgreSQL",
-        "Firebase",
-        "Microsoft Access"
+        "Revit API",
+        "AutoCAD",
+        "Blender",
+        "3D Studio Max",
+        "SketchUp",
+        "Dynamo"
       ],
       "yearsExperience": {
-        "MongoDB": 3,
-        "MySQL": 5,
-        "PostgreSQL": 2,
-        "Firebase": 2
+        "Revit API": 3,
+        "AutoCAD": 5,
+        "Blender": 3,
+        "3D Studio Max": 2,
+        "SketchUp": 4,
+        "Dynamo": 2
       }
     },
     "tools": {
       "technologies": [
         "Git",
-        "GitHub",
         "Docker",
         "AWS",
-        "Linux",
-        "Webpack",
         "Jest",
-        "Agile/Scrum"
+        "Playwright",
+        "CI/CD",
+        "Linux",
+        "Adobe Photoshop"
       ],
       "yearsExperience": {
         "Git": 6,
-        "GitHub": 6,
         "Docker": 2,
+        "AWS": 2,
+        "Jest": 2,
+        "Playwright": 1,
+        "CI/CD": 3,
         "Linux": 4,
-        "Webpack": 3,
-        "Jest": 2
-      }
-    },
-    "design": {
-      "technologies": ["Adobe Photoshop", "GIMP", "Typography", "Wireframing"],
-      "yearsExperience": {
-        "Adobe Photoshop": 10,
-        "GIMP": 3,
-        "Typography": 15,
-        "Wireframing": 5
-      }
-    },
-    "cms": {
-      "technologies": ["WordPress", "Drupal", "Joomla", "CodeIgniter"],
-      "yearsExperience": {
-        "WordPress": 2,
-        "Drupal": 1,
-        "Joomla": 1,
-        "CodeIgniter": 2
+        "Adobe Photoshop": 10
       }
     }
   },
   "education": [
     {
       "institution": "JOY OF CODING ACADEMY",
-      "degree": "Software Development Bootcamp",
+      "degree": "Python Programming & Software Engineering",
       "startDate": "2024-01-01",
       "endDate": null,
-      "displayDate": "Enrolled 2024",
+      "displayDate": "2024",
       "isCurrent": true,
       "gpa": null
     },
     {
       "institution": "CLEVELAND STATE COMMUNITY COLLEGE",
-      "degree": "Certificate in Computer Aided Drafting (CAD)",
+      "degree": "Computer Aided Drafting (CAD) Certificate",
       "startDate": "1995-08-01",
       "endDate": "1996-05-31",
       "displayDate": "1996",
@@ -348,5 +332,31 @@
         "date": null
       }
     ]
-  }
+  },
+  "keyProjects": [
+    {
+      "name": "SpokeToWork",
+      "technologies": ["Next.js 15", "React 19", "TypeScript", "PWA"],
+      "description": "Built PWA for in-person job hunting with bike route optimization, 98/100 Lighthouse accessibility",
+      "url": "https://spoketowork.com"
+    },
+    {
+      "name": "ScriptHammer Template",
+      "technologies": ["Next.js", "Docker", "Storybook", "CI/CD"],
+      "description": "Created full stack starter with 32 themes, WCAG AA accessibility, automated GitHub Actions",
+      "url": "https://scripthammer.com"
+    },
+    {
+      "name": "Interactive Resume",
+      "technologies": ["React", "TypeScript"],
+      "description": "Built interactive portfolio showcasing projects with dynamic navigation and smooth animations",
+      "url": "https://tortoisewolfe.github.io/Resume/"
+    },
+    {
+      "name": "The House that Code Built",
+      "technologies": ["React", "Educational Design"],
+      "description": "Developed interactive learning tool teaching web development through construction metaphors",
+      "url": "https://tortoisewolfe.github.io/The_House_that_Code_Built/"
+    }
+  ]
 }

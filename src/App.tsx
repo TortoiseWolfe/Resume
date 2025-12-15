@@ -5,6 +5,7 @@ import { PersonalInfo } from './components/Resume/PersonalInfo';
 import { Summary } from './components/Resume/Summary';
 import { Experience } from './components/Resume/Experience';
 import { Skills } from './components/Resume/Skills';
+import { KeyProjects } from './components/Resume/KeyProjects';
 import { EducationAndCertifications } from './components/Resume/EducationAndCertifications';
 import { useResumeData } from './hooks/useResumeData';
 import ScheduleButton from './components/ScheduleButton';
@@ -64,6 +65,10 @@ function App() {
           />
 
           <Skills skills={resumeData.skills} />
+
+          {resumeData.keyProjects && resumeData.keyProjects.length > 0 && (
+            <KeyProjects projects={resumeData.keyProjects} />
+          )}
 
           <EducationAndCertifications
             education={resumeData.education}

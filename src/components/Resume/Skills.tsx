@@ -78,12 +78,11 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
     SkillCategoryName,
     { title: string; icon: string }
   > = {
-    frontend: { title: 'Frontend Development', icon: '🎨' },
-    backend: { title: 'Backend Development', icon: '⚙️' },
-    database: { title: 'Databases', icon: '🗄️' },
-    tools: { title: 'Tools & Technologies', icon: '🔧' },
-    design: { title: 'Design & Graphics', icon: '🎭' },
-    cms: { title: 'Content Management', icon: '📝' },
+    languages: { title: 'Languages', icon: '💻' },
+    frontend: { title: 'Frontend', icon: '🎨' },
+    backend: { title: 'Backend', icon: '⚙️' },
+    cadAnd3d: { title: '3D & CAD', icon: '📐' },
+    tools: { title: 'Tools', icon: '🔧' },
   };
 
   return (

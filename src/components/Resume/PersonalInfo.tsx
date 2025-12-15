@@ -140,14 +140,15 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
             )}
           </div>
 
-          {personalInfo.willingToRelocate.length > 0 && (
-            <div className={styles.relocation}>
-              <p className={styles.relocationText}>
-                <strong>Willing to relocate:</strong>{' '}
-                {personalInfo.willingToRelocate.join(' • ')}
-              </p>
-            </div>
-          )}
+          {personalInfo.willingToRelocate &&
+            personalInfo.willingToRelocate.length > 0 && (
+              <div className={styles.relocation}>
+                <p className={styles.relocationText}>
+                  <strong>Willing to relocate:</strong>{' '}
+                  {personalInfo.willingToRelocate.join(' • ')}
+                </p>
+              </div>
+            )}
         </div>
       </div>
     </header>

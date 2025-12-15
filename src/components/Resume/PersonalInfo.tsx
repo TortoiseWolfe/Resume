@@ -94,11 +94,15 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
                 href={github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.socialLink}
-                title={`GitHub ${index + 1}`}
+                className={`${styles.socialLink} ${index === 1 ? styles.legacyLink : ''}`}
+                title={
+                  index === 0
+                    ? 'GitHub (Active)'
+                    : 'GitHub (Legacy - locked account)'
+                }
                 onClick={() => trackExternalLink('github', github)}
               >
-                ⚙️ GitHub
+                ⚙️ {index === 0 ? 'GitHub' : 'GitHub (Legacy)'}
               </a>
             ))}
 

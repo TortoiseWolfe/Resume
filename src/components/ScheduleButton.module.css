@@ -59,9 +59,8 @@
   background-size: 200% 100%;
   animation:
     bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-    breathe 2s ease-in-out infinite 0.8s,
-    gradientShift 3s ease infinite,
-    wiggle 10s ease-in-out infinite 3s;
+    breathe 2s ease-in-out infinite 0.8s;
+  /* Removed gradientShift and wiggle to reduce visual noise */
   font-size: 1.125rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -267,7 +266,7 @@
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .floating {
-    bottom: 1.5rem;
+    bottom: 6rem; /* Increased from 1.5rem to clear social links */
     right: 1.5rem;
     left: 1.5rem;
     width: calc(100% - 3rem);

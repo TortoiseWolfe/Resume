@@ -225,6 +225,18 @@
   box-shadow: var(--shadow-steampunk);
 }
 
+/* Legacy GitHub link styling - muted appearance */
+.legacyLink {
+  opacity: 0.7;
+  font-size: 0.85em;
+  background-color: var(--color-secondary);
+}
+
+.legacyLink:hover {
+  opacity: 1;
+  background-color: var(--color-secondary);
+}
+
 .relocation {
   text-align: center;
   padding: var(--space-md);

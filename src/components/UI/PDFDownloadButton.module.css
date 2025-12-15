@@ -1,5 +1,7 @@
 .container {
   position: relative;
+  display: flex;
+  gap: var(--space-sm);
 }
 
 .downloadButton {
@@ -7,7 +9,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  padding: var(--space-sm) var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
   min-height: 44px;
   font-weight: var(--font-weight-medium);
   border-radius: var(--border-radius-base);
@@ -25,6 +27,7 @@
   letter-spacing: 0.05em;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .downloadButton::before {

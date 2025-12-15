@@ -139,6 +139,20 @@
   font-weight: var(--font-weight-semibold);
 }
 
+.companyLink {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.companyLink:hover {
+  color: var(--color-primary-light);
+  text-decoration: underline;
+  text-shadow: 0 0 8px var(--color-steam);
+}
+
 .location {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);

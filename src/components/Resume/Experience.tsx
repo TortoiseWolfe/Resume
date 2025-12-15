@@ -35,7 +35,18 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
           <div className={styles.titleSection}>
             <h3 className={styles.jobTitle}>{experience.title}</h3>
             <div className={styles.company}>
-              <span className={styles.companyName}>{experience.company}</span>
+              {experience.companyUrl ? (
+                <a
+                  href={experience.companyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.companyLink}
+                >
+                  {experience.company}
+                </a>
+              ) : (
+                <span className={styles.companyName}>{experience.company}</span>
+              )}
               <span className={styles.location}>{formatLocation()}</span>
             </div>
           </div>

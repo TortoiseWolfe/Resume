@@ -24,58 +24,9 @@
   "summary": "Software developer with 2.5 years of production C# experience building Revit automation plugins and 4+ years developing web applications in React and React Native. Background in 3D modeling (Blender, 3D Studio Max, SketchUp) and CAD (AutoCAD, Revit) informs approach to translating design workflows into technical solutions. Developed plugins used daily by 12+ drafters, reducing dimensioning tasks from minutes to milliseconds. Maintains 166+ GitHub repositories including full stack templates with 93 components and 680+ tests.",
   "experience": [
     {
-      "title": "SOFTWARE DEVELOPER",
-      "company": "Trinam Drafting and Design",
-      "location": {
-        "city": null,
-        "state": "GA"
-      },
-      "startDate": "2022-03-01",
-      "endDate": "2024-09-30",
-      "displayDate": "Mar 2022 - Sep 2024",
-      "isCurrent": false,
-      "responsibilities": [
-        "Built 5+ C# Revit plugins automating wall dimensioning, reducing manual tasks to milliseconds",
-        "Deployed automation tools used daily by 12+ drafters, translating design pain points into solutions",
-        "Wrote 20+ automated test cases validating plugin functionality across multiple Revit versions",
-        "Collaborated with drafting team to identify workflow bottlenecks and prioritize feature development"
-      ]
-    },
-    {
-      "title": "SOFTWARE ENGINEERING INTERN",
-      "company": "TechJoy Software",
-      "location": {
-        "city": "Remote",
-        "state": null
-      },
-      "startDate": "2022-01-01",
-      "endDate": null,
-      "displayDate": "Jan 2022 - Present",
-      "isCurrent": true,
-      "responsibilities": [
-        "Built 50+ responsive UI components in React and TypeScript for client web applications",
-        "Integrated RESTful APIs and participated in weekly code reviews following agile methodology"
-      ]
-    },
-    {
-      "title": "LEAD DEVELOPER",
-      "company": "Collective Minds Inc",
-      "location": {
-        "city": "Remote",
-        "state": null
-      },
-      "startDate": "2021-01-01",
-      "endDate": "2021-03-31",
-      "displayDate": "Jan - Mar 2021",
-      "isCurrent": false,
-      "responsibilities": [
-        "Developed 10+ cross-platform mobile screens using React Native with Firebase backend",
-        "Led technical planning and coordinated deliverables across a 4-person distributed team"
-      ]
-    },
-    {
       "title": "FREELANCE WEB DEVELOPER",
       "company": "ScriptHammer.com",
+      "companyUrl": "https://scripthammer.com",
       "location": {
         "city": "Cleveland",
         "state": "TN"
@@ -102,6 +53,57 @@
           "name": "TurtleWolfe.com",
           "url": "https://turtlewolfe.com"
         }
+      ]
+    },
+    {
+      "title": "SOFTWARE ENGINEERING INTERN",
+      "company": "TechJoy Software",
+      "companyUrl": "https://techjoy.com",
+      "location": {
+        "city": "Remote",
+        "state": null
+      },
+      "startDate": "2022-01-01",
+      "endDate": null,
+      "displayDate": "Jan 2022 - Present",
+      "isCurrent": true,
+      "responsibilities": [
+        "Built 50+ responsive UI components in React and TypeScript for client web applications",
+        "Integrated RESTful APIs and participated in weekly code reviews following agile methodology"
+      ]
+    },
+    {
+      "title": "SOFTWARE DEVELOPER",
+      "company": "Trinam Drafting and Design",
+      "location": {
+        "city": null,
+        "state": "GA"
+      },
+      "startDate": "2022-03-01",
+      "endDate": "2024-09-30",
+      "displayDate": "Mar 2022 - Sep 2024",
+      "isCurrent": false,
+      "responsibilities": [
+        "Built 5+ C# Revit plugins automating wall dimensioning, reducing manual tasks to milliseconds",
+        "Deployed automation tools used daily by 12+ drafters, translating design pain points into solutions",
+        "Wrote 20+ automated test cases validating plugin functionality across multiple Revit versions",
+        "Collaborated with drafting team to identify workflow bottlenecks and prioritize feature development"
+      ]
+    },
+    {
+      "title": "LEAD DEVELOPER",
+      "company": "Collective Minds Inc",
+      "location": {
+        "city": "Remote",
+        "state": null
+      },
+      "startDate": "2021-01-01",
+      "endDate": "2021-03-31",
+      "displayDate": "Jan - Mar 2021",
+      "isCurrent": false,
+      "responsibilities": [
+        "Developed 10+ cross-platform mobile screens using React Native with Firebase backend",
+        "Led technical planning and coordinated deliverables across a 4-person distributed team"
       ]
     }
   ],

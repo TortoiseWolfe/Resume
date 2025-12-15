@@ -27,6 +27,7 @@ export interface Links {
 export interface Experience {
   title: string;
   company: string;
+  companyUrl?: string;
   location: Location;
   startDate: string;
   endDate: string | null;

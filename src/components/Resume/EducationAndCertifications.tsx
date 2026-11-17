@@ -42,7 +42,20 @@ export const EducationAndCertifications: React.FC<
                   <h4 className={styles.itemTitle}>{edu.degree}</h4>
                   <span className={styles.itemDate}>{edu.displayDate}</span>
                 </div>
-                <div className={styles.itemSubtitle}>{edu.institution}</div>
+                <div className={styles.itemSubtitle}>
+                  {edu.institutionUrl ? (
+                    <a
+                      href={edu.institutionUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.certLink}
+                    >
+                      {edu.institution}
+                    </a>
+                  ) : (
+                    edu.institution
+                  )}
+                </div>
                 {edu.isCurrent && (
                   <span className={styles.currentBadge}>Current</span>
                 )}

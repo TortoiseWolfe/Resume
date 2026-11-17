@@ -94,8 +94,28 @@
       ]
     },
     {
+      "title": "SOFTWARE ENGINEERING INTERN",
+      "company": "TechJoy Software",
+      "companyUrl": "https://techjoy.software",
+      "location": {
+        "city": "Madison",
+        "state": "NJ"
+      },
+      "startDate": "2022-01-01",
+      "endDate": null,
+      "displayDate": "Jan 2022 - Jan 2023 and Aug 2026 - Present",
+      "isCurrent": true,
+      "responsibilities": [
+        "Ship React and TypeScript changes through ticketed pull requests with peer and senior engineering review",
+        "Peer mentor in weekly pair-programming sessions for newer developers",
+        "Built 50+ responsive UI components in React and TypeScript for client web applications",
+        "Integrated RESTful APIs and participated in weekly code reviews following agile methodology"
+      ]
+    },
+    {
       "title": "SOFTWARE DEVELOPER",
       "company": "Trinam Drafting and Design",
+      "companyUrl": "https://trinamdesign.com/",
       "location": {
         "city": "Alpharetta",
         "state": "GA"
@@ -109,56 +129,6 @@
         "Deployed automation tools used daily by 12+ drafters, translating design pain points into solutions",
         "Wrote 20+ automated test cases validating plugin functionality across multiple Revit versions",
         "Collaborated with drafting team to identify workflow bottlenecks and prioritize feature development"
-      ]
-    },
-    {
-      "title": "LEAD DEVELOPER",
-      "company": "Collective Minds Inc",
-      "location": {
-        "city": "Remote",
-        "state": null
-      },
-      "startDate": "2021-01-01",
-      "endDate": "2021-03-31",
-      "displayDate": "Jan - Mar 2021",
-      "isCurrent": false,
-      "responsibilities": [
-        "Developed 10+ cross-platform mobile screens using React Native with Firebase backend",
-        "Led technical planning and coordinated deliverables across a 4-person distributed team"
-      ]
-    },
-    {
-      "title": "SOFTWARE ENGINEERING INTERN",
-      "company": "TechJoy Software",
-      "companyUrl": "https://techjoy.software",
-      "location": {
-        "city": "Madison",
-        "state": "NJ"
-      },
-      "startDate": "2026-08-01",
-      "endDate": null,
-      "displayDate": "Aug 2026 - Present",
-      "isCurrent": true,
-      "responsibilities": [
-        "Ship React and TypeScript changes through ticketed pull requests with peer and senior engineering review",
-        "Peer mentor in weekly pair-programming sessions for newer developers"
-      ]
-    },
-    {
-      "title": "SOFTWARE ENGINEERING INTERN",
-      "company": "TechJoy Software",
-      "companyUrl": "https://techjoy.software",
-      "location": {
-        "city": "Madison",
-        "state": "NJ"
-      },
-      "startDate": "2022-01-01",
-      "endDate": "2023-01-31",
-      "displayDate": "Jan 2022 - Jan 2023",
-      "isCurrent": false,
-      "responsibilities": [
-        "Built 50+ responsive UI components in React and TypeScript for client web applications",
-        "Integrated RESTful APIs and participated in weekly code reviews following agile methodology"
       ]
     }
   ],
@@ -301,7 +271,8 @@
       "endDate": null,
       "displayDate": "Alumnus",
       "isCurrent": false,
-      "gpa": null
+      "gpa": null,
+      "institutionUrl": "https://joyofcoding.org/"
     },
     {
       "institution": "CLEVELAND STATE COMMUNITY COLLEGE",
@@ -310,7 +281,8 @@
       "endDate": "1996-05-31",
       "displayDate": "1994 - 1996",
       "isCurrent": false,
-      "gpa": null
+      "gpa": null,
+      "institutionUrl": "https://www.clevelandstatecc.edu/"
     }
   ],
   "certifications": [

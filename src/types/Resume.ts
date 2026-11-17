@@ -59,6 +59,7 @@ export interface Skills {
 
 export interface Education {
   institution: string;
+  institutionUrl?: string;
   degree: string;
   startDate?: string;
   endDate?: string | null;

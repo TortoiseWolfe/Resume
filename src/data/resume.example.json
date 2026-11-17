@@ -56,23 +56,6 @@
       ]
     },
     {
-      "title": "LEAD DEVELOPER",
-      "company": "Collective Minds Incorporated",
-      "location": {
-        "city": null,
-        "state": null
-      },
-      "startDate": "2021-01-01",
-      "endDate": "2021-03-31",
-      "displayDate": "Jan 2021 - Mar 2021",
-      "isCurrent": false,
-      "responsibilities": [
-        "Lead React/React Native development serving 5,000+ users",
-        "Architected RESTful APIs using Node.js and Express",
-        "Reduced application load time by 50% through optimization"
-      ]
-    },
-    {
       "title": "FULL STACK WEB DEVELOPER",
       "company": "ScriptHammer.com",
       "location": {

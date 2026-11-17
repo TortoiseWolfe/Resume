@@ -56,23 +56,6 @@
       ]
     },
     {
-      "title": "LEAD DEVELOPER",
-      "company": "Collective Minds Incorporated",
-      "location": {
-        "city": null,
-        "state": null
-      },
-      "startDate": "2021-01-01",
-      "endDate": "2021-03-31",
-      "displayDate": "Jan 2021 - Mar 2021",
-      "isCurrent": false,
-      "responsibilities": [
-        "Lead React/React Native development serving 5,000+ users",
-        "Architected RESTful APIs using Node.js and Express",
-        "Reduced application load time by 50% through optimization"
-      ]
-    },
-    {
       "title": "FULL STACK WEB DEVELOPER",
       "company": "ScriptHammer.com",
       "location": {
@@ -126,7 +109,17 @@
   ],
   "skills": {
     "frontend": {
-      "technologies": ["React", "React Native", "TypeScript", "JavaScript ES6+", "HTML5", "CSS3", "Bootstrap", "Tailwind", "jQuery"],
+      "technologies": [
+        "React",
+        "React Native",
+        "TypeScript",
+        "JavaScript ES6+",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "Tailwind",
+        "jQuery"
+      ],
       "yearsExperience": {
         "React": 4,
         "TypeScript": 1,
@@ -137,7 +130,14 @@
       }
     },
     "backend": {
-      "technologies": ["Node.js", "Express", "C#", "PHP", "RESTful APIs", "GraphQL"],
+      "technologies": [
+        "Node.js",
+        "Express",
+        "C#",
+        "PHP",
+        "RESTful APIs",
+        "GraphQL"
+      ],
       "yearsExperience": {
         "Node.js": 5,
         "Express": 5,
@@ -147,7 +147,13 @@
       }
     },
     "database": {
-      "technologies": ["MongoDB", "MySQL", "PostgreSQL", "Firebase", "Microsoft Access"],
+      "technologies": [
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "Firebase",
+        "Microsoft Access"
+      ],
       "yearsExperience": {
         "MongoDB": 3,
         "MySQL": 5,
@@ -156,7 +162,16 @@
       }
     },
     "tools": {
-      "technologies": ["Git", "GitHub", "Docker", "AWS", "Linux", "Webpack", "Jest", "Agile/Scrum"],
+      "technologies": [
+        "Git",
+        "GitHub",
+        "Docker",
+        "AWS",
+        "Linux",
+        "Webpack",
+        "Jest",
+        "Agile/Scrum"
+      ],
       "yearsExperience": {
         "Git": 6,
         "GitHub": 6,

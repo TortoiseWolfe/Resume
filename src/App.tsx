@@ -51,7 +51,7 @@ function App() {
   return (
     <ThemeProvider>
       <Layout>
-        <main className={styles.resumeContent}>
+        <div className={styles.resumeContent}>
           <PersonalInfo
             personalInfo={resumeData.personalInfo}
             links={resumeData.links}
@@ -84,7 +84,7 @@ function App() {
             calendlyUrl={import.meta.env.VITE_CALENDLY_URL}
             googleCalendarUrl={import.meta.env.VITE_GOOGLE_CALENDAR_URL}
           />
-        </main>
+        </div>
 
         {/* Schedule Interview Floating Action Button */}
         <ScheduleButton

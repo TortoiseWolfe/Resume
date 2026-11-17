@@ -19,7 +19,7 @@
   }
 
   /* Hide non-essential elements */
-  [class*='header'],
+  [data-print-hide],
   [class*='controls'],
   [class*='ThemeToggle'],
   [class*='PDFDownload'],

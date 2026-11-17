@@ -15,8 +15,16 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className={styles.layout}>
-      <header className={styles.header}>
-        <div className="container">
+      <a href="#main" className={styles.skipLink} data-print-hide>
+        Skip to content
+      </a>
+
+      <header className={styles.header} data-print-hide>
+        <div className={styles.bar}>
+          <a href="#personal-info" className={styles.brand}>
+            Jonathan Pohlner
+          </a>
+          <SectionNavigation />
           <div className={styles.controls}>
             <ThemeToggle />
             <PDFDownloadButton />
@@ -24,7 +32,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </header>
 
-      <main className={styles.main}>
+      <main id="main" className={styles.main} tabIndex={-1}>
         <div className="container" data-resume-content>
           {children}
         </div>
@@ -45,8 +53,6 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           </p>
         </div>
       </footer>
-
-      <SectionNavigation />
     </div>
   );
 };

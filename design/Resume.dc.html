@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jonathan Pohlner – Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap">
+<style>
+:root{--font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;--font-serif:'Special Elite','Courier New',monospace;
+--bg:#f4e4bc;--surface:#e8d4a0;--surface-2:#e8d4a0;--bar-bg:rgba(244,228,188,.94);
+--ink:#1f2937;--ink-2:#374151;--line:#b45309;--line-strong:#b45309;
+--accent:#92400e;--accent-hover:#713209;--accent-light:#b45309;--on-accent:#ffffff;--badge-bg:#f4e4bc;--badge-ink:#92400e;--focus:#d97706;
+--shadow-1:0 1px 2px oklch(0.25 0.02 60 / .06),0 1px 3px oklch(0.25 0.02 60 / .05);
+--shadow-2:0 2px 4px oklch(0.25 0.02 60 / .05),0 6px 16px oklch(0.25 0.02 60 / .07);
+--shadow-3:0 4px 8px oklch(0.25 0.02 60 / .06),0 16px 40px oklch(0.25 0.02 60 / .12);
+--fs-body:clamp(1.0625rem,1.01rem + .2vw,1.125rem);--fs-meta:.9375rem;--fs-title:clamp(1.0625rem,1rem + .4vw,1.25rem);--fs-h1:clamp(2.25rem,1.7rem + 2.4vw,3.25rem);--fs-h2:clamp(1.5rem,1.3rem + .8vw,1.875rem);--fs-h3:1.0625rem;--fs-chip:.9375rem;
+--lh:1.65;--measure:68ch;--sec-gap:clamp(3rem,2.25rem + 2.5vw,4.5rem);--font-h2:var(--font-serif);--h2-mb:1.25rem;--h2-pb:0;--h2-border:none;--h2-tt:none;--h2-ls:-0.01em;--h3-ls:.04em;
+--card-pad:clamp(1.25rem,1rem + 1vw,1.75rem);--card-border:1px solid var(--line);--radius:12px;--stack:1rem;--tl-pad:1.5rem;--tl-line:2px solid var(--line);
+--ul-pad:1.2em;--ul-mt:.75rem;--li-gap:.4rem;--hero-gap:.75rem;--page-pt:clamp(2.5rem,1.5rem + 3vw,4rem);--page-pb:5rem;
+--chip-pad:.4rem .8rem;--chip-bg:var(--surface);--chip-border:1px solid var(--line);--group-gap:1.5rem;--meta-mt:.2rem;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:oklch(0.19 0.008 65);--surface:oklch(0.235 0.009 65);--surface-2:oklch(0.285 0.01 65);--bar-bg:oklch(0.19 0.008 65 / .9);--ink:oklch(0.94 0.006 80);--ink-2:oklch(0.79 0.01 75);--line:oklch(0.34 0.01 65);--line-strong:oklch(0.48 0.01 65);--accent:oklch(0.79 0.11 60);--accent-hover:oklch(0.87 0.08 68);--on-accent:oklch(0.2 0.02 55);--badge-bg:oklch(0.32 0.045 55);--badge-ink:oklch(0.89 0.07 70);--focus:oklch(0.79 0.11 60);--shadow-1:0 1px 2px oklch(0 0 0 / .3);--shadow-2:0 2px 4px oklch(0 0 0 / .25),0 8px 20px oklch(0 0 0 / .3);--shadow-3:0 4px 10px oklch(0 0 0 / .3),0 18px 44px oklch(0 0 0 / .45);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:oklch(0.19 0.008 65);--surface:oklch(0.235 0.009 65);--surface-2:oklch(0.285 0.01 65);--bar-bg:oklch(0.19 0.008 65 / .9);--ink:oklch(0.94 0.006 80);--ink-2:oklch(0.79 0.01 75);--line:oklch(0.34 0.01 65);--line-strong:oklch(0.48 0.01 65);--accent:oklch(0.79 0.11 60);--accent-hover:oklch(0.87 0.08 68);--on-accent:oklch(0.2 0.02 55);--badge-bg:oklch(0.32 0.045 55);--badge-ink:oklch(0.89 0.07 70);--focus:oklch(0.79 0.11 60);--shadow-1:0 1px 2px oklch(0 0 0 / .3);--shadow-2:0 2px 4px oklch(0 0 0 / .25),0 8px 20px oklch(0 0 0 / .3);--shadow-3:0 4px 10px oklch(0 0 0 / .3),0 18px 44px oklch(0 0 0 / .45);color-scheme:dark}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);font-size:var(--fs-body);line-height:var(--lh);overflow-wrap:break-word}
+a{color:var(--accent);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{color:var(--accent-hover);text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+[data-print="only"],[data-pp-marker]{display:none}
+@page{size:letter;margin:.4in}
+@media print{
+:root,:root[data-theme]{--bg:#fff;--surface:transparent;--surface-2:transparent;--ink:oklch(0.18 0.01 60);--ink-2:oklch(0.36 0.01 60);--line:oklch(0.78 0.006 70);--accent:oklch(0.4 0.11 45);--badge-bg:transparent;--shadow-1:none;--shadow-2:none;--shadow-3:none;--fs-body:7.1pt;--fs-meta:7pt;--fs-title:8.2pt;--fs-h1:17pt;--fs-h2:8pt;--fs-h3:7.4pt;--fs-chip:7pt;--lh:1.3;--measure:none;--sec-gap:7pt;--font-h2:var(--font-sans);--h2-mb:3pt;--h2-pb:1.5pt;--h2-border:.6pt solid var(--line);--h2-tt:uppercase;--h2-ls:.08em;--h3-ls:.03em;--card-pad:0;--card-border:none;--radius:0;--stack:3.5pt;--tl-pad:0;--tl-line:none;--ul-pad:1.05em;--ul-mt:1pt;--li-gap:0;--hero-gap:2pt;--page-pt:0;--page-pb:0;--chip-pad:0;--chip-bg:transparent;--chip-border:none;--group-gap:3pt;--meta-mt:0;color-scheme:light}
+body{background:#fff}
+a{text-decoration:none}
+[data-print="hide"]{display:none!important}
+[data-print="only"]{display:revert!important}
+[data-page]{width:auto!important;max-width:none!important;margin:0!important;padding:0!important}
+[data-hero]{margin-bottom:6pt!important}
+[data-chips]{gap:0 9pt!important}
+[data-print-grid]{display:grid!important;grid-template-columns:minmax(0,1.82fr) minmax(0,1fr);column-gap:.22in;align-items:start}
+[data-col]>section:first-child{margin-top:0!important}
+[data-jh]{display:flex!important;flex-wrap:wrap;column-gap:5pt;align-items:baseline}
+}
+:root[data-pp]{--bg:#fff;--surface:transparent;--surface-2:transparent;--ink:oklch(0.18 0.01 60);--ink-2:oklch(0.36 0.01 60);--line:oklch(0.78 0.006 70);--accent:oklch(0.4 0.11 45);--badge-bg:transparent;--shadow-1:none;--shadow-2:none;--shadow-3:none;--fs-body:7.1pt;--fs-meta:7pt;--fs-title:8.2pt;--fs-h1:17pt;--fs-h2:8pt;--fs-h3:7.4pt;--fs-chip:7pt;--lh:1.3;--measure:none;--sec-gap:7pt;--font-h2:var(--font-sans);--h2-mb:3pt;--h2-pb:1.5pt;--h2-border:.6pt solid var(--line);--h2-tt:uppercase;--h2-ls:.08em;--h3-ls:.03em;--card-pad:0;--card-border:none;--radius:0;--stack:3.5pt;--tl-pad:0;--tl-line:none;--ul-pad:1.05em;--ul-mt:1pt;--li-gap:0;--hero-gap:2pt;--page-pt:0;--page-pb:0;--chip-pad:0;--chip-bg:transparent;--chip-border:none;--group-gap:3pt;--meta-mt:0;color-scheme:light}
+:root[data-pp] body{background:oklch(0.86 0.005 70)}
+:root[data-pp] a{text-decoration:none}
+:root[data-pp] [data-print="hide"]{display:none!important}
+:root[data-pp] [data-print="only"]{display:revert!important}
+:root[data-pp] [data-page]{box-sizing:border-box;width:8.5in!important;max-width:8.5in!important;min-height:11in;margin:24px auto!important;padding:.4in!important;background:#fff;box-shadow:0 10px 40px oklch(0 0 0 / .2);position:relative}
+:root[data-pp] [data-pp-marker]{display:block}
+:root[data-pp] [data-hero]{margin-bottom:6pt!important}
+:root[data-pp] [data-chips]{gap:0 9pt!important}
+:root[data-pp] [data-print-grid]{display:grid!important;grid-template-columns:minmax(0,1.82fr) minmax(0,1fr);column-gap:.22in;align-items:start}
+:root[data-pp] [data-col]>section:first-child{margin-top:0!important}
+:root[data-pp] [data-jh]{display:flex!important;flex-wrap:wrap;column-gap:5pt;align-items:baseline}
+@keyframes cursor-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@media print{[data-typed]{display:none!important}[data-ghost]{visibility:visible!important}}
+:root[data-pp] [data-typed]{display:none!important}
+:root[data-pp] [data-ghost]{visibility:visible!important}
+</style>
+</helmet>
+
+<a href="#main" data-print="hide" style="position:absolute;left:1rem;top:-4rem;z-index:20;padding:.6rem 1rem;background:var(--surface);color:var(--ink);border-radius:8px;box-shadow:var(--shadow-3);font-weight:600" style-focus="top:1rem">Skip to content</a>
+
+<header data-print="hide" ref="{{ barRef }}" style="position:fixed;top:0;left:0;right:0;z-index:10;background:var(--bar-bg);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line);box-shadow:var(--shadow-2)">
+  <div style="width:min(100% - 2.5rem, 46rem);margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1rem;padding:.6rem 0 .2rem">
+    <a href="#top" style="font-family:var(--font-serif);font-weight:600;font-size:1.125rem;color:var(--ink);text-decoration:none">Jonathan Pohlner</a>
+    <div role="group" aria-label="Page tools" style="display:flex;gap:.5rem">
+      <button type="button" onClick="{{ toggleTheme }}" aria-label="{{ themeAria }}" style="display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:8px;font:inherit;font-size:.9375rem;font-weight:600;cursor:pointer;box-shadow:var(--shadow-1)" style-hover="background:var(--surface-2)">{{ themeLabel }}</button>
+      <button type="button" onClick="{{ printPdf }}" aria-label="Download PDF (opens print dialog)" style="display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:8px;font:inherit;font-size:.9375rem;font-weight:600;cursor:pointer;box-shadow:var(--shadow-1)" style-hover="background:var(--surface-2)">PDF</button>
+      <a href="{{ docxUrl }}" download="" aria-label="Download DOCX" style="display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box;padding:0 .9rem;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:8px;font-size:.9375rem;font-weight:600;text-decoration:none;box-shadow:var(--shadow-1)" style-hover="background:var(--surface-2);color:var(--ink)">DOCX</a>
+    </div>
+  </div>
+  <nav aria-label="Sections" style="width:min(100% - 2.5rem, 46rem);margin:0 auto;overflow-x:auto;scrollbar-width:thin">
+    <ul style="list-style:none;margin:0;padding:0;display:flex;gap:1.25rem;white-space:nowrap">
+      <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="8">
+        <li style="display:flex"><a href="#{{ n.id }}" aria-current="{{ n.cur }}" style="display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box;font-size:.9375rem;font-weight:500;text-decoration:none;color:{{ n.color }};border-bottom:2px solid {{ n.bc }}" style-hover="color:var(--ink)">{{ n.label }}</a></li>
+      </sc-for>
+    </ul>
+  </nav>
+</header>
+
+<div data-page="" id="top" style="width:min(100% - 2.5rem, 46rem);margin:0 auto;padding:calc(var(--bar-h, 7.5rem) + var(--page-pt)) 0 var(--page-pb)">
+  <div data-pp-marker="" aria-hidden="true" style="position:absolute;left:0;right:0;top:10.6in;border-top:2px dashed oklch(0.6 0.19 25);font:600 11px/1 var(--font-sans);color:oklch(0.5 0.19 25);text-align:right;padding:4px .4in 0">Bottom margin of US Letter page</div>
+
+  <header data-hero="" style="display:grid;gap:var(--hero-gap);margin-bottom:0">
+    <h1 style="font-family:var(--font-serif);font-size:var(--fs-h1);line-height:1.1;font-weight:600;margin:0;display:grid"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Jonathan Pohlner</span><span data-ghost="" aria-hidden="true" style="grid-area:1/1;visibility:hidden;text-wrap:balance">Jonathan Pohlner</span><span data-typed="" aria-hidden="true" style="grid-area:1/1;text-wrap:balance">{{ typedName }}{{ nameCursor }}</span></h1>
+    <p style="margin:0;font-family:var(--font-serif);font-size:var(--fs-title);color:var(--ink-2);font-weight:500;display:grid"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">{{ title }}</span><span data-ghost="" aria-hidden="true" style="grid-area:1/1;visibility:hidden;text-wrap:balance">{{ title }}</span><span data-typed="" aria-hidden="true" style="grid-area:1/1;text-wrap:balance">{{ typedTitle }}{{ titleCursor }}</span></p>
+    <ul aria-label="Contact" data-chips="" style="list-style:none;margin:.25rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;font-size:var(--fs-meta)">
+      <li><a href="tel:{{ phoneHref }}">{{ phone }}</a></li>
+      <li><a href="mailto:{{ email }}">{{ email }}</a></li>
+      <li style="color:var(--ink-2)">{{ locationText }}</li>
+    </ul>
+    <ul aria-label="Links" data-chips="" style="list-style:none;margin:.25rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem">
+      <sc-for list="{{ links }}" as="l" hint-placeholder-count="7">
+        <li style="display:flex"><a href="{{ l.href }}" style="display:inline-flex;align-items:center;padding:var(--chip-pad);border:var(--chip-border);background:var(--chip-bg);border-radius:999px;font-size:var(--fs-chip);font-weight:500;color:var(--ink);text-decoration:none;box-shadow:var(--shadow-1)" style-hover="border-color:var(--accent);color:var(--accent)">{{ l.label }}</a></li>
+      </sc-for>
+    </ul>
+  </header>
+
+  <main id="main" tabindex="-1" style="outline:none">
+    <div data-print-grid="">
+      <div data-col="a">
+        <section id="summary" aria-labelledby="h-summary" style="margin-top:var(--sec-gap);scroll-margin-top:calc(var(--bar-h, 7.5rem) + 1rem)">
+          <h2 id="h-summary" style="font-family:var(--font-h2);font-size:var(--fs-h2);font-weight:600;line-height:1.2;letter-spacing:var(--h2-ls);text-transform:var(--h2-tt);margin:0 0 var(--h2-mb);padding-bottom:var(--h2-pb);border-bottom:var(--h2-border);text-wrap:balance">Professional Summary</h2>
+          <p style="margin:0;max-width:var(--measure);text-wrap:pretty">{{ summary }}</p>
+        </section>
+
+        <section id="experience" aria-labelledby="h-exp" style="margin-top:var(--sec-gap);scroll-margin-top:calc(var(--bar-h, 7.5rem) + 1rem)">
+          <h2 id="h-exp" style="font-family:var(--font-h2);font-size:var(--fs-h2);font-weight:600;line-height:1.2;letter-spacing:var(--h2-ls);text-transform:var(--h2-tt);margin:0 0 var(--h2-mb);padding-bottom:var(--h2-pb);border-bottom:var(--h2-border);text-wrap:balance">Professional Experience</h2>
+          <ol style="list-style:none;margin:0;padding:0 0 0 var(--tl-pad);border-left:var(--tl-line);display:grid;gap:var(--stack)">
+            <sc-for list="{{ experience }}" as="job" hint-placeholder-count="4">
+              <li style="position:relative">
+                <sc-if value="{{ job.isCurrent }}" hint-placeholder-val="{{ true }}">
+                  <span data-print="hide" aria-hidden="true" style="position:absolute;left:calc(-1 * var(--tl-pad) - 7px);top:1.85rem;width:12px;height:12px;box-sizing:border-box;border-radius:50%;background:var(--accent);border:2px solid var(--bg)"></span>
+                </sc-if>
+                <sc-if value="{{ job.isPast }}" hint-placeholder-val="{{ false }}">
+                  <span data-print="hide" aria-hidden="true" style="position:absolute;left:calc(-1 * var(--tl-pad) - 7px);top:1.85rem;width:12px;height:12px;box-sizing:border-box;border-radius:50%;background:var(--bg);border:2px solid var(--line-strong)"></span>
+                </sc-if>
+                <article style="background:var(--surface);border:var(--card-border);border-radius:var(--radius);padding:var(--card-pad);box-shadow:var(--shadow-1)">
+                  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.25rem 1rem">
+                    <div data-jh="" style="flex:1 1 15rem;min-width:0">
+                      <h3 style="font-size:var(--fs-h3);font-weight:700;letter-spacing:var(--h3-ls);line-height:1.35;margin:0;text-wrap:balance">{{ job.title }}</h3>
+                      <p style="margin:var(--meta-mt) 0 0;font-size:var(--fs-meta);color:var(--ink-2)">
+                        <sc-if value="{{ job.hasUrl }}" hint-placeholder-val="{{ true }}"><a href="{{ job.url }}" style="font-weight:600">{{ job.company }}</a></sc-if><sc-if value="{{ job.noUrl }}" hint-placeholder-val="{{ false }}"><span style="font-weight:600;color:var(--ink)">{{ job.company }}</span></sc-if> · {{ job.loc }}
+                      </p>
+                    </div>
+                    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;font-size:var(--fs-meta);color:var(--ink-2)">
+                      <span style="font-variant-numeric:tabular-nums">{{ job.date }}</span>
+                      <sc-if value="{{ job.isCurrent }}" hint-placeholder-val="{{ true }}">
+                        <span data-print="hide" style="display:inline-flex;align-items:center;padding:.1rem .55rem;border-radius:999px;background:var(--badge-bg);color:var(--badge-ink);border:1px solid var(--badge-ink);font-size:.8125rem;font-weight:600;line-height:1.5">Current</span>
+                      </sc-if>
+                    </div>
+                  </div>
+                  <ul style="margin:var(--ul-mt) 0 0;padding-left:var(--ul-pad);display:grid;gap:var(--li-gap)">
+                    <sc-for list="{{ job.bullets }}" as="b" hint-placeholder-count="3"><li style="text-wrap:pretty">{{ b }}</li></sc-for>
+                  </ul>
+                  <sc-if value="{{ job.hasPortfolio }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .75rem;margin-top:var(--ul-mt);font-size:var(--fs-meta)">
+                      <span style="color:var(--ink-2);font-weight:600">Portfolio:</span>
+                      <sc-for list="{{ job.portfolio }}" as="p" hint-placeholder-count="3"><a href="{{ p.url }}">{{ p.name }}</a></sc-for>
+                    </div>
+                  </sc-if>
+                </article>
+              </li>
+            </sc-for>
+          </ol>
+        </section>
+
+        <section id="previous" aria-labelledby="h-prev" style="margin-top:var(--sec-gap);scroll-margin-top:calc(var(--bar-h, 7.5rem) + 1rem)">
+          <h2 id="h-prev" style="font-family:var(--font-h2);font-size:var(--fs-h2);font-weight:600;line-height:1.2;letter-spacing:var(--h2-ls);text-transform:var(--h2-tt);margin:0 0 var(--h2-mb);padding-bottom:var(--h2-pb);border-bottom:var(--h2-border);text-wrap:balance">Previous Experience</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:var(--stack)">
+            <sc-for list="{{ previous }}" as="job" hint-placeholder-count="2">
+              <article style="background:var(--surface);border:var(--card-border);border-radius:var(--radius);padding:var(--card-pad);box-shadow:var(--shadow-1)">
+                <h3 style="font-size:var(--fs-h3);font-weight:700;letter-spacing:var(--h3-ls);line-height:1.35;margin:0;text-wrap:balance">{{ job.title }}</h3>
+                <p style="margin:var(--meta-mt) 0 0;font-size:var(--fs-meta);color:var(--ink-2)"><span style="font-weight:600;color:var(--ink)">{{ job.company }}</span> · {{ job.loc }} · <span style="font-variant-numeric:tabular-nums">{{ job.date }}</span></p>
+                <ul style="margin:var(--ul-mt) 0 0;padding-left:var(--ul-pad);display:grid;gap:var(--li-gap)">
+                  <sc-for list="{{ job.bullets }}" as="b" hint-placeholder-count="3"><li style="text-wrap:pretty">{{ b }}</li></sc-for>
+                </ul>
+              </article>
+            </sc-for>
+          </div>
+        </section>
+      </div>
+
+      <div data-col="b">
+        <section id="skills" aria-labelledby="h-skills" style="margin-top:var(--sec-gap);scroll-margin-top:calc(var(--bar-h, 7.5rem) + 1rem)">
+          <h2 id="h-skills" style="font-family:var(--font-h2);font-size:var(--fs-h2);font-weight:600;line-height:1.2;letter-spacing:var(--h2-ls);text-transform:var(--h2-tt);margin:0 0 var(--h2-mb);padding-bottom:var(--h2-pb);border-bottom:var(--h2-border);text-wrap:balance">Technical Skills</h2>
+          <div data-print="hide" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:var(--group-gap) 2rem">
+            <sc-for list="{{ skillGroups }}" as="g" hint-placeholder-count="5">
+              <div>
+                <h3 style="font-size:var(--fs-h3);font-weight:700;margin:0 0 .6rem;line-height:1.35">{{ g.label }}</h3>
+                <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.45rem">
+                  <sc-for list="{{ g.items }}" as="s" hint-placeholder-count="5">
+                    <li style="display:inline-flex;align-items:baseline;gap:.4rem;padding:.3rem .7rem;border:1px solid var(--line);background:var(--surface);border-radius:8px;font-size:var(--fs-chip);line-height:1.4"><span style="font-weight:500">{{ s.name }}</span><span style="color:var(--ink-2);font-variant-numeric:tabular-nums">{{ s.yrs }}</span></li>
+                  </sc-for>
+                </ul>
+              </div>
+            </sc-for>
+          </div>
+          <div data-print="only">
+            <sc-for list="{{ skillGroups }}" as="g" hint-placeholder-count="5">
+              <p style="margin:0 0 2pt"><strong>{{ g.label }}:</strong> {{ g.line }}</p>
+            </sc-for>
+          </div>
+        </section>
+
+        <section id="projects" aria-labelledby="h-proj" style="margin-top:var(--sec-gap);scroll-margin-top:calc(var(--bar-h, 7.5rem) + 1rem)">
+          <h2 id="h-proj" style="font-family:var(--font-h2);font-size:var(--fs-h2);font-weight:600;line-height:1.2;letter-spacing:var(--h2-ls);text-transform:var(--h2-tt);margin:0 0 var(--h2-mb);padding-bottom:var(--h2-pb);border-bottom:var(--h2-border);text-wrap:balance">Key Projects</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:var(--stack)">
+            <sc-for list="{{ projects }}" as="p" hint-placeholder-count="5">
+              <article style="background:var(--surface);border:var(--card-border);border-radius:var(--radius);padding:var(--card-pad);box-shadow:var(--shadow-1);display:flex;flex-direction:column;gap:.5rem">
+                <h3 style="font-size:var(--fs-h3);font-weight:700;margin:0;line-height:1.35;text-wrap:balance"><a href="{{ p.url }}">{{ p.name }}</a></h3>
+                <p style="margin:0;text-wrap:pretty">{{ p.description }} <span data-print="only" style="color:var(--ink-2)">({{ p.techLine }})</span></p>
+                <ul aria-label="Technologies" data-print="hide" style="list-style:none;margin:auto 0 0;padding:.25rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem">
+                  <sc-for list="{{ p.tech }}" as="t" hint-placeholder-count="3"><li style="padding:.15rem .6rem;border-radius:6px;background:var(--surface-2);color:var(--ink);font-size:.875rem;line-height:1.5">{{ t }}</li></sc-for>
+                </ul>
+              </article>
+            </sc-for>
+          </div>
+        </section>
+
+        <section id="education" aria-labelledby="h-edu" style="margin-top:var(--sec-gap);scroll-margin-top:calc(var(--bar-h, 7.5rem) + 1rem)">
+          <h2 id="h-edu" style="font-family:var(--font-h2);font-size:var(--fs-h2);font-weight:600;line-height:1.2;letter-spacing:var(--h2-ls);text-transform:var(--h2-tt);margin:0 0 var(--h2-mb);padding-bottom:var(--h2-pb);border-bottom:var(--h2-border);text-wrap:balance">Education and Certifications</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:var(--group-gap) 2rem">
+            <div>
+              <h3 style="font-size:var(--fs-h3);font-weight:700;margin:0 0 .5rem;line-height:1.35">Education</h3>
+              <ul style="list-style:none;margin:0;padding:0;display:grid;gap:var(--stack)">
+                <sc-for list="{{ education }}" as="e" hint-placeholder-count="2">
+                  <li><div style="font-weight:600;letter-spacing:.02em">{{ e.institution }}</div><div>{{ e.degree }}</div><div style="font-size:var(--fs-meta);color:var(--ink-2)">{{ e.displayDate }}</div></li>
+                </sc-for>
+              </ul>
+            </div>
+            <div>
+              <h3 style="font-size:var(--fs-h3);font-weight:700;margin:0 0 .5rem;line-height:1.35">Certifications</h3>
+              <ul style="list-style:none;margin:0;padding:0;display:grid;gap:var(--stack)">
+                <sc-for list="{{ certs }}" as="c" hint-placeholder-count="3">
+                  <li>
+                    <sc-if value="{{ c.hasUrl }}" hint-placeholder-val="{{ true }}"><a href="{{ c.url }}" style="font-weight:600">{{ c.name }}</a></sc-if>
+                    <sc-if value="{{ c.noUrl }}" hint-placeholder-val="{{ false }}"><span style="font-weight:600">{{ c.name }}</span></sc-if>
+                    <div style="font-size:var(--fs-meta);color:var(--ink-2)">{{ c.provider }} · {{ c.displayDate }}</div>
+                  </li>
+                </sc-for>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="assessments" aria-labelledby="h-assess" style="margin-top:var(--sec-gap);scroll-margin-top:calc(var(--bar-h, 7.5rem) + 1rem)">
+          <h2 id="h-assess" style="font-family:var(--font-h2);font-size:var(--fs-h2);font-weight:600;line-height:1.2;letter-spacing:var(--h2-ls);text-transform:var(--h2-tt);margin:0 0 var(--h2-mb);padding-bottom:var(--h2-pb);border-bottom:var(--h2-border);text-wrap:balance">Skills Assessments</h2>
+          <p data-print="hide" style="margin:0 0 1rem;color:var(--ink-2);font-size:var(--fs-meta)">Indeed skills assessments, grouped by result level.</p>
+          <div data-print="hide" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:var(--stack)">
+            <sc-for list="{{ assessGroups }}" as="g" hint-placeholder-count="3">
+              <div style="background:var(--surface);border:var(--card-border);border-radius:var(--radius);padding:1.1rem 1.25rem;box-shadow:var(--shadow-1)">
+                <h3 style="font-size:var(--fs-h3);font-weight:700;margin:0 0 .4rem;line-height:1.35">{{ g.level }}</h3>
+                <ul style="margin:0;padding-left:1.1em;display:grid;gap:.2rem">
+                  <sc-for list="{{ g.items }}" as="a" hint-placeholder-count="3"><li>{{ a }}</li></sc-for>
+                </ul>
+              </div>
+            </sc-for>
+          </div>
+          <div data-print="only">
+            <p style="margin:0 0 1pt;color:var(--ink-2)">Indeed assessments</p>
+            <sc-for list="{{ assessGroups }}" as="g" hint-placeholder-count="3">
+              <p style="margin:0 0 1pt"><strong>{{ g.level }}:</strong> {{ g.line }}</p>
+            </sc-for>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section id="contact" aria-labelledby="h-contact" data-print="hide" style="margin-top:var(--sec-gap);scroll-margin-top:calc(var(--bar-h, 7.5rem) + 1rem)">
+      <h2 id="h-contact" style="font-family:var(--font-h2);font-size:var(--fs-h2);font-weight:600;line-height:1.2;letter-spacing:var(--h2-ls);text-transform:var(--h2-tt);margin:0 0 var(--h2-mb);text-wrap:balance">Get in Touch</h2>
+      <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:1rem 2rem">
+        <sc-for list="{{ contactItems }}" as="c" hint-placeholder-count="5">
+          <div style="min-width:0">
+            <dt style="font-size:.875rem;font-weight:600;color:var(--ink-2);letter-spacing:.04em;text-transform:uppercase">{{ c.label }}</dt>
+            <dd style="margin:.1rem 0 0">
+              <sc-for list="{{ c.values }}" as="v" hint-placeholder-count="1">
+                <div><sc-if value="{{ v.hasHref }}" hint-placeholder-val="{{ true }}"><a href="{{ v.href }}">{{ v.text }}</a></sc-if><sc-if value="{{ v.noHref }}" hint-placeholder-val="{{ false }}"><span>{{ v.text }}</span></sc-if></div>
+              </sc-for>
+            </dd>
+          </div>
+        </sc-for>
+      </dl>
+
+      <div role="region" aria-labelledby="h-cta" style="margin-top:2.5rem;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(1.5rem,1rem + 2vw,2.25rem);box-shadow:var(--shadow-3);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.25rem 2rem">
+        <div style="flex:1 1 16rem;min-width:0">
+          <h3 id="h-cta" style="font-family:var(--font-serif);font-size:clamp(1.375rem,1.2rem + .6vw,1.625rem);font-weight:600;line-height:1.2;margin:0;text-wrap:balance">Schedule an interview</h3>
+          <p style="margin:.4rem 0 0;color:var(--ink-2)">Email or call to arrange a time.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:.75rem">
+          <a href="{{ scheduleHref }}" style="display:inline-flex;align-items:center;min-height:48px;box-sizing:border-box;padding:0 1.35rem;border-radius:10px;background:var(--accent);color:var(--on-accent);font-weight:600;text-decoration:none;box-shadow:var(--shadow-2)" style-hover="background:var(--accent-hover);color:var(--on-accent)">Schedule Interview</a>
+          <a href="tel:{{ phoneHref }}" style="display:inline-flex;align-items:center;min-height:48px;box-sizing:border-box;padding:0 1.25rem;border-radius:10px;border:1px solid var(--line-strong);color:var(--ink);font-weight:600;text-decoration:none;box-shadow:var(--shadow-1)" style-hover="background:var(--surface-2);color:var(--ink)">Call {{ phone }}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;printPreview&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Print&quot;},&quot;docxUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Jonathan_Pohlner_Resume.docx&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Downloads&quot;}}">
+class Component extends DCLogic {
+  static D = {"personalInfo":{"name":"Jonathan Pohlner","title":"Full Stack Developer | C# • React • TypeScript • 3D Modeling","location":{"city":"Cleveland","state":"TN","zip":"37312"},"phone":"+1-555-123-4567","email":"turtlewolfe@example.com"},"links":{"portfolio":"https://TurtleWolfe.com","spokeToWork":"https://spoketowork.com","github":["https://github.com/TortoiseWolfe","https://github.com/TurtleWolfe"],"linkedin":"https://linkedin.com/in/turtlewolfe","youtube":"https://www.youtube.com/@JonathanPohlner","twitch":"https://twitch.tv/turtlewolfe"},"summary":"Software developer with 15 years of self-taught web application work, 4+ years in React and React Native, and 2.5 years of production C# experience building Revit automation plugins. Lead developer of a live subscription audio platform and volunteer sysadmin for a community technology co-op. Background in 3D modeling (Blender, 3D Studio Max, SketchUp) and CAD (AutoCAD, Revit) informs approach to translating design workflows into technical solutions. Developed plugins used daily by 12+ drafters, reducing dimensioning tasks from minutes to milliseconds. Maintains 296 public GitHub repositories across two accounts, including an open-source full stack template with WCAG 2.1 AA accessibility checks and 6,400+ passing automated tests. Seeking full stack or accessibility-minded web development roles where I can build tools that solve real problems for the people who use them.","experience":[{"title":"LEAD DEVELOPER","company":"Harmonic Egg","companyUrl":"https://harmonicegg.com","location":{"city":"Remote","state":null},"displayDate":"Aug 2026 - Present","isCurrent":true,"responsibilities":["Took over a subscription audio platform from the previous vendor and completed the cutover to the new stack on 11 Sep 2026","Build and run the web app (React Native, Express, PostgreSQL, Stripe) on AWS, with 190+ pull requests","Added SQL guards against out-of-order payment webhooks, nightly database backups and a 15-minute health watch","Delivered lossless audio streaming for all 36 tracks a day ahead of schedule and fixed an iPhone playback gap the day it was found"]},{"title":"FULL STACK SOFTWARE DEVELOPER","company":"ScriptHammer.com","companyUrl":"https://scripthammer.com","location":{"city":"Cleveland","state":"TN"},"displayDate":"Aug 2011 - Present","isCurrent":true,"responsibilities":["Built an open-source Next.js starter with payments, end-to-end encrypted messaging, PWA support and 6,400+ passing automated tests","Built a WCAG 2.1 AA accessible template with 35 themes, colorblind accessibility modes, keyboard navigation and Pa11y checks in CI","Containerized development environments with Docker in 100+ repositories across two GitHub accounts","Engineered interactive 3D web environments (Three.js, CesiumJS) drawing 13,800+ Chattanooga buildings on USGS LiDAR terrain"],"portfolioLinks":[{"name":"SpokeToWork","url":"https://spoketowork.com"},{"name":"ScriptHammer.com","url":"https://scripthammer.com"},{"name":"TurtleWolfe.com","url":"https://turtlewolfe.com"}]},{"title":"VOLUNTEER SYSADMIN AND DEVOPS","company":"Chattanooga.Digital co-op","companyUrl":"https://chattanooga.digital","location":{"city":"Remote","state":null},"displayDate":"Jul 2026 - Present","isCurrent":true,"responsibilities":["Upgraded production Nextcloud on two sites overnight, with downtime under 4 minutes each","Found the files backup was empty and fixed it; ran the first off-site disaster restore test","Applied same-day PHP security patches across the co-op's sites and fixed a silent sign-up failure on the Hubzilla social network"]},{"title":"SOFTWARE DEVELOPER","company":"Trinam Drafting and Design","location":{"city":"Alpharetta","state":"GA"},"displayDate":"Mar 2022 - Aug 2024","isCurrent":false,"responsibilities":["Built 5+ C# Revit plugins automating wall dimensioning, reducing manual tasks to milliseconds","Deployed automation tools used daily by 12+ drafters, translating design pain points into solutions","Wrote 20+ automated test cases validating plugin functionality across multiple Revit versions","Collaborated with drafting team to identify workflow bottlenecks and prioritize feature development"]},{"title":"LEAD DEVELOPER","company":"Collective Minds Inc","location":{"city":"Remote","state":null},"displayDate":"Jan - Mar 2021","isCurrent":false,"responsibilities":["Developed 10+ cross-platform mobile screens using React Native with Firebase backend","Led technical planning and coordinated deliverables across a 4-person distributed team"]},{"title":"SOFTWARE ENGINEERING INTERN","company":"TechJoy Software","companyUrl":"https://techjoy.software","location":{"city":"Madison","state":"NJ"},"displayDate":"Aug 2026 - Present","isCurrent":true,"responsibilities":["Ship React and TypeScript changes through ticketed pull requests with peer and senior engineering review","Peer mentor in weekly pair-programming sessions for newer developers"]},{"title":"SOFTWARE ENGINEERING INTERN","company":"TechJoy Software","companyUrl":"https://techjoy.software","location":{"city":"Madison","state":"NJ"},"displayDate":"Jan 2022 - Jan 2023","isCurrent":false,"responsibilities":["Built 50+ responsive UI components in React and TypeScript for client web applications","Integrated RESTful APIs and participated in weekly code reviews following agile methodology"]}],"previousExperience":[{"title":"LEAD GRAPHIC DESIGNER","company":"Creative Touch","location":{"city":"Cleveland","state":"TN"},"displayDate":"Oct 1998 - Dec 2018","responsibilities":["Visual layout for church directories and promotional materials","Color correction and photo editing for professional publications","Managed team of two employees for photo scanning and data input"]},{"title":"CHILDREN'S PORTRAIT PHOTOGRAPHER","company":"Antiquities","location":{"city":"Cleveland","state":"TN"},"displayDate":"Oct 1995 - Dec 2017","responsibilities":["Traveled to 23 states on short notice for portrait fundraising programs","Set up mobile studio and photographed new groups every 12 minutes","Achieved consistent sales averaging $80 per sitting with vintage costume portraits"]}],"skills":{"languages":{"yearsExperience":{"C#":3,"JavaScript (ES6+)":8,"TypeScript":4,"Python":2,"PHP":6,"HTML5":10,"CSS3":10}},"frontend":{"yearsExperience":{"React":4,"React Native":2,"Next.js":2,"Tailwind CSS":2,"Storybook":1}},"backend":{"yearsExperience":{"Node.js":5,"Express":5,"RESTful APIs":5,"Firebase":2,"MongoDB":3,"PostgreSQL":2}},"cadAnd3d":{"yearsExperience":{"Revit API":3,"AutoCAD":5,"Blender":3,"3D Studio Max":2,"SketchUp":4,"Dynamo":2}},"tools":{"yearsExperience":{"Git":6,"Docker":2,"AWS":2,"Jest":2,"Playwright":1,"CI/CD":3,"Linux":4,"Adobe Photoshop":10}}},"education":[{"institution":"JOY OF CODING ACADEMY","degree":"Python Programming & Software Engineering","displayDate":"Alumnus"},{"institution":"CLEVELAND STATE COMMUNITY COLLEGE","degree":"Computer Aided Drafting (CAD) Coursework","displayDate":"1994 - 1996"}],"certifications":[{"name":"CompTIA Data+ (in progress)","provider":"CompTIA","displayDate":"In progress","url":""},{"name":"freeCodeCamp Front End Development Libraries","provider":"freeCodeCamp","displayDate":"2021","url":"https://www.freecodecamp.org/certification/turtlewolf/front-end-development-libraries"},{"name":"Node.js API Masterclass With Express & MongoDB","provider":"Udemy","displayDate":"2020","url":"https://www.udemy.com/certificate/UC-8033cc47-612f-4a7b-afc3-c7a8c9273686/"}],"assessments":{"indeed":[{"name":"Problem Solving","level":"Expert"},{"name":"Basic Computer Skills: PC","level":"Expert"},{"name":"Software Developer Fit","level":"Proficient"},{"name":"Attention to Detail","level":"Proficient"},{"name":"Analyzing Data","level":"Proficient"},{"name":"Graphic Design","level":"Proficient"},{"name":"Social Media","level":"Proficient"},{"name":"Technical Support","level":"Familiar"},{"name":"Software Developer Skills","level":"Familiar"}]},"keyProjects":[{"name":"SpokeToWork","technologies":["Next.js 15","React 19","TypeScript","PWA"],"description":"Built PWA for in-person job hunting with bike route optimization, 98/100 Lighthouse accessibility","url":"https://spoketowork.com"},{"name":"ScriptHammer Template","technologies":["Next.js","Docker","Storybook","CI/CD"],"description":"Created full stack starter with 35 themes, WCAG 2.1 AA accessibility checks, 6,400+ passing tests and automated GitHub Actions","url":"https://scripthammer.com"},{"name":"Interactive Resume","technologies":["React","TypeScript"],"description":"Built interactive portfolio showcasing projects with dynamic navigation and smooth animations","url":"https://tortoisewolfe.github.io/Resume/"},{"name":"The House that Code Built","technologies":["React","Educational Design"],"description":"Developed interactive learning tool teaching web development through construction metaphors; fixed contrast, audio and horizontal-scroll findings from an accessibility audit","url":"https://tortoisewolfe.github.io/The_House_that_Code_Built/"},{"name":"TurtleWolfe.com","technologies":["Portfolio","Web Development"],"description":"Personal portfolio and development showcase maintained since 2012","url":"https://turtlewolfe.com"}]};
+
+  static NAV = [['summary','Summary'],['experience','Experience'],['previous','Previous'],['skills','Skills'],['projects','Projects'],['education','Education'],['assessments','Assessments'],['contact','Contact']];
+
+  barRef = React.createRef();
+  state = { theme: null, active: 'summary', nameN: 0, titleN: 0, titleOn: false };
+  startTyping() {
+    const name = Component.D.personalInfo.name, title = Component.D.personalInfo.title;
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this.setState({ nameN: name.length, titleOn: true, titleN: title.length }); return;
+    }
+    const step = (key, len, speed, done) => {
+      const tick = () => {
+        if (this.state[key] >= len) { done && done(); return; }
+        this.setState(s => ({ [key]: s[key] + 1 }), () => { this.tt = setTimeout(tick, this.state[key] >= len ? 0 : speed); });
+      };
+      return tick;
+    };
+    this.tt = setTimeout(step('nameN', name.length, 100, () => {
+      this.setState({ titleOn: true });
+      this.tt = setTimeout(step('titleN', title.length, 75), 200);
+    }), 500);
+  }
+
+  componentDidMount() {
+    let t = null;
+    try { t = localStorage.getItem('jp-resume-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    this.setState({ theme: t });
+    this.apply(t);
+    this.startTyping();
+    const setBar = () => { if (this.barRef.current) document.documentElement.style.setProperty('--bar-h', this.barRef.current.offsetHeight + 'px'); };
+    setBar();
+    if ('ResizeObserver' in window && this.barRef.current) { this.ro = new ResizeObserver(setBar); this.ro.observe(this.barRef.current); }
+    setTimeout(() => {
+      if (!('IntersectionObserver' in window)) return;
+      this.io = new IntersectionObserver(es => {
+        es.forEach(e => { if (e.isIntersecting) this.setState({ active: e.target.id }); });
+      }, { rootMargin: '-25% 0px -65% 0px' });
+      Component.NAV.forEach(([id]) => { const el = document.getElementById(id); if (el) this.io.observe(el); });
+    }, 100);
+  }
+  componentDidUpdate() { this.apply(this.state.theme); }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); clearTimeout(this.tt); if (this.ro) this.ro.disconnect(); }
+  apply(t) {
+    const r = document.documentElement;
+    if (t) r.setAttribute('data-theme', t);
+    if (this.props.printPreview) r.setAttribute('data-pp', ''); else r.removeAttribute('data-pp');
+  }
+
+  renderVals() {
+    const D = Component.D, P = D.personalInfo, L = D.links;
+    const short = u => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+    const loc = l => l.state ? `${l.city}, ${l.state}` : l.city;
+    const linkUrls = [L.portfolio, L.spokeToWork, ...L.github, L.linkedin, L.youtube, L.twitch];
+    const mapJob = j => ({
+      title: j.title, company: j.company, url: j.companyUrl || '', hasUrl: !!j.companyUrl, noUrl: !j.companyUrl,
+      loc: loc(j.location), date: j.displayDate, isCurrent: !!j.isCurrent, isPast: !j.isCurrent,
+      bullets: j.responsibilities, portfolio: j.portfolioLinks || [], hasPortfolio: !!(j.portfolioLinks && j.portfolioLinks.length)
+    });
+    const groupLabels = { languages: 'Languages', frontend: 'Frontend', backend: 'Backend', cadAnd3d: 'CAD and 3D', tools: 'Tools' };
+    const skillGroups = Object.keys(groupLabels).map(k => {
+      const ye = D.skills[k].yearsExperience;
+      const items = Object.keys(ye).map(n => ({ name: n, yrs: `${ye[n]} ${ye[n] === 1 ? 'yr' : 'yrs'}` }));
+      return { label: groupLabels[k], items, line: items.map(i => `${i.name} ${i.yrs}`).join(', ') };
+    });
+    const assessGroups = ['Expert', 'Proficient', 'Familiar'].map(level => {
+      const items = D.assessments.indeed.filter(a => a.level === level).map(a => a.name);
+      return { level, items, line: items.join(', ') };
+    });
+    const theme = this.state.theme || 'light';
+    const v = (text, href) => ({ text, href: href || '', hasHref: !!href, noHref: !href });
+    const cursor = k => React.createElement('span', { key: k, 'aria-hidden': true, style: { display: 'inline-block', width: '4px', height: '1.2em', background: 'var(--accent)', animation: 'cursor-blink 1s step-end infinite', marginLeft: '4px', verticalAlign: 'text-bottom', boxShadow: '0 0 10px var(--accent-light, var(--accent))' } });
+    const { nameN, titleN, titleOn } = this.state;
+    return {
+      typedName: P.name.slice(0, nameN), nameCursor: nameN < P.name.length ? cursor('n') : null,
+      typedTitle: titleOn ? P.title.slice(0, titleN) : '', titleCursor: titleOn && titleN < P.title.length ? cursor('t') : null,
+      barRef: this.barRef,
+      title: P.title, phone: P.phone, phoneHref: P.phone.replace(/[^+\d]/g, ''), email: P.email,
+      locationText: `${P.location.city}, ${P.location.state} ${P.location.zip}`,
+      links: linkUrls.map(u => ({ href: u, label: short(u) })),
+      summary: D.summary,
+      experience: D.experience.map(mapJob),
+      previous: D.previousExperience.map(mapJob),
+      skillGroups, assessGroups,
+      projects: D.keyProjects.map(p => ({ ...p, techLine: p.technologies.join(' · '), tech: p.technologies })),
+      education: D.education,
+      certs: D.certifications.map(c => ({ ...c, hasUrl: !!c.url, noUrl: !c.url })),
+      contactItems: [
+        { label: 'Email', values: [v(P.email, 'mailto:' + P.email)] },
+        { label: 'Phone', values: [v(P.phone, 'tel:' + P.phone.replace(/[^+\d]/g, ''))] },
+        { label: 'Location', values: [v(`${P.location.city}, ${P.location.state} ${P.location.zip}`)] },
+        { label: 'LinkedIn', values: [v(short(L.linkedin), L.linkedin)] },
+        { label: 'GitHub', values: L.github.map(u => v(short(u), u)) }
+      ],
+      scheduleHref: `mailto:${P.email}?subject=${encodeURIComponent('Interview request: ' + P.name)}`,
+      navItems: Component.NAV.map(([id, label]) => {
+        const on = this.state.active === id;
+        return { id, label, cur: on ? 'location' : undefined, color: on ? 'var(--ink)' : 'var(--ink-2)', bc: on ? 'var(--accent)' : 'transparent' };
+      }),
+      themeLabel: theme === 'dark' ? 'Light' : 'Dark',
+      themeAria: theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme',
+      toggleTheme: () => {
+        const t = theme === 'dark' ? 'light' : 'dark';
+        try { localStorage.setItem('jp-resume-theme', t); } catch (e) {}
+        this.setState({ theme: t });
+      },
+      printPdf: () => window.print(),
+      docxUrl: this.props.docxUrl ?? 'Jonathan_Pohlner_Resume.docx'
+    };
+  }
+}
+</script>
+</body>
+</html>

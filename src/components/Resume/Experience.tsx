@@ -33,7 +33,10 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
       <div className={styles.content}>
         <div className={styles.header}>
           <div className={styles.titleSection}>
-            <h3 className={styles.jobTitle}>{experience.title}</h3>
+            {/* A no-break space joins the last two words so a phone never ends the title on one lone word */}
+            <h3 className={styles.jobTitle}>
+              {experience.title.replace(/ (\S+)$/, ' $1')}
+            </h3>
             <div className={styles.company}>
               {experience.companyUrl ? (
                 <a

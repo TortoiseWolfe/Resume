@@ -13,12 +13,14 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  /* Keep anchor jumps and keyboard focus clear of the sticky bar */
+  scroll-padding-top: var(--bar-h, 1rem);
 }
 
 body {
   font-family: var(--font-primary);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
   color: var(--color-text-primary);
   background-color: var(--color-background);
   position: relative;
@@ -98,7 +100,7 @@ body::after {
   padding: 0 var(--container-padding);
 }
 
-/* Typography - Vintage Typewriter Style */
+/* Typography - Special Elite display type, calm sizes (Claude Design layout) */
 h1,
 h2,
 h3,
@@ -106,51 +108,27 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
   color: var(--color-text-primary);
-  text-shadow: var(--shadow-text, 2px 2px 0px rgba(0, 0, 0, 0.4));
-  letter-spacing: 0.08em;
+  text-wrap: balance;
 }
 
 h1 {
-  font-size: var(--font-size-4xl);
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  text-shadow:
-    3px 3px 6px rgba(0, 0, 0, 0.3),
-    0 0 30px var(--color-primary-light);
+  font-size: var(--fs-h1);
+  letter-spacing: -0.01em;
 }
 
 h2 {
-  font-size: var(--font-size-2xl);
-  margin-bottom: var(--space-lg);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border-bottom: 3px solid var(--color-primary);
-  padding-bottom: var(--space-sm);
-  position: relative;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Decorative line with gear */
-h2::after {
-  content: '⚙';
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.5rem;
-  color: var(--color-primary);
-  background: transparent;
-  padding: 0 var(--space-sm);
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.01em;
 }
 
 h3 {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--space-md);
-  letter-spacing: 0.05em;
+  font-size: var(--fs-h3);
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.01em;
 }
 
 p {
@@ -159,21 +137,21 @@ p {
 
 a {
   color: var(--color-primary);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
   transition: color var(--duration-fast) var(--ease-in-out);
 }
 
 a:hover {
   color: var(--color-primary-light);
-  text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
 }
 
-/* Focus Styles */
+/* Focus Styles: 3px ring, 3:1 or better against both themes' pages */
 *:focus-visible {
-  outline: 2px solid var(--color-focus);
-  outline-offset: 2px;
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
   border-radius: var(--border-radius-sm);
 }
 

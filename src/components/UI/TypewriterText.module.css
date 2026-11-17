@@ -4,15 +4,48 @@
   position: relative;
 }
 
+/* Reserved-space variant: the ghost holds the final line's size, the typed
+   text sits on top of it, so nothing below moves while typing. */
+.reserve {
+  display: grid;
+}
+
+.ghost,
+.typed {
+  grid-area: 1 / 1;
+}
+
+.ghost {
+  visibility: hidden;
+  text-wrap: balance;
+}
+
+/* The text lives in an attribute, so the page's text holds the name once */
+.ghost::before {
+  content: attr(data-text);
+}
+
+.typed {
+  text-wrap: balance;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .cursor {
   display: inline-block;
-  width: 4px;
-  height: 1.2em;
+  width: 3px;
+  height: 1em;
   background: var(--color-primary);
   animation: cursor-blink 1s step-end infinite;
   margin-left: 4px;
   vertical-align: text-bottom;
-  box-shadow: 0 0 10px var(--color-primary-light);
 }
 
 @keyframes cursor-blink {

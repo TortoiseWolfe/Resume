@@ -21,8 +21,27 @@
     "youtube": "https://www.youtube.com/@JonathanPohlner",
     "twitch": "https://twitch.tv/turtlewolfe"
   },
-  "summary": "Software developer with 2.5 years of production C# experience building Revit automation plugins and 4+ years developing web applications in React and React Native. Background in 3D modeling (Blender, 3D Studio Max, SketchUp) and CAD (AutoCAD, Revit) informs approach to translating design workflows into technical solutions. Developed plugins used daily by 12+ drafters, reducing dimensioning tasks from minutes to milliseconds. Maintains 166+ GitHub repositories including full stack templates with 93 components and 680+ tests. Seeking full stack or automation-focused roles where I can build tools that solve real workflow problems for development teams.",
+  "summary": "Software developer with 15 years of self-taught web application work, 4+ years in React and React Native, and 2.5 years of production C# experience building Revit automation plugins. Lead developer of a live subscription audio platform and volunteer sysadmin for a community technology co-op. Background in 3D modeling (Blender, 3D Studio Max, SketchUp) and CAD (AutoCAD, Revit) informs approach to translating design workflows into technical solutions. Developed plugins used daily by 12+ drafters, reducing dimensioning tasks from minutes to milliseconds. Maintains 296 public GitHub repositories across two accounts, including an open-source full stack template with WCAG 2.1 AA accessibility checks and 6,400+ passing automated tests. Seeking full stack or accessibility-minded web development roles where I can build tools that solve real problems for the people who use them.",
   "experience": [
+    {
+      "title": "LEAD DEVELOPER",
+      "company": "Harmonic Egg",
+      "companyUrl": "https://harmonicegg.com",
+      "location": {
+        "city": "Remote",
+        "state": null
+      },
+      "startDate": "2026-08-01",
+      "endDate": null,
+      "displayDate": "Aug 2026 - Present",
+      "isCurrent": true,
+      "responsibilities": [
+        "Took over a subscription audio platform from the previous vendor and completed the cutover to the new stack on 11 Sep 2026",
+        "Build and run the web app (React Native, Express, PostgreSQL, Stripe) on AWS, with 190+ pull requests",
+        "Added SQL guards against out-of-order payment webhooks, nightly database backups and a 15-minute health watch",
+        "Delivered lossless audio streaming for all 36 tracks a day ahead of schedule and fixed an iPhone playback gap the day it was found"
+      ]
+    },
     {
       "title": "FULL STACK SOFTWARE DEVELOPER",
       "company": "ScriptHammer.com",
@@ -36,9 +55,10 @@
       "displayDate": "Aug 2011 - Present",
       "isCurrent": true,
       "responsibilities": [
-        "Built Next.js starter template with 35+ features, 93 Storybook components, and 680+ tests",
-        "Containerized development environments using Docker across 166+ GitHub repositories",
-        "Built WCAG-compliant Next.js template with PWA support, 32 themes, and colorblind accessibility modes"
+        "Built an open-source Next.js starter with payments, end-to-end encrypted messaging, PWA support and 6,400+ passing automated tests",
+        "Built a WCAG 2.1 AA accessible template with 35 themes, colorblind accessibility modes, keyboard navigation and Pa11y checks in CI",
+        "Containerized development environments with Docker in 100+ repositories across two GitHub accounts",
+        "Engineered interactive 3D web environments (Three.js, CesiumJS) drawing 13,800+ Chattanooga buildings on USGS LiDAR terrain"
       ],
       "portfolioLinks": [
         {
@@ -56,37 +76,21 @@
       ]
     },
     {
-      "title": "PEER MENTOR",
-      "company": "TechJoy Software",
-      "companyUrl": "https://techjoy.com",
+      "title": "VOLUNTEER SYSADMIN AND DEVOPS",
+      "company": "Chattanooga.Digital co-op",
+      "companyUrl": "https://chattanooga.digital",
       "location": {
-        "city": "Madison",
-        "state": "NJ"
+        "city": "Remote",
+        "state": null
       },
-      "startDate": "2024-11-01",
+      "startDate": "2026-07-01",
       "endDate": null,
-      "displayDate": "Nov 2024 - Present",
+      "displayDate": "Jul 2026 - Present",
       "isCurrent": true,
       "responsibilities": [
-        "Guide students through React and TypeScript projects, providing code review and debugging support",
-        "Participate in weekly community learning sessions and help explain best practices for web development"
-      ]
-    },
-    {
-      "title": "SOFTWARE ENGINEERING INTERN",
-      "company": "TechJoy Software",
-      "companyUrl": "https://techjoy.com",
-      "location": {
-        "city": "Madison",
-        "state": "NJ"
-      },
-      "startDate": "2022-01-01",
-      "endDate": "2022-03-31",
-      "displayDate": "Jan 2022 - Mar 2022",
-      "isCurrent": false,
-      "responsibilities": [
-        "Built 50+ responsive UI components in React and TypeScript for client web applications",
-        "Integrated RESTful APIs and participated in weekly code reviews following agile methodology"
+        "Upgraded production Nextcloud on two sites overnight, with downtime under 4 minutes each",
+        "Found the files backup was empty and fixed it; ran the first off-site disaster restore test",
+        "Applied same-day PHP security patches across the co-op's sites and fixed a silent sign-up failure on the Hubzilla social network"
       ]
     },
     {
@@ -97,8 +101,8 @@
         "state": "GA"
       },
       "startDate": "2022-03-01",
-      "endDate": "2024-09-30",
-      "displayDate": "Mar 2022 - Sep 2024",
+      "endDate": "2024-08-15",
+      "displayDate": "Mar 2022 - Aug 2024",
       "isCurrent": false,
       "responsibilities": [
         "Built 5+ C# Revit plugins automating wall dimensioning, reducing manual tasks to milliseconds",
@@ -121,6 +125,40 @@
       "responsibilities": [
         "Developed 10+ cross-platform mobile screens using React Native with Firebase backend",
         "Led technical planning and coordinated deliverables across a 4-person distributed team"
+      ]
+    },
+    {
+      "title": "SOFTWARE ENGINEERING INTERN",
+      "company": "TechJoy Software",
+      "companyUrl": "https://techjoy.software",
+      "location": {
+        "city": "Madison",
+        "state": "NJ"
+      },
+      "startDate": "2026-08-01",
+      "endDate": null,
+      "displayDate": "Aug 2026 - Present",
+      "isCurrent": true,
+      "responsibilities": [
+        "Ship React and TypeScript changes through ticketed pull requests with peer and senior engineering review",
+        "Peer mentor in weekly pair-programming sessions for newer developers"
+      ]
+    },
+    {
+      "title": "SOFTWARE ENGINEERING INTERN",
+      "company": "TechJoy Software",
+      "companyUrl": "https://techjoy.software",
+      "location": {
+        "city": "Madison",
+        "state": "NJ"
+      },
+      "startDate": "2022-01-01",
+      "endDate": "2023-01-31",
+      "displayDate": "Jan 2022 - Jan 2023",
+      "isCurrent": false,
+      "responsibilities": [
+        "Built 50+ responsive UI components in React and TypeScript for client web applications",
+        "Integrated RESTful APIs and participated in weekly code reviews following agile methodology"
       ]
     }
   ],
@@ -260,29 +298,36 @@
     {
       "institution": "JOY OF CODING ACADEMY",
       "degree": "Python Programming & Software Engineering",
-      "startDate": "2024-01-01",
       "endDate": null,
-      "displayDate": "2024",
-      "isCurrent": true,
+      "displayDate": "Alumnus",
+      "isCurrent": false,
       "gpa": null
     },
     {
       "institution": "CLEVELAND STATE COMMUNITY COLLEGE",
-      "degree": "Computer Aided Drafting (CAD) Certificate",
-      "startDate": "1995-08-01",
+      "degree": "Computer Aided Drafting (CAD) Coursework",
+      "startDate": "1994-08-01",
       "endDate": "1996-05-31",
-      "displayDate": "1996",
+      "displayDate": "1994 - 1996",
       "isCurrent": false,
       "gpa": null
     }
   ],
   "certifications": [
     {
-      "name": "FreeCodeCamp Front End Libraries",
-      "provider": "FreeCodeCamp",
-      "date": "2021-06-01",
+      "name": "CompTIA Data+ (in progress)",
+      "provider": "CompTIA",
+      "date": "",
+      "displayDate": "In progress",
+      "url": "",
+      "expires": null
+    },
+    {
+      "name": "freeCodeCamp Front End Development Libraries",
+      "provider": "freeCodeCamp",
+      "date": "2021-01-01",
       "displayDate": "2021",
-      "url": "https://www.freecodecamp.org/certification/turtlewolf/front-end-libraries",
+      "url": "https://www.freecodecamp.org/certification/turtlewolf/front-end-development-libraries",
       "expires": null
     },
     {
@@ -355,31 +400,50 @@
   "keyProjects": [
     {
       "name": "SpokeToWork",
-      "technologies": ["Next.js 15", "React 19", "TypeScript", "PWA"],
+      "technologies": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "PWA"
+      ],
       "description": "Built PWA for in-person job hunting with bike route optimization, 98/100 Lighthouse accessibility",
       "url": "https://spoketowork.com"
     },
     {
       "name": "ScriptHammer Template",
-      "technologies": ["Next.js", "Docker", "Storybook", "CI/CD"],
-      "description": "Created full stack starter with 32 themes, WCAG AA accessibility, automated GitHub Actions",
+      "technologies": [
+        "Next.js",
+        "Docker",
+        "Storybook",
+        "CI/CD"
+      ],
+      "description": "Created full stack starter with 35 themes, WCAG 2.1 AA accessibility checks, 6,400+ passing tests and automated GitHub Actions",
       "url": "https://scripthammer.com"
     },
     {
       "name": "Interactive Resume",
-      "technologies": ["React", "TypeScript"],
+      "technologies": [
+        "React",
+        "TypeScript"
+      ],
       "description": "Built interactive portfolio showcasing projects with dynamic navigation and smooth animations",
       "url": "https://tortoisewolfe.github.io/Resume/"
     },
     {
       "name": "The House that Code Built",
-      "technologies": ["React", "Educational Design"],
-      "description": "Developed interactive learning tool teaching web development through construction metaphors",
+      "technologies": [
+        "React",
+        "Educational Design"
+      ],
+      "description": "Developed interactive learning tool teaching web development through construction metaphors; fixed contrast, audio and horizontal-scroll findings from an accessibility audit",
       "url": "https://tortoisewolfe.github.io/The_House_that_Code_Built/"
     },
     {
       "name": "TurtleWolfe.com",
-      "technologies": ["Portfolio", "Web Development"],
+      "technologies": [
+        "Portfolio",
+        "Web Development"
+      ],
       "description": "Personal portfolio and development showcase maintained since 2012",
       "url": "https://turtlewolfe.com"
     }

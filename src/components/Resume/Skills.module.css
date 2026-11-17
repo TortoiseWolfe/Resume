@@ -1,7 +1,6 @@
 /* Skills: each category is a card; each skill a small chip with its years */
 .skills {
   margin-bottom: var(--section-gap);
-  scroll-margin-top: var(--bar-h, 6.5rem);
 }
 
 .sectionTitle {

@@ -1,6 +1,5 @@
 .educationSection {
   margin-bottom: var(--section-gap);
-  scroll-margin-top: var(--bar-h, 6.5rem);
 }
 
 .sectionTitle {

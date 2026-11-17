@@ -83,9 +83,9 @@
   margin: 0;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 920px) {
   :global(:root) {
-    --bar-h: 1rem; /* the bar scrolls away on phones, so anchors need no offset */
+    --bar-h: 1rem; /* the bar would wrap to two rows here, so it scrolls away and anchors need no offset */
   }
 
   .header {

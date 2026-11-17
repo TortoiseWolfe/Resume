@@ -1,7 +1,6 @@
 /* Hero: name, title, contact line, link chips */
 .personalInfo {
   padding: var(--space-lg) 0 var(--section-gap);
-  scroll-margin-top: var(--bar-h, 6.5rem);
 }
 
 .nameSection {

@@ -1,7 +1,6 @@
 /* Experience: one column of cards on a quiet timeline rule */
 .experience {
   margin-bottom: var(--section-gap);
-  scroll-margin-top: var(--bar-h, 6.5rem);
 }
 
 .sectionTitle {

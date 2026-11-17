@@ -112,7 +112,7 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
                 }
                 onClick={() => trackExternalLink('github', github)}
               >
-                ⚙️ GitHub
+                ⚙️ GitHub{index === 1 ? ' (legacy)' : ''}
               </a>
             ))}
 

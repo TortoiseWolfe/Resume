@@ -96,7 +96,7 @@
   --color-border: #b45309; /* Copper borders */
   --color-accent-gold: #fbbf24; /* Gear highlights */
   --color-accent-bronze: #92400e; /* Deep metallic */
-  --color-focus: #d97706; /* Copper focus ring */
+  --color-focus: #92400e; /* Bronze focus ring: 5.6:1 on cream (#d97706 was 2.5:1) */
   --color-error: #dc2626;
   --color-success: #16a34a;
 
@@ -160,7 +160,7 @@
   --color-border: #b45309; /* Copper borders */
   --color-accent-gold: #fbbf24; /* Gear highlights */
   --color-accent-bronze: #92400e; /* Deep metallic */
-  --color-focus: #d97706; /* Copper focus ring */
+  --color-focus: #92400e; /* Bronze focus ring: 5.6:1 on cream (#d97706 was 2.5:1) */
   --color-error: #dc2626;
   --color-success: #16a34a;
   --color-paper-light: #f4e4bc;
@@ -184,6 +184,33 @@
     --font-size-3xl: 2.25rem; /* 36px */
     --font-size-2xl: 1.875rem; /* 30px */
   }
+}
+
+/* Type scale and 3-level shadow scale (Claude Design layout, repo colours) */
+:root {
+  --fs-body: clamp(1.0625rem, 1.01rem + 0.2vw, 1.125rem); /* 17-18px */
+  --lh-body: 1.65;
+  --fs-meta: 0.9375rem;
+  --fs-title: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+  --fs-h1: clamp(2.25rem, 1.7rem + 2.4vw, 3.25rem);
+  --fs-h2: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);
+  --fs-h3: 1.0625rem;
+  --measure: 68ch;
+  --bar-h: 5.5rem; /* sticky bar height + breathing room, for anchor jumps */
+  --section-gap: clamp(3rem, 2.25rem + 2.5vw, 4.5rem);
+  --card-pad: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  --shadow-1:
+    0 1px 2px rgba(31, 41, 55, 0.08), 0 1px 3px rgba(31, 41, 55, 0.06);
+  --shadow-2:
+    0 2px 4px rgba(31, 41, 55, 0.07), 0 6px 16px rgba(31, 41, 55, 0.1);
+  --shadow-3:
+    0 4px 8px rgba(31, 41, 55, 0.08), 0 16px 40px rgba(31, 41, 55, 0.16);
+}
+
+[data-theme='dark'] {
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.35);
+  --shadow-3: 0 4px 10px rgba(0, 0, 0, 0.35), 0 18px 44px rgba(0, 0, 0, 0.45);
 }
 
 /* Accessibility - Respect motion preferences */

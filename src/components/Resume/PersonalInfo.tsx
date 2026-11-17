@@ -40,13 +40,23 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
             speed={100}
             delay={500}
             onComplete={handleNameComplete}
+            reserveText={personalInfo.name}
           />
         </h1>
-        <h2 className={styles.title}>
-          {showTitle && (
-            <TypewriterText text={personalInfo.title} speed={75} delay={200} />
+        <p className={styles.title}>
+          {showTitle ? (
+            <TypewriterText
+              text={personalInfo.title}
+              speed={75}
+              delay={200}
+              reserveText={personalInfo.title}
+            />
+          ) : (
+            <span aria-hidden="true" style={{ visibility: 'hidden' }}>
+              {personalInfo.title}
+            </span>
           )}
-        </h2>
+        </p>
       </div>
 
       <div className={styles.contactInfo}>

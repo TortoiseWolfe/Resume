@@ -315,14 +315,6 @@
   ],
   "certifications": [
     {
-      "name": "CompTIA Data+ (in progress)",
-      "provider": "CompTIA",
-      "date": "",
-      "displayDate": "In progress",
-      "url": "",
-      "expires": null
-    },
-    {
       "name": "freeCodeCamp Front End Development Libraries",
       "provider": "freeCodeCamp",
       "date": "2021-01-01",
